@@ -3,590 +3,395 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PC Parts Tracker - Best Deals on Computer Parts</title>
+  <title>PC Parts Tracker</title>
   <style>
-    :root { 
-      color-scheme: dark;
-      --bg-primary: #0a0e17;
-      --bg-secondary: #0f172a;
-      --bg-card: #1e293b;
-      --accent: #3b82f6;
-      --accent-hover: #2563eb;
-      --text-primary: #f1f5f9;
-      --text-secondary: #cbd5e1;
-      --border: rgba(255,255,255,.08);
-    }
-    
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.6;
-    }
-    
-    /* Navigation */
-    nav { 
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(12px);
-    }
-    
-    .nav-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-    
-    .nav-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    
-    .nav-links a:hover {
-      color: var(--text-primary);
-    }
-    
-    /* Hero Section */
-    .hero {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 900;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s;
-      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
-    }
-    
-    .cta-button:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 30px rgba(59, 130, 246, 0.4);
-    }
-    
-    /* Featured Deals Section */
-    .featured-section {
-      max-width: 1400px;
-      margin: 4rem auto;
-      padding: 0 2rem;
-    }
-    
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-    
-    .section-header h2 {
-      font-size: 2rem;
-      font-weight: 800;
-    }
-    
-    .ai-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
-      border: 1px solid rgba(139, 92, 246, 0.3);
-      border-radius: 999px;
-      font-size: 0.875rem;
-      font-weight: 600;
-    }
-    
-    .ai-badge::before {
-      content: "✨";
-      font-size: 1rem;
-    }
-    
-    .deals-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    
-    .deal-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.3s;
-      position: relative;
-    }
-    
-    .deal-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-      border-color: rgba(59, 130, 246, 0.3);
-    }
-    
-    .deal-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(239, 68, 68, 0.9);
-      color: white;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      z-index: 10;
-    }
-    
-    .deal-image {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      background: var(--bg-secondary);
-      object-fit: cover;
-    }
-    
-    .deal-content {
-      padding: 1.25rem;
-    }
-    
-    .deal-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    
-    .deal-meta {
-      display: flex;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-      flex-wrap: wrap;
-    }
-    
-    .deal-tag {
-      font-size: 0.75rem;
-      padding: 0.25rem 0.5rem;
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid rgba(59, 130, 246, 0.25);
-      border-radius: 6px;
-      color: #93c5fd;
-    }
-    
-    .deal-price {
-      font-size: 1.75rem;
-      font-weight: 900;
-      color: #10b981;
-      margin-bottom: 0.75rem;
-    }
-    
-    .deal-reason {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
-      font-style: italic;
-      line-height: 1.5;
-    }
-    
-    .deal-button {
-      display: block;
-      width: 100%;
-      padding: 0.75rem;
-      background: var(--accent);
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    
-    .deal-button:hover {
-      background: var(--accent-hover);
-    }
-    
-    /* Loading State */
-    .loading {
-      text-align: center;
-      padding: 4rem 2rem;
-      color: var(--text-secondary);
-    }
-    
-    .spinner {
-      width: 40px;
-      height: 40px;
-      border: 3px solid var(--border);
-      border-top-color: var(--accent);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin: 0 auto 1rem;
-    }
-    
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.5rem; }
-      .nav-links { gap: 1rem; }
-      .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    }
+    :root { color-scheme: dark; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#0b0f17; color:#e8eefc; }
+    header { padding: 18px 16px; border-bottom: 1px solid rgba(255,255,255,.08); position: sticky; top:0; background:#0b0f17; z-index:10; }
+    h1 { margin:0; font-size: 18px; letter-spacing:.2px; }
+    .controls { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    select, input { background:#101828; color:#e8eefc; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:10px 12px; outline:none; }
+    input { min-width: 220px; }
+    main { padding: 16px; max-width: 1200px; margin: 0 auto; }
+    .meta { opacity:.8; font-size: 13px; margin: 10px 0 0; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:14px; margin-top: 14px; }
+    .card { background:#0f172a; border:1px solid rgba(255,255,255,.08); border-radius:16px; overflow:hidden; box-shadow: 0 10px 25px rgba(0,0,0,.25); display:flex; flex-direction:column; }
+    .thumb { width:100%; aspect-ratio: 16 / 10; background:#0b1220; display:block; object-fit: cover; }
+    .content { padding: 12px 12px 14px; display:flex; flex-direction:column; gap:8px; }
+    .title { font-size: 14px; line-height: 1.25; margin:0; }
+    .subtitle { font-size: 12px; opacity:.75; line-height: 1.25; margin:0; }
+    .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .pill { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: rgba(59,130,246,.18); border: 1px solid rgba(59,130,246,.25); }
+    .price { font-weight: 800; }
+    .site-badge { font-size: 11px; padding: 3px 7px; border-radius: 999px; background: rgba(16,185,129,.18); border: 1px solid rgba(16,185,129,.25); }
+    a.btn { margin-top:6px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 12px; border-radius:12px;
+      background: rgba(16,185,129,.18); border:1px solid rgba(16,185,129,.28); color:#dffbee; text-decoration:none; }
+    a.btn:hover { filter: brightness(1.08); }
+    .error { color:#ffb4b4; }
+    .toggle { display:flex; gap:8px; align-items:center; user-select:none; }
+    .toggle input { min-width: auto; }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <div class="logo">PC Parts Tracker</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="browse.html">Browse All</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="hero">
-    <h1>Find the Best PC Part Deals</h1>
-    <p>AI-powered deal discovery across eBay, Newegg, and more. Save money on your next build.</p>
-    <a href="browse.html" class="cta-button">Browse All Parts</a>
-  </div>
-
-  <div class="featured-section">
-    <div class="section-header">
-      <h2>Featured Deals</h2>
-      <span class="ai-badge">AI Recommended</span>
-    </div>
+  <header>
+    <nav style="padding: 1rem 16px; border-bottom: 1px solid rgba(255,255,255,.08); background: #0b0f17;">
+      <div style="max-width: 1200px; margin: 0 auto; display: flex; gap: 2rem; align-items: center;">
+        <a href="index.html" style="color: #e8eefc; text-decoration: none; font-weight: 600;">← Home</a>
+        <span style="opacity: 0.5;">|</span>
+        <span style="font-weight: 600;">Browse All Parts</span>
+      </div>
+    </nav>
     
-    <div id="loading" class="loading">
-      <div class="spinner"></div>
-      <p>Finding the best deals...</p>
+    <div style="padding: 18px 16px;">
+      <h1>PC Parts Tracker - Browse All</h1>
+    <div class="controls">
+      <select id="partType">
+        <option value="ALL">All Part Types</option>
+        <option value="gpu">GPU</option>
+        <option value="cpu">CPU</option>
+        <option value="motherboard">Motherboard</option>
+        <option value="psu">PSU</option>
+        <option value="case">Case</option>
+        <option value="ssd">SSD</option>
+        <option value="keyboard">Keyboard</option>
+        <option value="mouse">Mouse</option>
+        <option value="monitor">Monitor</option>
+        <option value="headsets">Headsets</option>
+        <option value="prebuilts">Prebuilts</option>
+        <option value="cables">Cables</option>
+      </select>
+
+      <input id="search" type="text" placeholder="Search name / keyword..." />
+
+      <select id="site">
+        <option value="ALL">All Sites</option>
+        <option value="ebay">eBay</option>
+        <option value="amazon">Amazon</option>
+        <option value="newegg">Newegg</option>
+        <option value="bestbuy">Best Buy</option>
+        <option value="walmart">Walmart</option>
+      </select>
+
+      <select id="condition">
+        <option value="ALL">All Conditions</option>
+        <option value="New">New</option>
+        <option value="Used">Used</option>
+        <option value="Open Box">Open Box</option>
+        <option value="Unknown">Unknown</option>
+      </select>
+
+      <select id="sort">
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+        <option value="title-asc">Name: A → Z</option>
+      </select>
     </div>
-    
-    <div id="deals" class="deals-grid" style="display: none;"></div>
-  </div>
+
+    <div class="meta">
+      <span id="meta">Loading…</span>
+      <label class="toggle" title="Show raw listing titles under the clean names">
+        <input id="showRaw" type="checkbox" checked />
+        <span>Show raw titles</span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <div id="error" class="error"></div>
+    <div class="grid" id="grid"></div>
+  </main>
 
   <script>
+    // Updated to use COMPILED_DATA files
+    const DATA_FILES = [
+      "data/gpu.json",
+      "data/cpu.json",
+      "data/motherboard.json",
+      "data/psu.json",
+      "data/case.json",
+      "data/ssd.json",
+      "data/keyboard.json",
+      "data/mouse.json",
+      "data/monitor.json",
+      "data/headsets.json",
+      "data/prebuilts.json",
+      "data/cables.json"
+    ];
+
     const FALLBACK_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750">
-        <rect width="100%" height="100%" fill="#0f172a"/>
+        <rect width="100%" height="100%" fill="#0b1220"/>
         <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-              font-family="Arial" font-size="42" fill="#475569">No Image</text>
+              font-family="Arial" font-size="42" fill="#7aa2ff">No Image</text>
       </svg>
     `);
 
     function upgradeEbayImg(url) {
       if (!url) return "";
-      return String(url).replace(/\/s-l\d+\.(jpg|jpeg|png|webp)$/i, "/s-l1600.$1");
+      const u = String(url).trim();
+      return u.replace(/\/s-l\d+\.(jpg|jpeg|png|webp)$/i, "/s-l1600.$1");
     }
 
-    function calculateSavings(price) {
-      // Simple heuristic: lower prices = better deal
-      const avgPrices = {
-        gpu: 300,
-        cpu: 250,
-        motherboard: 150,
-        psu: 100,
-        case: 80,
-        ssd: 100
+    const BRAND_MAP = [
+      ["msi", "MSI"], ["asus", "ASUS"], ["gigabyte", "Gigabyte"], ["evga", "EVGA"],
+      ["zotac", "Zotac"], ["pny", "PNY"], ["asrock", "ASRock"], ["sapphire", "Sapphire"],
+      ["powercolor", "PowerColor"], ["xfx", "XFX"], ["corsair", "Corsair"],
+      ["g.skill", "G.Skill"], ["gskill", "G.Skill"], ["kingston", "Kingston"],
+      ["crucial", "Crucial"], ["teamgroup", "TeamGroup"], ["t-force", "T-Force"],
+      ["tforce", "T-Force"], ["adata", "ADATA"], ["silicon power", "Silicon Power"],
+      ["samsung", "Samsung"], ["western digital", "Western Digital"], ["wd", "WD"],
+      ["seagate", "Seagate"], ["sk hynix", "SK hynix"], ["seasonic", "Seasonic"],
+      ["thermaltake", "Thermaltake"], ["cooler master", "Cooler Master"],
+      ["be quiet", "be quiet!"], ["super flower", "Super Flower"],
+      ["segotep", "Segotep"], ["antec", "Antec"], ["lian li", "Lian Li"],
+      ["nzxt", "NZXT"], ["fractal", "Fractal"], ["phanteks", "Phanteks"],
+      ["montech", "Montech"]
+    ];
+
+    function getBrand(textLower) {
+      for (const [needle, brand] of BRAND_MAP) {
+        if (textLower.includes(needle)) return brand;
+      }
+      return "";
+    }
+
+    function pickMatch(textLower, regex) {
+      const m = textLower.match(regex);
+      return m ? m[0] : "";
+    }
+
+    function normalizeName(part) {
+      const rawTitle = String(part.title || part.name || "").trim();
+      if (!rawTitle) return "Unknown Item";
+
+      let t = rawTitle.toLowerCase();
+      const junk = [/opens in a new window or tab/gi, /\bfree shipping\b/gi, /\bnew listing\b/gi, /\bsponsored\b/gi];
+      junk.forEach(rx => t = t.replace(rx, " "));
+      t = t.replace(/\s+/g, " ").trim();
+
+      const pt = (part.partType || "").trim();
+      const brand = getBrand(t);
+
+      if (pt === "gpu") {
+        const modelRaw = pickMatch(t, /\b(rtx|gtx|rx)\s?-?\s?\d{3,4}\s?(ti|super|xtx|xt|gre)?\b/i);
+        const model = modelRaw ? modelRaw.toUpperCase().replace(/\s+/g, " ").replace("-", " ").trim() : "";
+        const vramRaw = pickMatch(t, /\b(\d+)\s?gb\b/i);
+        const vram = vramRaw ? vramRaw.toUpperCase().replace(" ", "") : "";
+        return [model, brand, vram].filter(Boolean).join(" · ") || rawTitle;
+      }
+
+      if (pt === "cpu") {
+        const ryzen = pickMatch(t, /\bryzen\s[3579]\s?\d{4,5}x3d\b|\bryzen\s[3579]\s?\d{4,5}x?\b/i);
+        const intel = pickMatch(t, /\bi[3579]\s?-?\s?\d{4,5}[a-z]*\b/i);
+        const cpuName = ryzen ? ryzen.toUpperCase().replace(/\s+/g, " ").trim() : (intel ? intel.toUpperCase().replace("-", " ").trim() : "");
+        const socketRaw = pickMatch(t, /\b(am4|am5|lga\s?\d{4}|tr4|strx4|sTRX4)\b/i);
+        const socket = socketRaw ? socketRaw.toUpperCase().replace(/\s+/g, " ").trim() : "";
+        return [cpuName || rawTitle, socket].filter(Boolean).join(" · ");
+      }
+
+      return rawTitle;
+    }
+
+    function normalizedCondition(part) {
+      const raw = String(part.condition || "").trim();
+      const text = `${part.title || ""} ${part.name || ""}`.toLowerCase();
+
+      if (text.includes("open box") || text.includes("open-box")) return "Open Box";
+      if (text.includes("pre-owned") || text.includes("preowned") || text.includes("pre owned")) return "Used";
+      if (text.includes("used")) return "Used";
+
+      const hasBrandNew = text.includes("brand new");
+      const isNewListing = text.includes("new listing");
+      if (hasBrandNew && !isNewListing) return "New";
+      if (raw === "Used" || raw === "Open Box" || raw === "New") return raw;
+
+      return raw || "Unknown";
+    }
+
+    const state = {
+      all: [],
+      partType: "ALL",
+      site: "ALL",
+      condition: "ALL",
+      sort: "price-asc",
+      search: "",
+      showRaw: true
+    };
+
+    function money(n) {
+      if (typeof n !== "number") return "";
+      return "$" + n.toFixed(2);
+    }
+
+    async function loadAllParts() {
+      const lists = [];
+      for (const file of DATA_FILES) {
+        try {
+          const res = await fetch(file, { cache: "no-store" });
+          if (!res.ok) throw new Error(`${file} → ${res.status}`);
+          const data = await res.json();
+          if (Array.isArray(data)) lists.push(...data);
+        } catch (e) {
+          console.warn("Failed to load:", file, e);
+        }
+      }
+
+      return lists.map(p => ({
+        ...p,
+        _cond: normalizedCondition(p),
+        _displayName: normalizeName(p)
+      }));
+    }
+
+    function applyFilters(items) {
+      const q = state.search.trim().toLowerCase();
+
+      let out = items.filter(p => {
+        if (state.partType !== "ALL" && p.partType !== state.partType) return false;
+        if (state.site !== "ALL" && (p.site || "").toLowerCase() !== state.site.toLowerCase()) return false;
+        if (state.condition !== "ALL" && (p._cond || "Unknown") !== state.condition) return false;
+        if (q) {
+          const hay = `${p._displayName || ""} ${p.title || ""} ${p.keyword || ""}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      if (state.sort === "price-asc") out.sort((a,b) => (a.price ?? 1e12) - (b.price ?? 1e12));
+      if (state.sort === "price-desc") out.sort((a,b) => (b.price ?? -1) - (a.price ?? -1));
+      if (state.sort === "title-asc") out.sort((a,b) => String(a._displayName||"").localeCompare(String(b._displayName||"")));
+
+      return out;
+    }
+
+    function card(part) {
+      const rawImg = (part.image_url && String(part.image_url).trim()) ? part.image_url : "";
+      const upgraded = rawImg ? upgradeEbayImg(rawImg) : "";
+      const imgSrc = upgraded || FALLBACK_IMG;
+
+      const el = document.createElement("div");
+      el.className = "card";
+
+      const img = document.createElement("img");
+      img.className = "thumb";
+      img.loading = "lazy";
+      img.decoding = "async";
+      img.referrerPolicy = "no-referrer";
+      img.src = imgSrc;
+
+      img.onerror = () => {
+        if (rawImg && img.src !== rawImg) {
+          img.src = rawImg;
+          img.onerror = () => { img.src = FALLBACK_IMG; };
+        } else {
+          img.src = FALLBACK_IMG;
+        }
       };
-      
-      return Math.round(Math.random() * 30) + 10; // Placeholder for now
+
+      const content = document.createElement("div");
+      content.className = "content";
+
+      const title = document.createElement("p");
+      title.className = "title";
+      title.textContent = part._displayName || part.title || part.name || "Untitled";
+
+      const sub = document.createElement("p");
+      sub.className = "subtitle";
+      sub.textContent = state.showRaw ? (part.title || part.name || "") : "";
+
+      const row = document.createElement("div");
+      row.className = "row";
+
+      const price = document.createElement("span");
+      price.className = "price";
+      price.textContent = money(part.price);
+
+      const pill1 = document.createElement("span");
+      pill1.className = "pill";
+      pill1.textContent = part.partType || "Unknown";
+
+      const pill2 = document.createElement("span");
+      pill2.className = "pill";
+      pill2.textContent = part._cond || "Unknown";
+
+      const siteBadge = document.createElement("span");
+      siteBadge.className = "site-badge";
+      siteBadge.textContent = (part.site || "unknown").toUpperCase();
+
+      row.appendChild(price);
+      row.appendChild(siteBadge);
+      row.appendChild(pill1);
+      row.appendChild(pill2);
+
+      const btn = document.createElement("a");
+      btn.className = "btn";
+      btn.href = part.url || "#";
+      btn.target = "_blank";
+      btn.rel = "noopener noreferrer";
+      btn.textContent = "Open Listing";
+
+      content.appendChild(title);
+      if (state.showRaw) content.appendChild(sub);
+      content.appendChild(row);
+      content.appendChild(btn);
+
+      el.appendChild(img);
+      el.appendChild(content);
+      return el;
     }
 
-    function getAIReason(item) {
-      const reasons = [
-        "Best price-to-performance ratio in category",
-        "Trending deal - price dropped 15% recently",
-        "High-value component for budget builds",
-        "Popular choice with excellent reviews",
-        "Great deal compared to market average"
-      ];
-      return reasons[Math.floor(Math.random() * reasons.length)];
+    function render() {
+      const grid = document.getElementById("grid");
+      grid.innerHTML = "";
+
+      const filtered = applyFilters(state.all);
+      for (const p of filtered) grid.appendChild(card(p));
+
+      document.getElementById("meta").textContent =
+        `${filtered.length.toLocaleString()} shown • ${state.all.length.toLocaleString()} total`;
     }
 
-    async function loadFeaturedDeals() {
-      try {
-        // Load all part types
-        const partTypes = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
-        const allItems = [];
-
-        for (const part of partTypes) {
-          try {
-            const res = await fetch(`data/${part}.json`, { cache: 'no-store' });
-            if (res.ok) {
-              const data = await res.json();
-              allItems.push(...data);
-            }
-          } catch (e) {
-            console.warn(`Failed to load ${part}:`, e);
-          }
-        }
-
-        if (allItems.length === 0) {
-          document.getElementById('loading').innerHTML = '<p>No deals found. Check back soon!</p>';
-          return;
-        }
-
-        // Filter out obvious junk
-        const filtered = allItems.filter(item => {
-          if (!item.price || item.price <= 0) return false;
-          
-          const title = (item.title || '').toLowerCase();
-          
-          // Remove auctions (usually have "bid" or time remaining language)
-          if (title.includes('bid') || title.includes('0 bids') || title.includes('auction')) return false;
-          
-          // Remove broken/parts items
-          if (title.includes('for parts') || title.includes('not working') || title.includes('broken')) return false;
-          
-          // Remove bundles/lots
-          if (title.includes('lot of') || title.includes('bundle')) return false;
-          
-          // Price sanity checks per category
-          if (item.partType === 'gpu' && item.price < 50) return false; // Too cheap = sketchy
-          if (item.partType === 'cpu' && item.price < 40) return false;
-          if (item.partType === 'motherboard' && item.price < 30) return false;
-          
-          return true;
-        });
-
-        // Get AI recommendations
-        const featured = await getAIRecommendations(filtered);
-        displayDeals(featured);
-
-      } catch (error) {
-        console.error('Error loading deals:', error);
-        document.getElementById('loading').innerHTML = '<p>Error loading deals. Please try again later.</p>';
-      }
-    }
-
-    async function getAIRecommendations(items) {
-      try {
-        // Prepare items for AI analysis
-        const itemsForAI = items.slice(0, 100).map(item => ({
-          title: item.title,
-          price: item.price,
-          partType: item.partType,
-          condition: item.condition,
-          site: item.site
-        }));
-
-        const prompt = `You are a PC parts deal expert. Analyze these ${itemsForAI.length} PC parts listings and select the 6 BEST VALUE deals for someone building a gaming PC.
-
-Criteria for selection:
-1. Good price-to-performance ratio (not just cheapest)
-2. Reliable brands (MSI, ASUS, Corsair, etc.)
-3. Mix of different part types (GPU, CPU, motherboard, etc.)
-4. Avoid suspiciously cheap items
-5. Prefer "New" or "Open Box" over "Used" when prices are similar
-6. Skip obvious red flags in titles
-
-Here are the items:
-${JSON.stringify(itemsForAI, null, 2)}
-
-Respond with ONLY a JSON array of 6 numbers representing the indices of the best deals. For example: [0, 5, 12, 23, 45, 67]`;
-
-        const response = await fetch("https://api.anthropic.com/v1/messages", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            model: "claude-sonnet-4-20250514",
-            max_tokens: 1000,
-            messages: [
-              { role: "user", content: prompt }
-            ],
-          })
-        });
-
-        if (!response.ok) {
-          console.warn('AI API failed, falling back to heuristic selection');
-          return heuristicSelection(items);
-        }
-
-        const data = await response.json();
-        const textContent = data.content.find(c => c.type === "text");
-        
-        if (!textContent) {
-          return heuristicSelection(items);
-        }
-
-        // Parse AI response
-        const aiText = textContent.text.trim();
-        const jsonMatch = aiText.match(/\[[\d,\s]+\]/);
-        
-        if (!jsonMatch) {
-          console.warn('Could not parse AI response, using fallback');
-          return heuristicSelection(items);
-        }
-
-        const indices = JSON.parse(jsonMatch[0]);
-        const selected = indices
-          .filter(i => i < items.length)
-          .map(i => items[i])
-          .filter(Boolean);
-
-        return selected.length >= 4 ? selected : heuristicSelection(items);
-
-      } catch (error) {
-        console.error('AI recommendation error:', error);
-        return heuristicSelection(items);
-      }
-    }
-
-    function heuristicSelection(items) {
-      // Fallback: Smart heuristic-based selection
-      const scored = items.map(item => {
-        let score = 0;
-        
-        // Prefer newer condition
-        if (item.condition === 'New') score += 20;
-        else if (item.condition === 'Open Box') score += 10;
-        
-        // Prefer fixed price sites
-        if (item.site === 'newegg') score += 15;
-        if (item.site === 'bestbuy') score += 10;
-        
-        // Brand recognition (simple check)
-        const title = item.title.toLowerCase();
-        const goodBrands = ['msi', 'asus', 'evga', 'corsair', 'samsung', 'crucial', 'western digital', 'seagate'];
-        if (goodBrands.some(brand => title.includes(brand))) score += 10;
-        
-        // Price/value ratio (lower is better but not too low)
-        const priceRatios = {
-          gpu: item.price / 200,
-          cpu: item.price / 150,
-          motherboard: item.price / 120,
-          psu: item.price / 80,
-          case: item.price / 70,
-          ssd: item.price / 90
-        };
-        
-        const ratio = priceRatios[item.partType] || 1;
-        if (ratio > 0.5 && ratio < 1.5) score += 15; // Sweet spot
-        
-        return { ...item, score };
+    function wireControls() {
+      document.getElementById("partType").addEventListener("change", (e) => {
+        state.partType = e.target.value;
+        render();
       });
-
-      // Sort by score and pick diverse set
-      scored.sort((a, b) => b.score - a.score);
-      
-      const selected = [];
-      const usedTypes = new Set();
-      
-      // First pass: one of each type
-      for (const item of scored) {
-        if (!usedTypes.has(item.partType) && selected.length < 6) {
-          selected.push(item);
-          usedTypes.add(item.partType);
-        }
-      }
-      
-      // Second pass: fill remaining
-      for (const item of scored) {
-        if (selected.length >= 6) break;
-        if (!selected.includes(item)) {
-          selected.push(item);
-        }
-      }
-      
-      return selected.slice(0, 6);
-    }
-
-    function displayDeals(deals) {
-      const container = document.getElementById('deals');
-      const loading = document.getElementById('loading');
-      
-      container.innerHTML = '';
-      
-      deals.forEach(deal => {
-        const card = document.createElement('div');
-        card.className = 'deal-card';
-        
-        const savings = calculateSavings(deal.price);
-        const imgSrc = upgradeEbayImg(deal.image_url) || FALLBACK_IMG;
-        
-        card.innerHTML = `
-          <div class="deal-badge">-${savings}%</div>
-          <img src="${imgSrc}" alt="${deal.title}" class="deal-image" 
-               onerror="this.src='${FALLBACK_IMG}'" loading="lazy">
-          <div class="deal-content">
-            <h3 class="deal-title">${deal.title || deal.name}</h3>
-            <div class="deal-meta">
-              <span class="deal-tag">${deal.partType}</span>
-              <span class="deal-tag">${deal.site}</span>
-              <span class="deal-tag">${deal.condition}</span>
-            </div>
-            <div class="deal-price">$${deal.price.toFixed(2)}</div>
-            <p class="deal-reason">${getAIReason(deal)}</p>
-            <a href="${deal.url}" target="_blank" rel="noopener noreferrer" class="deal-button">
-              View Deal →
-            </a>
-          </div>
-        `;
-        
-        container.appendChild(card);
+      document.getElementById("site").addEventListener("change", (e) => {
+        state.site = e.target.value;
+        render();
       });
-      
-      loading.style.display = 'none';
-      container.style.display = 'grid';
+      document.getElementById("condition").addEventListener("change", (e) => {
+        state.condition = e.target.value;
+        render();
+      });
+      document.getElementById("sort").addEventListener("change", (e) => {
+        state.sort = e.target.value;
+        render();
+      });
+      document.getElementById("search").addEventListener("input", (e) => {
+        state.search = e.target.value;
+        render();
+      });
+      document.getElementById("showRaw").addEventListener("change", (e) => {
+        state.showRaw = !!e.target.checked;
+        render();
+      });
     }
 
-    // Load deals on page load
-    loadFeaturedDeals();
+    (async function init() {
+      wireControls();
+      document.getElementById("error").textContent = "";
+
+      const parts = await loadAllParts();
+      state.all = parts;
+
+      if (!parts.length) {
+        document.getElementById("error").textContent =
+          "No parts loaded. Check that /data/*.json files exist and are being served.";
+      }
+
+      render();
+    })();
   </script>
 </body>
 </html>
