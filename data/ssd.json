@@ -77,6 +77,17 @@
     "title": "Team Group MP33 M.2 2280 1TB PCIe 3.0 x4 with NVMe 1.3 3D NAND Internal Solid State Drive (SSD) TM8FP6001T0C101"
   },
   {
+    "name": "SAMSUNG 990 EVO PLUS SSD 1TB",
+    "price": 104.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/samsung-1tb-990-evo-plus-nvme-2-0/p/N82E16820147899",
+    "partType": "ssd",
+    "keyword": "1tb nvme ssd",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-147-899-10.jpg",
+    "site": "newegg",
+    "title": "SAMSUNG 990 EVO PLUS SSD 1TB"
+  },
+  {
     "name": "PNY CS2150 M.2 2280 1TB PCI-Express 5.0 x4 3D NAND Internal Solid State Drive (SSD) M280CS2150-1TB-TB",
     "price": 109.0,
     "condition": "New",
@@ -132,17 +143,6 @@
     "title": "Team Group MP44S M.2 2230 1TB PCIe 4.0 x4 with NVMe, STEAM Deck Compatible, Internal Solid State Drive (SSD) TM5FF3001T0C101"
   },
   {
-    "name": "Kingston NV3 M.2 2280 1TB PCIe 4.0 x4 NVMe Internal Solid State Drive (SSD) SNV3S/1000G Up to 6000 MB/s",
-    "price": 117.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/kingston-1tb-snv3s/p/N82E16820242902",
-    "partType": "ssd",
-    "keyword": "1tb nvme ssd",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-242-902-02.jpg",
-    "site": "newegg",
-    "title": "Kingston NV3 M.2 2280 1TB PCIe 4.0 x4 NVMe Internal Solid State Drive (SSD) SNV3S/1000G Up to 6000 MB/s"
-  },
-  {
     "name": "Crucial P310 M.2 2280 1TB PCI-Express 4.0 x4 NVMe 3D NAND Internal Solid State Drive Speed Up to 7100 MBps (SSD) CT1000P310SSD8",
     "price": 118.0,
     "condition": "New",
@@ -174,6 +174,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/20-985-133-04.jpg",
     "site": "newegg",
     "title": "Team Group T-FORCE G50 M.2 2280 1TB PCIe 4.0 x4 with NVMe 1.4 TLC Internal Solid State Drive (SSD) TM8FFE001T0C129"
+  },
+  {
+    "name": "Kingston NV3 M.2 2280 1TB PCIe 4.0 x4 NVMe Internal Solid State Drive (SSD) SNV3S/1000G Up to 6000 MB/s",
+    "price": 119.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/kingston-1tb-snv3s/p/N82E16820242902",
+    "partType": "ssd",
+    "keyword": "1tb nvme ssd",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-242-902-02.jpg",
+    "site": "newegg",
+    "title": "Kingston NV3 M.2 2280 1TB PCIe 4.0 x4 NVMe Internal Solid State Drive (SSD) SNV3S/1000G Up to 6000 MB/s"
   },
   {
     "name": "Corsair MP600 Elite M.2 2280 1TB PCI-Express 4.0 x4, NVMe 1.4 3D TLC Internal Solid State Drive Up to 7000 MB/sec (SSD) CSSD-F1000GBMP600ENH",
@@ -372,17 +383,6 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/20-250-206-01.jpg",
     "site": "newegg",
     "title": "WD Red SN700 NVMe SSD, 1TB of NVMe Solid-State Drive for NAS Devices"
-  },
-  {
-    "name": "SAMSUNG 990 EVO PLUS SSD 1TB",
-    "price": 191.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/samsung-1tb-990-evo-plus-nvme-2-0/p/N82E16820147899",
-    "partType": "ssd",
-    "keyword": "1tb nvme ssd",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-147-899-10.jpg",
-    "site": "newegg",
-    "title": "SAMSUNG 990 EVO PLUS SSD 1TB"
   },
   {
     "name": "Crucial T700 GEN5 NMVE M.2 SSD 1TB PCI-Express 5.0 x4 TLC NAND² Internal Solid State Drive (SSD) CT1000T700SSD3",
