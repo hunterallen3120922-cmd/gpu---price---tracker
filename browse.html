@@ -1,0 +1,397 @@
+!doctype html
+html lang=en
+head
+  meta charset=utf-8 
+  meta name=viewport content=width=device-width, initial-scale=1 
+  titlePC Parts Trackertitle
+  style
+    root { color-scheme dark; }
+    body { margin0; font-family system-ui, -apple-system, Segoe UI, Roboto, Arial; background#0b0f17; color#e8eefc; }
+    header { padding 18px 16px; border-bottom 1px solid rgba(255,255,255,.08); position sticky; top0; background#0b0f17; z-index10; }
+    h1 { margin0; font-size 18px; letter-spacing.2px; }
+    .controls { displayflex; flex-wrapwrap; gap10px; margin-top12px; }
+    select, input { background#101828; color#e8eefc; border1px solid rgba(255,255,255,.12); border-radius10px; padding10px 12px; outlinenone; }
+    input { min-width 220px; }
+    main { padding 16px; max-width 1200px; margin 0 auto; }
+    .meta { opacity.8; font-size 13px; margin 10px 0 0; displayflex; gap10px; align-itemscenter; flex-wrapwrap; }
+    .grid { displaygrid; grid-template-columns repeat(auto-fill, minmax(260px, 1fr)); gap14px; margin-top 14px; }
+    .card { background#0f172a; border1px solid rgba(255,255,255,.08); border-radius16px; overflowhidden; box-shadow 0 10px 25px rgba(0,0,0,.25); displayflex; flex-directioncolumn; }
+    .thumb { width100%; aspect-ratio 16  10; background#0b1220; displayblock; object-fit cover; }
+    .content { padding 12px 12px 14px; displayflex; flex-directioncolumn; gap8px; }
+    .title { font-size 14px; line-height 1.25; margin0; }
+    .subtitle { font-size 12px; opacity.75; line-height 1.25; margin0; }
+    .row { displayflex; gap10px; align-itemscenter; flex-wrapwrap; }
+    .pill { font-size 12px; padding 4px 8px; border-radius 999px; background rgba(59,130,246,.18); border 1px solid rgba(59,130,246,.25); }
+    .price { font-weight 800; }
+    .site-badge { font-size 11px; padding 3px 7px; border-radius 999px; background rgba(16,185,129,.18); border 1px solid rgba(16,185,129,.25); }
+    a.btn { margin-top6px; displayinline-flex; align-itemscenter; justify-contentcenter; gap8px; padding10px 12px; border-radius12px;
+      background rgba(16,185,129,.18); border1px solid rgba(16,185,129,.28); color#dffbee; text-decorationnone; }
+    a.btnhover { filter brightness(1.08); }
+    .error { color#ffb4b4; }
+    .toggle { displayflex; gap8px; align-itemscenter; user-selectnone; }
+    .toggle input { min-width auto; }
+  style
+head
+body
+  header
+    nav style=padding 1rem 16px; border-bottom 1px solid rgba(255,255,255,.08); background #0b0f17;
+      div style=max-width 1200px; margin 0 auto; display flex; gap 2rem; align-items center;
+        a href=index.html style=color #e8eefc; text-decoration none; font-weight 600;← Homea
+        span style=opacity 0.5;span
+        span style=font-weight 600;Browse All Partsspan
+      div
+    nav
+    
+    div style=padding 18px 16px;
+      h1PC Parts Tracker - Browse Allh1
+    div class=controls
+      select id=partType
+        option value=ALLAll Part Typesoption
+        option value=gpuGPUoption
+        option value=cpuCPUoption
+        option value=motherboardMotherboardoption
+        option value=psuPSUoption
+        option value=caseCaseoption
+        option value=ssdSSDoption
+        option value=keyboardKeyboardoption
+        option value=mouseMouseoption
+        option value=monitorMonitoroption
+        option value=headsetsHeadsetsoption
+        option value=prebuiltsPrebuiltsoption
+        option value=cablesCablesoption
+      select
+
+      input id=search type=text placeholder=Search name  keyword... 
+
+      select id=site
+        option value=ALLAll Sitesoption
+        option value=ebayeBayoption
+        option value=amazonAmazonoption
+        option value=neweggNeweggoption
+        option value=bestbuyBest Buyoption
+        option value=walmartWalmartoption
+      select
+
+      select id=condition
+        option value=ALLAll Conditionsoption
+        option value=NewNewoption
+        option value=UsedUsedoption
+        option value=Open BoxOpen Boxoption
+        option value=UnknownUnknownoption
+      select
+
+      select id=sort
+        option value=price-ascPrice Low → Highoption
+        option value=price-descPrice High → Lowoption
+        option value=title-ascName A → Zoption
+      select
+    div
+
+    div class=meta
+      span id=metaLoading…span
+      label class=toggle title=Show raw listing titles under the clean names
+        input id=showRaw type=checkbox checked 
+        spanShow raw titlesspan
+      label
+    div
+  header
+
+  main
+    div id=error class=errordiv
+    div class=grid id=griddiv
+  main
+
+  script
+     Updated to use COMPILED_DATA files
+    const DATA_FILES = [
+      datagpu.json,
+      datacpu.json,
+      datamotherboard.json,
+      datapsu.json,
+      datacase.json,
+      datassd.json,
+      datakeyboard.json,
+      datamouse.json,
+      datamonitor.json,
+      dataheadsets.json,
+      dataprebuilts.json,
+      datacables.json
+    ];
+
+    const FALLBACK_IMG = dataimagesvg+xml;charset=utf-8, + encodeURIComponent(`
+      svg xmlns=httpwww.w3.org2000svg width=1200 height=750
+        rect width=100% height=100% fill=#0b1220
+        text x=50% y=50% dominant-baseline=middle text-anchor=middle
+              font-family=Arial font-size=42 fill=#7aa2ffNo Imagetext
+      svg
+    `);
+
+    function upgradeEbayImg(url) {
+      if (!url) return ;
+      const u = String(url).trim();
+      return u.replace(s-ld+.(jpgjpegpngwebp)$i, s-l1600.$1);
+    }
+
+    const BRAND_MAP = [
+      [msi, MSI], [asus, ASUS], [gigabyte, Gigabyte], [evga, EVGA],
+      [zotac, Zotac], [pny, PNY], [asrock, ASRock], [sapphire, Sapphire],
+      [powercolor, PowerColor], [xfx, XFX], [corsair, Corsair],
+      [g.skill, G.Skill], [gskill, G.Skill], [kingston, Kingston],
+      [crucial, Crucial], [teamgroup, TeamGroup], [t-force, T-Force],
+      [tforce, T-Force], [adata, ADATA], [silicon power, Silicon Power],
+      [samsung, Samsung], [western digital, Western Digital], [wd, WD],
+      [seagate, Seagate], [sk hynix, SK hynix], [seasonic, Seasonic],
+      [thermaltake, Thermaltake], [cooler master, Cooler Master],
+      [be quiet, be quiet!], [super flower, Super Flower],
+      [segotep, Segotep], [antec, Antec], [lian li, Lian Li],
+      [nzxt, NZXT], [fractal, Fractal], [phanteks, Phanteks],
+      [montech, Montech]
+    ];
+
+    function getBrand(textLower) {
+      for (const [needle, brand] of BRAND_MAP) {
+        if (textLower.includes(needle)) return brand;
+      }
+      return ;
+    }
+
+    function pickMatch(textLower, regex) {
+      const m = textLower.match(regex);
+      return m  m[0]  ;
+    }
+
+    function normalizeName(part) {
+      const rawTitle = String(part.title  part.name  ).trim();
+      if (!rawTitle) return Unknown Item;
+
+      let t = rawTitle.toLowerCase();
+      const junk = [opens in a new window or tabgi, bfree shippingbgi, bnew listingbgi, bsponsoredbgi];
+      junk.forEach(rx = t = t.replace(rx,  ));
+      t = t.replace(s+g,  ).trim();
+
+      const pt = (part.partType  ).trim();
+      const brand = getBrand(t);
+
+      if (pt === gpu) {
+        const modelRaw = pickMatch(t, b(rtxgtxrx)s-sd{3,4}s(tisuperxtxxtgre)bi);
+        const model = modelRaw  modelRaw.toUpperCase().replace(s+g,  ).replace(-,  ).trim()  ;
+        const vramRaw = pickMatch(t, b(d+)sgbbi);
+        const vram = vramRaw  vramRaw.toUpperCase().replace( , )  ;
+        return [model, brand, vram].filter(Boolean).join( · )  rawTitle;
+      }
+
+      if (pt === cpu) {
+        const ryzen = pickMatch(t, bryzens[3579]sd{4,5}x3dbbryzens[3579]sd{4,5}xbi);
+        const intel = pickMatch(t, bi[3579]s-sd{4,5}[a-z]bi);
+        const cpuName = ryzen  ryzen.toUpperCase().replace(s+g,  ).trim()  (intel  intel.toUpperCase().replace(-,  ).trim()  );
+        const socketRaw = pickMatch(t, b(am4am5lgasd{4}tr4strx4sTRX4)bi);
+        const socket = socketRaw  socketRaw.toUpperCase().replace(s+g,  ).trim()  ;
+        return [cpuName  rawTitle, socket].filter(Boolean).join( · );
+      }
+
+      return rawTitle;
+    }
+
+    function normalizedCondition(part) {
+      const raw = String(part.condition  ).trim();
+      const text = `${part.title  } ${part.name  }`.toLowerCase();
+
+      if (text.includes(open box)  text.includes(open-box)) return Open Box;
+      if (text.includes(pre-owned)  text.includes(preowned)  text.includes(pre owned)) return Used;
+      if (text.includes(used)) return Used;
+
+      const hasBrandNew = text.includes(brand new);
+      const isNewListing = text.includes(new listing);
+      if (hasBrandNew && !isNewListing) return New;
+      if (raw === Used  raw === Open Box  raw === New) return raw;
+
+      return raw  Unknown;
+    }
+
+    const state = {
+      all [],
+      partType ALL,
+      site ALL,
+      condition ALL,
+      sort price-asc,
+      search ,
+      showRaw true
+    };
+
+    function money(n) {
+      if (typeof n !== number) return ;
+      return $ + n.toFixed(2);
+    }
+
+    async function loadAllParts() {
+      const lists = [];
+      for (const file of DATA_FILES) {
+        try {
+          const res = await fetch(file, { cache no-store });
+          if (!res.ok) throw new Error(`${file} → ${res.status}`);
+          const data = await res.json();
+          if (Array.isArray(data)) lists.push(...data);
+        } catch (e) {
+          console.warn(Failed to load, file, e);
+        }
+      }
+
+      return lists.map(p = ({
+        ...p,
+        _cond normalizedCondition(p),
+        _displayName normalizeName(p)
+      }));
+    }
+
+    function applyFilters(items) {
+      const q = state.search.trim().toLowerCase();
+
+      let out = items.filter(p = {
+        if (state.partType !== ALL && p.partType !== state.partType) return false;
+        if (state.site !== ALL && (p.site  ).toLowerCase() !== state.site.toLowerCase()) return false;
+        if (state.condition !== ALL && (p._cond  Unknown) !== state.condition) return false;
+        if (q) {
+          const hay = `${p._displayName  } ${p.title  } ${p.keyword  }`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      if (state.sort === price-asc) out.sort((a,b) = (a.price  1e12) - (b.price  1e12));
+      if (state.sort === price-desc) out.sort((a,b) = (b.price  -1) - (a.price  -1));
+      if (state.sort === title-asc) out.sort((a,b) = String(a._displayName).localeCompare(String(b._displayName)));
+
+      return out;
+    }
+
+    function card(part) {
+      const rawImg = (part.image_url && String(part.image_url).trim())  part.image_url  ;
+      const upgraded = rawImg  upgradeEbayImg(rawImg)  ;
+      const imgSrc = upgraded  FALLBACK_IMG;
+
+      const el = document.createElement(div);
+      el.className = card;
+
+      const img = document.createElement(img);
+      img.className = thumb;
+      img.loading = lazy;
+      img.decoding = async;
+      img.referrerPolicy = no-referrer;
+      img.src = imgSrc;
+
+      img.onerror = () = {
+        if (rawImg && img.src !== rawImg) {
+          img.src = rawImg;
+          img.onerror = () = { img.src = FALLBACK_IMG; };
+        } else {
+          img.src = FALLBACK_IMG;
+        }
+      };
+
+      const content = document.createElement(div);
+      content.className = content;
+
+      const title = document.createElement(p);
+      title.className = title;
+      title.textContent = part._displayName  part.title  part.name  Untitled;
+
+      const sub = document.createElement(p);
+      sub.className = subtitle;
+      sub.textContent = state.showRaw  (part.title  part.name  )  ;
+
+      const row = document.createElement(div);
+      row.className = row;
+
+      const price = document.createElement(span);
+      price.className = price;
+      price.textContent = money(part.price);
+
+      const pill1 = document.createElement(span);
+      pill1.className = pill;
+      pill1.textContent = part.partType  Unknown;
+
+      const pill2 = document.createElement(span);
+      pill2.className = pill;
+      pill2.textContent = part._cond  Unknown;
+
+      const siteBadge = document.createElement(span);
+      siteBadge.className = site-badge;
+      siteBadge.textContent = (part.site  unknown).toUpperCase();
+
+      row.appendChild(price);
+      row.appendChild(siteBadge);
+      row.appendChild(pill1);
+      row.appendChild(pill2);
+
+      const btn = document.createElement(a);
+      btn.className = btn;
+      btn.href = part.url  #;
+      btn.target = _blank;
+      btn.rel = noopener noreferrer;
+      btn.textContent = Open Listing;
+
+      content.appendChild(title);
+      if (state.showRaw) content.appendChild(sub);
+      content.appendChild(row);
+      content.appendChild(btn);
+
+      el.appendChild(img);
+      el.appendChild(content);
+      return el;
+    }
+
+    function render() {
+      const grid = document.getElementById(grid);
+      grid.innerHTML = ;
+
+      const filtered = applyFilters(state.all);
+      for (const p of filtered) grid.appendChild(card(p));
+
+      document.getElementById(meta).textContent =
+        `${filtered.length.toLocaleString()} shown • ${state.all.length.toLocaleString()} total`;
+    }
+
+    function wireControls() {
+      document.getElementById(partType).addEventListener(change, (e) = {
+        state.partType = e.target.value;
+        render();
+      });
+      document.getElementById(site).addEventListener(change, (e) = {
+        state.site = e.target.value;
+        render();
+      });
+      document.getElementById(condition).addEventListener(change, (e) = {
+        state.condition = e.target.value;
+        render();
+      });
+      document.getElementById(sort).addEventListener(change, (e) = {
+        state.sort = e.target.value;
+        render();
+      });
+      document.getElementById(search).addEventListener(input, (e) = {
+        state.search = e.target.value;
+        render();
+      });
+      document.getElementById(showRaw).addEventListener(change, (e) = {
+        state.showRaw = !!e.target.checked;
+        render();
+      });
+    }
+
+    (async function init() {
+      wireControls();
+      document.getElementById(error).textContent = ;
+
+      const parts = await loadAllParts();
+      state.all = parts;
+
+      if (!parts.length) {
+        document.getElementById(error).textContent =
+          No parts loaded. Check that data.json files exist and are being served.;
+      }
+
+      render();
+    })();
+  script
+body
+html
