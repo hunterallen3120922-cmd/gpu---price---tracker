@@ -22,11 +22,12 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .size-button:hover{background:var(--accent-hover);transform:scale(1.1)}
 .size-button:active{transform:scale(0.95)}
 .size-label{color:var(--text-secondary);font-size:.875rem;padding:0 .5rem}
+.size-label-mobile{display:none;font-size:1.2rem}
 .filter-tabs{display:flex;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap;animation:fadeInUp 0.8s ease-out 0.3s;animation-fill-mode:backwards}
 .filter-tab{padding:.75rem 1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;color:var(--text-secondary);cursor:pointer;transition:all .3s;font-weight:500}
 .filter-tab:hover{border-color:var(--accent);color:var(--text-primary)}
 .filter-tab.active{background:var(--accent);color:white;border-color:var(--accent)}
-.parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--card-size),1fr));gap:1.5rem;transition:all .3s ease-out}
+.parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--card-size),1fr));gap:1.5rem;transition:opacity 0.15s ease-out}
 .part-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;position:relative;animation:fadeInUp 0.6s ease-out;animation-fill-mode:backwards}
 .part-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:rgba(59,130,246,.3)}
 .part-badge{position:absolute;top:12px;right:12px;background:rgba(239,68,68,.9);color:white;padding:.25rem .75rem;border-radius:999px;font-size:.75rem;font-weight:700;z-index:10}
@@ -51,13 +52,13 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .browse-container{padding:0 1rem}
 .browse-header{flex-direction:column;align-items:flex-start}
 .browse-header h1{font-size:1.75rem}
-.controls{width:100%;justify-content:space-between}
+.controls{width:100%;justify-content:flex-end}
+.size-label{display:none}
+.size-label-mobile{display:block}
 .filter-tabs{gap:.25rem}
 .filter-tab{padding:.5rem 1rem;font-size:.875rem}
-.parts-grid{grid-template-columns:1fr;gap:1rem}
-.part-card{--card-size:100%}
+.parts-grid{gap:1rem}
 .part-image{aspect-ratio:4/5;object-fit:contain}
-.size-control{display:none}
 }
 
 @media (max-width: 480px) {
@@ -81,6 +82,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <div class="size-control">
 <button class="size-button" onclick="decreaseCardSize()">−</button>
 <span class="size-label">Card Size</span>
+<span class="size-label-mobile">🔍</span>
 <button class="size-button" onclick="increaseCardSize()">+</button>
 </div>
 </div>
@@ -212,14 +214,21 @@ function decreaseCardSize() {
 }
 
 function updateCardSize() {
+    // Update CSS variable
     document.documentElement.style.setProperty('--card-size', `${cardSize}px`);
     
-    // Add a subtle animation effect
+    // Force browser to recalculate layout
     const grid = document.getElementById('partsGrid');
-    grid.style.transform = 'scale(0.98)';
+    grid.style.gridTemplateColumns = `repeat(auto-fill, minmax(${cardSize}px, 1fr))`;
+    
+    // Add a subtle animation effect
+    grid.style.opacity = '0.7';
     setTimeout(() => {
-        grid.style.transform = 'scale(1)';
-    }, 100);
+        grid.style.opacity = '1';
+    }, 150);
+    
+    // Log for debugging
+    console.log('Card size updated to:', cardSize);
 }
 
 // Load parts on page load
