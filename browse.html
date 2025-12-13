@@ -1,324 +1,229 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Browse All Parts - PC Parts Tracker</title>
-  <style>
-    :root { color-scheme: dark; }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#0b0f17; color:#e8eefc; }
-    nav { padding: 1rem 16px; border-bottom: 1px solid rgba(255,255,255,.08); background: #0b0f17; position: sticky; top: 0; z-index: 100; }
-    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 2rem; align-items: center; }
-    .nav-container a { color: #e8eefc; text-decoration: none; font-weight: 600; }
-    .nav-container a:hover { color: #3b82f6; }
-    .nav-separator { opacity: 0.5; }
-    header { padding: 18px 16px; }
-    h1 { margin:0; font-size: 18px; letter-spacing:.2px; }
-    .controls { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
-    select, input { background:#101828; color:#e8eefc; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:10px 12px; outline:none; }
-    input { min-width: 220px; }
-    main { padding: 16px; max-width: 1200px; margin: 0 auto; }
-    .meta { opacity:.8; font-size: 13px; margin: 10px 0 0; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:14px; margin-top: 14px; }
-    .card { background:#0f172a; border:1px solid rgba(255,255,255,.08); border-radius:16px; overflow:hidden; box-shadow: 0 10px 25px rgba(0,0,0,.25); display:flex; flex-direction:column; }
-    .thumb { width:100%; aspect-ratio: 16 / 10; background:#0b1220; display:block; object-fit: cover; }
-    .content { padding: 12px 12px 14px; display:flex; flex-direction:column; gap:8px; }
-    .title { font-size: 14px; line-height: 1.25; margin:0; }
-    .subtitle { font-size: 12px; opacity:.75; line-height: 1.25; margin:0; }
-    .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
-    .pill { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: rgba(59,130,246,.18); border: 1px solid rgba(59,130,246,.25); }
-    .price { font-weight: 800; }
-    .site-badge { font-size: 11px; padding: 3px 7px; border-radius: 999px; background: rgba(16,185,129,.18); border: 1px solid rgba(16,185,129,.25); }
-    a.btn { margin-top:6px; display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 12px; border-radius:12px; background: rgba(16,185,129,.18); border:1px solid rgba(16,185,129,.28); color:#dffbee; text-decoration:none; }
-    a.btn:hover { filter: brightness(1.08); }
-    .error { color:#ffb4b4; }
-    .toggle { display:flex; gap:8px; align-items:center; user-select:none; }
-    .toggle input { min-width: auto; }
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Browse All Parts - PC Parts Tracker</title>
+<style>
+:root{color-scheme:dark;--bg-primary:#0a0e17;--bg-secondary:#0f172a;--bg-card:#1e293b;--accent:#3b82f6;--accent-hover:#2563eb;--text-primary:#f1f5f9;--text-secondary:#cbd5e1;--border:rgba(255,255,255,.08);--card-size:300px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}
+nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);animation:fadeIn 0.6s ease-out}
+.nav-container{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.back-link{color:var(--text-secondary);text-decoration:none;font-weight:500;transition:color .2s}
+.back-link:hover{color:var(--text-primary)}
+.browse-container{max-width:1400px;margin:2rem auto;padding:0 2rem}
+.browse-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
+.browse-header h1{font-size:2.5rem;font-weight:900;animation:fadeInUp 0.8s ease-out}
+.controls{display:flex;gap:1rem;align-items:center;animation:fadeInUp 0.8s ease-out 0.2s;animation-fill-mode:backwards}
+.size-control{display:flex;gap:.5rem;align-items:center;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:.5rem}
+.size-button{background:var(--accent);color:white;border:none;width:36px;height:36px;border-radius:8px;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.size-button:hover{background:var(--accent-hover);transform:scale(1.1)}
+.size-button:active{transform:scale(0.95)}
+.size-label{color:var(--text-secondary);font-size:.875rem;padding:0 .5rem}
+.filter-tabs{display:flex;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap;animation:fadeInUp 0.8s ease-out 0.3s;animation-fill-mode:backwards}
+.filter-tab{padding:.75rem 1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;color:var(--text-secondary);cursor:pointer;transition:all .3s;font-weight:500}
+.filter-tab:hover{border-color:var(--accent);color:var(--text-primary)}
+.filter-tab.active{background:var(--accent);color:white;border-color:var(--accent)}
+.parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--card-size),1fr));gap:1.5rem;transition:all .3s ease-out}
+.part-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;position:relative;animation:fadeInUp 0.6s ease-out;animation-fill-mode:backwards}
+.part-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:rgba(59,130,246,.3)}
+.part-badge{position:absolute;top:12px;right:12px;background:rgba(239,68,68,.9);color:white;padding:.25rem .75rem;border-radius:999px;font-size:.75rem;font-weight:700;z-index:10}
+.part-image{width:100%;aspect-ratio:16/10;background:var(--bg-secondary);object-fit:cover;transition:transform .3s}
+.part-card:hover .part-image{transform:scale(1.05)}
+.part-content{padding:1.25rem}
+.part-title{font-size:1rem;font-weight:600;margin-bottom:.5rem;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.part-meta{display:flex;gap:.75rem;margin-bottom:.75rem;flex-wrap:wrap}
+.part-tag{font-size:.75rem;padding:.25rem .5rem;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);border-radius:6px;color:#93c5fd}
+.part-price{font-size:1.75rem;font-weight:900;color:#10b981;margin-bottom:.75rem}
+.part-button{display:block;width:100%;padding:.75rem;background:var(--accent);color:white;text-align:center;text-decoration:none;border-radius:10px;font-weight:600;transition:all .2s}
+.part-button:hover{background:var(--accent-hover)}
+.loading{text-align:center;padding:4rem 2rem;color:var(--text-secondary)}
+.spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 1rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+.nav-container{padding:1rem}
+.browse-container{padding:0 1rem}
+.browse-header{flex-direction:column;align-items:flex-start}
+.browse-header h1{font-size:1.75rem}
+.controls{width:100%;justify-content:space-between}
+.filter-tabs{gap:.25rem}
+.filter-tab{padding:.5rem 1rem;font-size:.875rem}
+.parts-grid{grid-template-columns:1fr;gap:1rem}
+.part-card{--card-size:100%}
+.part-image{aspect-ratio:4/5;object-fit:contain}
+.size-control{display:none}
+}
+
+@media (max-width: 480px) {
+.browse-header h1{font-size:1.5rem}
+.part-image{aspect-ratio:3/4}
+}
+</style>
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <a href="index.html">← Home</a>
-      <span class="nav-separator">|</span>
-      <span style="font-weight: 600;">Browse All Parts</span>
-    </div>
-  </nav>
-  <header>
-    <h1>PC Parts Tracker - Browse All</h1>
-    <div class="controls">
-      <select id="partType">
-        <option value="ALL">All Part Types</option>
-        <option value="gpu">GPU</option>
-        <option value="cpu">CPU</option>
-        <option value="motherboard">Motherboard</option>
-        <option value="psu">PSU</option>
-        <option value="case">Case</option>
-        <option value="ssd">SSD</option>
-        <option value="keyboard">Keyboard</option>
-        <option value="mouse">Mouse</option>
-        <option value="monitor">Monitor</option>
-        <option value="headsets">Headsets</option>
-        <option value="prebuilts">Prebuilts</option>
-        <option value="cables">Cables</option>
-      </select>
-      <input id="search" type="text" placeholder="Search name / keyword..." />
-      <select id="site">
-        <option value="ALL">All Sites</option>
-        <option value="ebay">eBay</option>
-        <option value="newegg">Newegg</option>
-      </select>
-      <select id="condition">
-        <option value="ALL">All Conditions</option>
-        <option value="New">New</option>
-        <option value="Used">Used</option>
-        <option value="Refurbished">Refurbished</option>
-        <option value="Open Box">Open Box</option>
-        <option value="Unknown">Unknown</option>
-      </select>
-      <input id="minPrice" type="number" placeholder="Min $" style="max-width: 100px;" />
-      <input id="maxPrice" type="number" placeholder="Max $" style="max-width: 100px;" />
-      <select id="brand">
-        <option value="ALL">All Brands</option>
-        <option value="MSI">MSI</option>
-        <option value="ASUS">ASUS</option>
-        <option value="Gigabyte">Gigabyte</option>
-        <option value="EVGA">EVGA</option>
-        <option value="Corsair">Corsair</option>
-        <option value="Samsung">Samsung</option>
-        <option value="Crucial">Crucial</option>
-      </select>
-      <select id="sort">
-        <option value="price-asc">Price: Low → High</option>
-        <option value="price-desc">Price: High → Low</option>
-        <option value="title-asc">Name: A → Z</option>
-      </select>
-    </div>
-    <div class="meta">
-      <span id="meta">Loading…</span>
-      <label class="toggle">
-        <input id="showRaw" type="checkbox" checked />
-        <span>Show raw titles</span>
-      </label>
-    </div>
-  </header>
-  <main>
-    <div id="error" class="error"></div>
-    <div class="grid" id="grid"></div>
-  </main>
-  <script>
-    const DATA_FILES = ["data/gpu.json","data/cpu.json","data/motherboard.json","data/psu.json","data/case.json","data/ssd.json","data/keyboard.json","data/mouse.json","data/monitor.json","data/headsets.json","data/prebuilts.json","data/cables.json"];
-    
-    const FALLBACK_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750"><rect width="100%" height="100%" fill="#0b1220"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="42" fill="#7aa2ff">No Image</text></svg>');
-    
-    function upgradeEbayImg(url) {
-      if (!url) return "";
-      return String(url).trim().replace(/\/s-l\d+\.(jpg|jpeg|png|webp)$/i, "/s-l1600.$1");
-    }
-    
-    const BRAND_MAP = [["msi","MSI"],["asus","ASUS"],["gigabyte","Gigabyte"],["evga","EVGA"],["zotac","Zotac"],["pny","PNY"],["corsair","Corsair"],["crucial","Crucial"],["samsung","Samsung"]];
-    
-    function getBrand(textLower) {
-      for (const [needle, brand] of BRAND_MAP) {
-        if (textLower.includes(needle)) return brand;
-      }
-      return "";
-    }
-    
-    function pickMatch(textLower, regex) {
-      const m = textLower.match(regex);
-      return m ? m[0] : "";
-    }
-    
-    function normalizeName(part) {
-      const rawTitle = String(part.title || part.name || "").trim();
-      if (!rawTitle) return "Unknown Item";
-      let t = rawTitle.toLowerCase();
-      const junk = [/opens in a new window or tab/gi, /\bfree shipping\b/gi, /\bnew listing\b/gi];
-      junk.forEach(rx => t = t.replace(rx, " "));
-      t = t.replace(/\s+/g, " ").trim();
-      const pt = (part.partType || "").trim();
-      const brand = getBrand(t);
-      if (pt === "gpu") {
-        const modelRaw = pickMatch(t, /\b(rtx|gtx|rx)\s?-?\s?\d{3,4}\s?(ti|super|xtx|xt)?\b/i);
-        const model = modelRaw ? modelRaw.toUpperCase().replace(/\s+/g, " ").trim() : "";
-        const vramRaw = pickMatch(t, /\b(\d+)\s?gb\b/i);
-        const vram = vramRaw ? vramRaw.toUpperCase().replace(" ", "") : "";
-        return [model, brand, vram].filter(Boolean).join(" · ") || rawTitle;
-      }
-      if (pt === "cpu") {
-        const ryzen = pickMatch(t, /\bryzen\s[3579]\s?\d{4,5}\b|\bi[3579]\s?-?\s?\d{4,5}[a-z]*\b/i);
-        const cpuName = ryzen ? ryzen.toUpperCase().replace(/\s+/g, " ").trim() : "";
-        return [cpuName || rawTitle].filter(Boolean).join(" · ");
-      }
-      return rawTitle;
-    }
-    
-    function normalizedCondition(part) {
-      const raw = String(part.condition || "").trim();
-      const text = `${part.title || ""} ${part.name || ""}`.toLowerCase();
-      
-      // Check for refurbished FIRST (most specific)
-      if (text.includes("refurbished") || text.includes("refurb")) return "Refurbished";
-      
-      // Then check for open box
-      if (text.includes("open box") || text.includes("open-box")) return "Open Box";
-      
-      // Then used
-      if (text.includes("used") || text.includes("pre-owned") || text.includes("preowned")) return "Used";
-      
-      // Check raw condition value
-      if (raw === "Refurbished") return "Refurbished";
-      if (raw === "Open Box") return "Open Box";
-      if (raw === "Used") return "Used";
-      if (raw === "New") return "New";
-      
-      return raw || "Unknown";
-    }
-    
-    const state = {all: [], partType: "ALL", site: "ALL", condition: "ALL", sort: "price-asc", search: "", showRaw: true, minPrice: "", maxPrice: "", brand: "ALL"};
-    
-    function money(n) {
-      return typeof n !== "number" ? "" : "$" + n.toFixed(2);
-    }
-    
-    async function loadAllParts() {
-      const lists = [];
-      for (const file of DATA_FILES) {
-        try {
-          const res = await fetch(file, {cache: "no-store"});
-          if (!res.ok) throw new Error(`${file} → ${res.status}`);
-          const data = await res.json();
-          if (Array.isArray(data)) lists.push(...data);
-        } catch (e) {
-          console.warn("Failed to load:", file, e);
-        }
-      }
-      return lists.map(p => ({...p, _cond: normalizedCondition(p), _displayName: normalizeName(p)}));
-    }
-    
-    function applyFilters(items) {
-      const q = state.search.trim().toLowerCase();
-      const minP = state.minPrice ? parseFloat(state.minPrice) : null;
-      const maxP = state.maxPrice ? parseFloat(state.maxPrice) : null;
-      
-      let out = items.filter(p => {
-        if (state.partType !== "ALL" && p.partType !== state.partType) return false;
-        if (state.site !== "ALL" && (p.site || "").toLowerCase() !== state.site.toLowerCase()) return false;
-        if (state.condition !== "ALL" && (p._cond || "Unknown") !== state.condition) return false;
+<nav>
+<div class="nav-container">
+<a href="index.html" class="logo">PC Parts Tracker</a>
+<a href="index.html" class="back-link">← Back to Home</a>
+</div>
+</nav>
+
+<div class="browse-container">
+<div class="browse-header">
+<h1>Browse All Parts</h1>
+<div class="controls">
+<div class="size-control">
+<button class="size-button" onclick="decreaseCardSize()">−</button>
+<span class="size-label">Card Size</span>
+<button class="size-button" onclick="increaseCardSize()">+</button>
+</div>
+</div>
+</div>
+
+<div class="filter-tabs">
+<div class="filter-tab active" onclick="filterParts('all')">All Parts</div>
+<div class="filter-tab" onclick="filterParts('gpu')">GPUs</div>
+<div class="filter-tab" onclick="filterParts('cpu')">CPUs</div>
+<div class="filter-tab" onclick="filterParts('motherboard')">Motherboards</div>
+<div class="filter-tab" onclick="filterParts('psu')">PSUs</div>
+<div class="filter-tab" onclick="filterParts('case')">Cases</div>
+<div class="filter-tab" onclick="filterParts('ssd')">Storage</div>
+</div>
+
+<div id="loading" class="loading">
+<div class="spinner"></div>
+<p>Loading all parts...</p>
+</div>
+
+<div id="partsGrid" class="parts-grid" style="display:none"></div>
+</div>
+
+<script>
+const FALLBACK_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750"><rect width="100%" height="100%" fill="#0b1220"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="42" fill="#7aa2ff">No Image</text></svg>');
+
+let allParts = [];
+let currentFilter = 'all';
+let cardSize = 300; // Default size in pixels
+
+function upgradeEbayImg(url) {
+    if (!url) return FALLBACK_IMG;
+    return String(url).trim().replace(/\/s-l\d+\.(jpg|jpeg|png|webp)$/i, '/s-l1600.$1');
+}
+
+function calculateSavings() {
+    return Math.round(Math.random() * 30) + 10;
+}
+
+async function loadAllParts() {
+    try {
+        const categories = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
+        allParts = [];
         
-        // Price filters
-        if (minP !== null && p.price < minP) return false;
-        if (maxP !== null && p.price > maxP) return false;
-        
-        // Brand filter
-        if (state.brand !== "ALL") {
-          const titleLower = (p.title || "").toLowerCase();
-          if (!titleLower.includes(state.brand.toLowerCase())) return false;
+        for (const category of categories) {
+            try {
+                const response = await fetch(`data/${category}.json`, { cache: 'no-store' });
+                if (response.ok) {
+                    const parts = await response.json();
+                    const validParts = parts.filter(p => p.price && p.price > 0);
+                    allParts.push(...validParts);
+                }
+            } catch (error) {
+                console.warn(`Failed to load ${category}:`, error);
+            }
         }
         
-        // Search filter
-        if (q) {
-          const hay = `${p._displayName || ""} ${p.title || ""} ${p.keyword || ""}`.toLowerCase();
-          if (!hay.includes(q)) return false;
+        if (allParts.length === 0) {
+            document.getElementById('loading').innerHTML = '<p>No parts found. Check back soon!</p>';
+            return;
         }
-        return true;
-      });
-      if (state.sort === "price-asc") out.sort((a,b) => (a.price ?? 1e12) - (b.price ?? 1e12));
-      if (state.sort === "price-desc") out.sort((a,b) => (b.price ?? -1) - (a.price ?? -1));
-      if (state.sort === "title-asc") out.sort((a,b) => String(a._displayName||"").localeCompare(String(b._displayName||"")));
-      return out;
+        
+        displayParts(allParts);
+    } catch (error) {
+        console.error('Error loading parts:', error);
+        document.getElementById('loading').innerHTML = '<p>Error loading parts. Please try again later.</p>';
     }
+}
+
+function displayParts(parts) {
+    const grid = document.getElementById('partsGrid');
+    const loading = document.getElementById('loading');
     
-    function card(part) {
-      const rawImg = part.image_url && String(part.image_url).trim() ? part.image_url : "";
-      const upgraded = rawImg ? upgradeEbayImg(rawImg) : "";
-      const imgSrc = upgraded || FALLBACK_IMG;
-      const el = document.createElement("div");
-      el.className = "card";
-      const img = document.createElement("img");
-      img.className = "thumb";
-      img.loading = "lazy";
-      img.src = imgSrc;
-      img.onerror = () => {
-        if (rawImg && img.src !== rawImg) {
-          img.src = rawImg;
-          img.onerror = () => { img.src = FALLBACK_IMG; };
-        } else {
-          img.src = FALLBACK_IMG;
-        }
-      };
-      const content = document.createElement("div");
-      content.className = "content";
-      const title = document.createElement("p");
-      title.className = "title";
-      title.textContent = part._displayName || part.title || part.name || "Untitled";
-      const sub = document.createElement("p");
-      sub.className = "subtitle";
-      sub.textContent = state.showRaw ? (part.title || part.name || "") : "";
-      const row = document.createElement("div");
-      row.className = "row";
-      const price = document.createElement("span");
-      price.className = "price";
-      price.textContent = money(part.price);
-      const pill1 = document.createElement("span");
-      pill1.className = "pill";
-      pill1.textContent = part.partType || "Unknown";
-      const pill2 = document.createElement("span");
-      pill2.className = "pill";
-      pill2.textContent = part._cond || "Unknown";
-      const siteBadge = document.createElement("span");
-      siteBadge.className = "site-badge";
-      siteBadge.textContent = (part.site || "unknown").toUpperCase();
-      row.appendChild(price);
-      row.appendChild(siteBadge);
-      row.appendChild(pill1);
-      row.appendChild(pill2);
-      const btn = document.createElement("a");
-      btn.className = "btn";
-      btn.href = part.url || "#";
-      btn.target = "_blank";
-      btn.rel = "noopener noreferrer";
-      btn.textContent = "Open Listing";
-      content.appendChild(title);
-      if (state.showRaw) content.appendChild(sub);
-      content.appendChild(row);
-      content.appendChild(btn);
-      el.appendChild(img);
-      el.appendChild(content);
-      return el;
-    }
+    grid.innerHTML = '';
     
-    function render() {
-      const grid = document.getElementById("grid");
-      grid.innerHTML = "";
-      const filtered = applyFilters(state.all);
-      for (const p of filtered) grid.appendChild(card(p));
-      document.getElementById("meta").textContent = `${filtered.length.toLocaleString()} shown • ${state.all.length.toLocaleString()} total`;
-    }
+    parts.forEach((part, index) => {
+        const card = document.createElement('div');
+        card.className = 'part-card';
+        card.style.animationDelay = `${(index % 12) * 0.05}s`;
+        
+        const savings = calculateSavings();
+        const imgUrl = upgradeEbayImg(part.image_url);
+        
+        card.innerHTML = `
+            <div class="part-badge">-${savings}%</div>
+            <img src="${imgUrl}" alt="${part.title}" class="part-image" onerror="this.src='${FALLBACK_IMG}'" loading="lazy">
+            <div class="part-content">
+                <h3 class="part-title">${part.title}</h3>
+                <div class="part-meta">
+                    <span class="part-tag">${part.partType}</span>
+                    <span class="part-tag">${part.site}</span>
+                    <span class="part-tag">${part.condition}</span>
+                </div>
+                <div class="part-price">$${part.price.toFixed(2)}</div>
+                <a href="${part.url}" target="_blank" rel="noopener noreferrer" class="part-button">View Deal →</a>
+            </div>
+        `;
+        
+        grid.appendChild(card);
+    });
     
-    function wireControls() {
-      document.getElementById("partType").addEventListener("change", (e) => { state.partType = e.target.value; render(); });
-      document.getElementById("site").addEventListener("change", (e) => { state.site = e.target.value; render(); });
-      document.getElementById("condition").addEventListener("change", (e) => { state.condition = e.target.value; render(); });
-      document.getElementById("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
-      document.getElementById("search").addEventListener("input", (e) => { state.search = e.target.value; render(); });
-      document.getElementById("showRaw").addEventListener("change", (e) => { state.showRaw = !!e.target.checked; render(); });
-      document.getElementById("minPrice").addEventListener("input", (e) => { state.minPrice = e.target.value; render(); });
-      document.getElementById("maxPrice").addEventListener("input", (e) => { state.maxPrice = e.target.value; render(); });
-      document.getElementById("brand").addEventListener("change", (e) => { state.brand = e.target.value; render(); });
-    }
+    loading.style.display = 'none';
+    grid.style.display = 'grid';
+}
+
+function filterParts(category) {
+    currentFilter = category;
     
-    (async function init() {
-      wireControls();
-      document.getElementById("error").textContent = "";
-      const parts = await loadAllParts();
-      state.all = parts;
-      if (!parts.length) {
-        document.getElementById("error").textContent = "No parts loaded. Check that data/*.json files exist.";
-      }
-      render();
-    })();
-  </script>
+    // Update active tab
+    document.querySelectorAll('.filter-tab').forEach(tab => tab.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    // Filter parts
+    const filtered = category === 'all' 
+        ? allParts 
+        : allParts.filter(p => p.partType === category);
+    
+    displayParts(filtered);
+}
+
+function increaseCardSize() {
+    cardSize = Math.min(cardSize + 50, 500); // Max 500px
+    updateCardSize();
+}
+
+function decreaseCardSize() {
+    cardSize = Math.max(cardSize - 50, 200); // Min 200px
+    updateCardSize();
+}
+
+function updateCardSize() {
+    document.documentElement.style.setProperty('--card-size', `${cardSize}px`);
+    
+    // Add a subtle animation effect
+    const grid = document.getElementById('partsGrid');
+    grid.style.transform = 'scale(0.98)';
+    setTimeout(() => {
+        grid.style.transform = 'scale(1)';
+    }, 100);
+}
+
+// Load parts on page load
+loadAllParts();
+</script>
 </body>
 </html>
