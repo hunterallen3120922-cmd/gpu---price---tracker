@@ -382,7 +382,10 @@ async function generateBuild() {
         });
         
         if (!response.ok) {
-            throw new Error('Worker request failed');
+            const errorData = await response.json();
+            console.error('Worker error details:', errorData);
+            alert('Worker Error: ' + (errorData.error || 'Unknown error') + '\n\nDetails: ' + JSON.stringify(errorData.details || ''));
+            throw new Error('Worker request failed: ' + (errorData.error || 'Unknown'));
         }
         
         const result = await response.json();
