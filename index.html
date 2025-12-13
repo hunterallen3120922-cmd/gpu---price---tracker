@@ -114,6 +114,28 @@ nav{animation:fadeIn 0.6s ease-out}
 .build-total{background:linear-gradient(135deg,rgba(139,92,246,.2) 0%,rgba(59,130,246,.2) 100%);border:2px solid rgba(139,92,246,.3);border-radius:12px;padding:1.5rem;margin-top:1.5rem;text-align:center}
 .build-total h3{margin:0 0 .5rem 0;font-size:1.25rem}
 .build-total .total-price{font-size:2.5rem;font-weight:900;color:#10b981}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+.hero h1{font-size:2rem}
+.hero p{font-size:1rem}
+.nav-container{padding:1rem}
+.hero{padding:2rem 1rem}
+.featured-section{padding:0 1rem}
+.deals-container{padding:1rem}
+.deals-grid{gap:0}
+.deal-card{width:100%;min-width:100%;max-width:100%;margin:0}
+.deal-image{aspect-ratio:16/9;object-fit:contain;background:var(--bg-secondary)}
+.section-header{flex-direction:column;align-items:flex-start;gap:1rem}
+.cta-button{font-size:1rem;padding:.875rem 1.5rem}
+}
+
+@media (max-width: 480px) {
+.hero h1{font-size:1.75rem}
+.logo{font-size:1.25rem}
+.deal-title{font-size:.9rem}
+.deal-price{font-size:1.5rem}
+}
 </style>
 </head>
 <body>
@@ -375,8 +397,17 @@ function displayDeals(deals) {
         const cardWidth = 300;
         const gap = 24; // 1.5rem
         
-        // Calculate cards that fit - being conservative to never overflow
-        let cardsPerRow = Math.floor((containerWidth + gap) / (cardWidth + gap));
+        // Check if mobile (screen width < 768px)
+        const isMobile = window.innerWidth < 768;
+        
+        // On mobile, always show exactly 1 card
+        let cardsPerRow;
+        if (isMobile) {
+            cardsPerRow = 1;
+        } else {
+            // Calculate cards that fit - being conservative to never overflow
+            cardsPerRow = Math.floor((containerWidth + gap) / (cardWidth + gap));
+        }
         
         // Safety check - ensure at least 1 card, max based on available deals
         cardsPerRow = Math.max(1, Math.min(cardsPerRow, allDeals.length));

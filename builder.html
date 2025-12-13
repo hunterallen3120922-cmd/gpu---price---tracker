@@ -116,6 +116,34 @@ nav{animation:fadeIn 0.6s ease-out}
 .part-card:hover .part-image{transform:scale(1.05)}
 .navigation-buttons{animation:fadeInUp 0.6s ease-out 0.5s;animation-fill-mode:backwards}
 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+.parts-grid{grid-template-columns:repeat(2,1fr);gap:.75rem}
+.part-slot{padding:1rem .5rem;min-height:100px}
+.part-slot h3{font-size:.75rem}
+.part-slot .part-name{font-size:.7rem}
+.part-slot .part-price{font-size:.875rem}
+.section-header{flex-direction:column;align-items:flex-start;gap:1rem}
+.section-header .nav-buttons{width:100%;justify-content:space-between}
+.section-header h2{font-size:1.5rem}
+.parts-list{grid-template-columns:1fr;gap:1rem}
+.part-card{max-width:100%}
+.parts-overview{padding:0 1rem}
+.builder-section{padding:0 1rem}
+.summary-section{padding:1rem;max-width:100%}
+.summary-part{flex-direction:column;align-items:flex-start;gap:.5rem}
+.nav-button{padding:.625rem 1.25rem;font-size:.9rem}
+}
+
+@media (max-width: 480px) {
+.parts-grid{grid-template-columns:1fr;gap:.5rem}
+.part-slot{min-height:80px}
+.logo{font-size:1.25rem}
+.section-header h2{font-size:1.25rem}
+.part-price-big{font-size:1.5rem}
+.summary-total .total-price{font-size:2rem}
+}
+
 .hidden{display:none}
 </style>
 </head>
