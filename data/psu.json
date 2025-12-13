@@ -55,17 +55,6 @@
     "title": "REFURBISHED Cooler Master V650 - 650W Compact Fully Modular 80 PLUS Gold Power Supply P/N: RS-650-AFBA-G1"
   },
   {
-    "name": "ASRock Challenger CL-650G 650W 80 PLUS GOLD Certified Non-Modular Power Supply, ATX3.1 Ready, 5 Years Warranty",
-    "price": 59.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/asrock-atx-3-1-650-w-80-plus-gold-certified-power-supply-black-cl-650g/p/N82E16817955016",
-    "partType": "psu",
-    "keyword": "650w power supply",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/17-955-016-04.png",
-    "site": "newegg",
-    "title": "ASRock Challenger CL-650G 650W 80 PLUS GOLD Certified Non-Modular Power Supply, ATX3.1 Ready, 5 Years Warranty"
-  },
-  {
     "name": "SAMA GT650BK Black 80 PLUS Gold Fully Modular ATX Power Supply - ATX 3.1 & PCIe 5.1 Compliant - Japanese Capacitors - FDB Fan with Auto Speed Control - 5 Year Warranty",
     "price": 59.0,
     "condition": "New",
@@ -75,6 +64,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/B41TS2511270IQ92S62.jpg",
     "site": "newegg",
     "title": "SAMA GT650BK Black 80 PLUS Gold Fully Modular ATX Power Supply - ATX 3.1 & PCIe 5.1 Compliant - Japanese Capacitors - FDB Fan with Auto Speed Control - 5 Year Warranty"
+  },
+  {
+    "name": "ASRock Challenger CL-650G 650W 80 PLUS GOLD Certified Non-Modular Power Supply, ATX3.1 Ready, 5 Years Warranty",
+    "price": 59.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/asrock-atx-3-1-650-w-80-plus-gold-certified-power-supply-black-cl-650g/p/N82E16817955016",
+    "partType": "psu",
+    "keyword": "650w power supply",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/17-955-016-04.png",
+    "site": "newegg",
+    "title": "ASRock Challenger CL-650G 650W 80 PLUS GOLD Certified Non-Modular Power Supply, ATX3.1 Ready, 5 Years Warranty"
   },
   {
     "name": "SEGOTEP 650W 80 Plus Gold Power Supply Non-Modular with 6+2 Pin Connectors PFC Protection and RoHS Compliance 120mm Silent Fan Gaming PSU Black (5 Years Warranty)",
@@ -113,7 +113,7 @@
     "name": "Super Flower Combat DB 650W 80+ Bronze, 5 Years Warranty, Flexible Flat Cables, Fixed Cable Power Supply, SF-650C12DB, Black version",
     "price": 65.0,
     "condition": "New",
-    "url": "https://www.newegg.com/super-flower-atx12v-eps12v-650-w-80-plus-bronze-certified-power-supplies-sf-650c12db/p/1HU-024C-00083?Item=9SIAMNPK9A3292&cm_sp=SP-_-1061889-_-0-_-2-_-9SIAMNPK9A3292-_-650w%20power%20supply-_-650w|power|supply-_-7",
+    "url": "https://www.newegg.com/super-flower-atx12v-eps12v-650-w-80-plus-bronze-certified-power-supplies-sf-650c12db/p/1HU-024C-00083?Item=9SIAMNPK9A3292&cm_sp=SP-_-1061889-_-0-_-2-_-9SIAMNPK9A3292-_-650w%20power%20supply-_-650w|power|supply-_-5",
     "partType": "psu",
     "keyword": "650w power supply",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/AMNPS2503140POIQFE0.jpg",
@@ -245,7 +245,7 @@
     "name": "Super Flower Combat FG 650W 80+ Gold, Full Modular, ATX 3.1 / PCIe 5.0, W/12V-2x6 Cable (2x8pin - 16pin native cables) , Power Supply, FDB Fan, SF-650C12FG, Black version",
     "price": 89.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/1HU-024C-00070?Item=9SIAMNPK6F5191&cm_sp=SP-_-1061889-_-0-_-2-_-9SIAMNPK6F5191-_-650w%20power%20supply-_-650w|power|supply-_-11",
+    "url": "https://www.newegg.com/p/1HU-024C-00070?Item=9SIAMNPK6F5191&cm_sp=SP-_-1061889-_-0-_-2-_-9SIAMNPK6F5191-_-650w%20power%20supply-_-650w|power|supply-_-14",
     "partType": "psu",
     "keyword": "650w power supply",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/AMNPS24062006432E33.jpg",
@@ -289,7 +289,7 @@
     "name": "Vetroo 1000W Pink Power Supply ATX 3.1 Ready Dual PCIe 5.1, 80 Plus Gold Full Modular, Eco Mode with 120mm FDB Fan, Compact Size, 10 Year After-Sales Service",
     "price": 129.0,
     "condition": "New",
-    "url": "https://www.newegg.com/vetroo-atx-3-1-1000-w-80-plus-gold-certified-power-supplies-pink/p/1HU-021H-00022?Item=9SIBGX1KE29935&cm_sp=SP-_-2518177-_-0-_-3-_-9SIBGX1KE29935-_-650w%20power%20supply-_-650w|power|supply-_-20",
+    "url": "https://www.newegg.com/vetroo-atx-3-1-1000-w-80-plus-gold-certified-power-supplies-pink/p/1HU-021H-00022?Item=9SIBGX1KE29935&cm_sp=SP-_-2518177-_-0-_-3-_-9SIBGX1KE29935-_-650w%20power%20supply-_-650w|power|supply-_-23",
     "partType": "psu",
     "keyword": "650w power supply",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/BGX1S250909098I6JD2.jpg",
@@ -300,7 +300,7 @@
     "name": "Super Flower Leadex VII XG 850W 80+ Gold White, Cybenetics Platinum, Full Modular, ATX 3.1 & PCIe 5.1,12VHPWR Cable (2x8pin-16pin native cables) , Power Supply, FDB Fan, SF-850F14XG, White version",
     "price": 139.0,
     "condition": "New",
-    "url": "https://www.newegg.com/super-flower-leadex-vii-xg-atx-3-1-compatible-850w-80-plus-gold-certified-power-supplies-white/p/1HU-024C-00061?Item=9SIAMNPK3H3055&cm_sp=SP-_-1061889-_-0-_-3-_-9SIAMNPK3H3055-_-650w%20power%20supply-_-650w|power|supply-_-14",
+    "url": "https://www.newegg.com/super-flower-leadex-vii-xg-atx-3-1-compatible-850w-80-plus-gold-certified-power-supplies-white/p/1HU-024C-00061?Item=9SIAMNPK3H3055&cm_sp=SP-_-1061889-_-0-_-3-_-9SIAMNPK3H3055-_-650w%20power%20supply-_-650w|power|supply-_-17",
     "partType": "psu",
     "keyword": "650w power supply",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/AMNPS2311270W70QY59.jpg",
@@ -322,7 +322,7 @@
     "name": "Super Flower Leadex VII XG 1000W 80+ Gold, Cybenetics Platinum, Full Modular, ATX 3.1 & PCIe 5.1, W/12VHPWR Cable (2x8pin - 16pin native cables) , Power Supply, FDB Fan, SF-1000F14XG, Black version",
     "price": 159.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/1HU-024C-00056?Item=9SIAMNPJUA2891&cm_sp=SP-_-1061889-_-0-_-3-_-9SIAMNPJUA2891-_-650w%20power%20supply-_-650w|power|supply-_-23",
+    "url": "https://www.newegg.com/p/1HU-024C-00056?Item=9SIAMNPJUA2891&cm_sp=SP-_-1061889-_-0-_-3-_-9SIAMNPJUA2891-_-650w%20power%20supply-_-650w|power|supply-_-26",
     "partType": "psu",
     "keyword": "650w power supply",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/AMNPS2303310CL00F3E.jpg",
@@ -396,6 +396,17 @@
     "title": "CORSAIR RMx Series RM650x 2018 CP-9020178-NA 650 W ATX12V / EPS12V 80 PLUS GOLD Certified Full Modular Power Supply"
   },
   {
+    "name": "MSI MAG A650GL, Fully Modular Compact Gaming 650W Power Supply, 80+ Gold, ATX PSU, 10 Year Warranty",
+    "price": 221.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/msi-atx12v-650-w-80-plus-gold-certified-power-supply-black-mag-a650gl/p/N82E16817701023",
+    "partType": "psu",
+    "keyword": "650w power supply",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/17-701-023-16.jpg",
+    "site": "newegg",
+    "title": "MSI MAG A650GL, Fully Modular Compact Gaming 650W Power Supply, 80+ Gold, ATX PSU, 10 Year Warranty"
+  },
+  {
     "name": "Seasonic FOCUS SGX-650, 650W 80+ Gold, Full-Modular, SFX-L Form Factor, Compact Size, Fan Control in Fanless, Silent, and Cooling Mode, 10 Year Warranty, Power Supply, SSR-650SGX.",
     "price": 299.0,
     "condition": "New",
@@ -407,21 +418,10 @@
     "title": "Seasonic FOCUS SGX-650, 650W 80+ Gold, Full-Modular, SFX-L Form Factor, Compact Size, Fan Control in Fanless, Silent, and Cooling Mode, 10 Year Warranty, Power Supply, SSR-650SGX."
   },
   {
-    "name": "MSI MAG A650GL, Fully Modular Compact Gaming 650W Power Supply, 80+ Gold, ATX PSU, 10 Year Warranty",
-    "price": 301.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/msi-atx12v-650-w-80-plus-gold-certified-power-supply-black-mag-a650gl/p/N82E16817701023",
-    "partType": "psu",
-    "keyword": "650w power supply",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/17-701-023-16.jpg",
-    "site": "newegg",
-    "title": "MSI MAG A650GL, Fully Modular Compact Gaming 650W Power Supply, 80+ Gold, ATX PSU, 10 Year Warranty"
-  },
-  {
     "name": "Super Flower Leadex Titanium 1600W 80+ Titanium, ATX 3.1, W/12V-2x6(2x8pin - 16pin native cables)*2, 10 Years Warranty, ECO Mode, Full Modular, Dual Ball Bearing Fan, SF-1600F14HT ATX 3.1",
     "price": 399.0,
     "condition": "New",
-    "url": "https://www.newegg.com/super-flower-leadex-titanium-atx3-1-atx3-0-compatible-1600w-80-plus-titanium-certified-power-supplies-black/p/1HU-024C-00068?Item=9SIAMNPK4G2240&cm_sp=SP-_-1061889-_-0-_-3-_-9SIAMNPK4G2240-_-650w%20power%20supply-_-650w|power|supply-_-17",
+    "url": "https://www.newegg.com/super-flower-leadex-titanium-atx3-1-atx3-0-compatible-1600w-80-plus-titanium-certified-power-supplies-black/p/1HU-024C-00068?Item=9SIAMNPK4G2240&cm_sp=SP-_-1061889-_-0-_-3-_-9SIAMNPK4G2240-_-650w%20power%20supply-_-650w|power|supply-_-20",
     "partType": "psu",
     "keyword": "650w power supply",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/1HU-024C-00068-01.jpg",

@@ -34,7 +34,7 @@
   },
   {
     "name": "Yeyian Gaming Desktop PC YPI-ED44F0B-5601N Intel Core i5-14400F 16GB DDR5 1TB NVMe SSD GeForce RTX 5060 Windows 11 Home",
-    "price": 779.0,
+    "price": 769.0,
     "condition": "New",
     "url": "https://www.newegg.com/yeyian-gaming-desktop-pc-geforce-rtx-5060-intel-core-i5-14400f-16gb-ddr5-1tb-nvme-ssd-ypi-ed44f0b-5601n/p/N82E16883630101",
     "partType": "prebuilts",
@@ -42,17 +42,6 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/83-630-101-05.jpg",
     "site": "newegg",
     "title": "Yeyian Gaming Desktop PC YPI-ED44F0B-5601N Intel Core i5-14400F 16GB DDR5 1TB NVMe SSD GeForce RTX 5060 Windows 11 Home"
-  },
-  {
-    "name": "YLZKIX Gaming PC,AMD Ryzen 5 5600 3.5GHz(up to 4.4GHz), Radeon RX 6600 8GB Desktop Computer, 1TB NVMe SSD, 16GB DDR4 3200MHz, ,550W PSU,USB WIFI6&Bluetooth Windows 11 Home & AI Powered Gamer PC",
-    "price": 779.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/ylzkix-gaming-desktop-pcs-amd-radeon-rx-6600-amd-ryzen-5-5600x-16gb-ddr4-1tb-pcie-ssd-black/p/3D5-007H-00001",
-    "partType": "prebuilts",
-    "keyword": "gaming desktop",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/C10US2507180GF8YPD4.jpg",
-    "site": "newegg",
-    "title": "YLZKIX Gaming PC,AMD Ryzen 5 5600 3.5GHz(up to 4.4GHz), Radeon RX 6600 8GB Desktop Computer, 1TB NVMe SSD, 16GB DDR4 3200MHz, ,550W PSU,USB WIFI6&Bluetooth Windows 11 Home & AI Powered Gamer PC"
   },
   {
     "name": "MXZ Gaming PC Computer AMD Ryzen 5 5500 3.6GHz, RTX 3060 12GB, B450M,16GB(8G*2) DDR4 3200,NVME 1T SSD, 6RGB Fans, WIFI & Win 11 Pro Ready, Gamer Desktop Computer (R5 5500/RTX 3060)",
@@ -67,7 +56,7 @@
   },
   {
     "name": "Yeyian Gaming Desktop PC YPI-ED44F0C-5601N Intel Core i5-14400F 32GB DDR5 1TB NVMe SSD GeForce RTX 5060 Windows 11 Home",
-    "price": 819.0,
+    "price": 829.0,
     "condition": "New",
     "url": "https://www.newegg.com/yeyian-gaming-desktop-pc-geforce-rtx-5060-intel-core-i5-14400f-32gb-ddr5-1tb-nvme-ssd-ypi-ed44f0c-5601n/p/N82E16883630103",
     "partType": "prebuilts",
@@ -113,7 +102,7 @@
     "name": "VTG Gaming Desktop PC , Ryzen7 5700X, Radeon RX 9060XT , 16GB DDR4,1TB NVMe SSD, 550W PSU, AIO liquid cooler,Wi-Fi,,ARGB Fans , Windows 11 Home 64-bit ,Prebuilt Gaming Pc New computer",
     "price": 949.0,
     "condition": "New",
-    "url": "https://www.newegg.com/vtg-x5-gaming-desktop-pcs-amd-radeon-rx-9070-gre-amd-ryzen-5-9600x-32gb-ddr5-1tb-nvme-ssd-black/p/3D5-0058-00054?Item=9SIBMARKHE8648&cm_sp=SP-_-3020209-_-0-_-2-_-9SIBMARKHE8648-_-gaming%20desktop-_-desktop|gaming-_-13",
+    "url": "https://www.newegg.com/vtg-x5-gaming-desktop-pcs-amd-radeon-rx-9070-gre-amd-ryzen-5-9600x-32gb-ddr5-1tb-nvme-ssd-black/p/3D5-0058-00054",
     "partType": "prebuilts",
     "keyword": "gaming desktop",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/BMARS2511210D1Q4V1B.jpg",
@@ -198,17 +187,6 @@
     "title": "iBUYPOWER Element Gaming PC Desktop - AMD Ryzen 7 8700F, NVIDIA GeForce RTX 5060 8GB, 32GB DDR5 RGB RAM, 1TB NVMe SSD"
   },
   {
-    "name": "ABS Aquilon Aqua Gaming PC - Windows 11 - Intel Core i7-14700F - GeForce RTX 5060 Ti - DLSS 4 - AI-Powered Performance - 32GB DDR5 6400 - 1TB M.2 NVMe SSD - AA14700F5060TI2",
-    "price": 1299.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/abs-aquilon-aqua-gaming-desktop-pc-geforce-rtx-5060-ti-intel-core-i7-14700f-32gb-ddr5-1tb-nvme-ssd-aa14700f5060ti2-black/p/N82E16883360933",
-    "partType": "prebuilts",
-    "keyword": "gaming desktop",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/83-360-933-01.jpg",
-    "site": "newegg",
-    "title": "ABS Aquilon Aqua Gaming PC - Windows 11 - Intel Core i7-14700F - GeForce RTX 5060 Ti - DLSS 4 - AI-Powered Performance - 32GB DDR5 6400 - 1TB M.2 NVMe SSD - AA14700F5060TI2"
-  },
-  {
     "name": "Skytech Azure Gaming PC Desktop, Ryzen 7 7700 3.8 GHz (5.3GHz Turbo), NVIDIA RTX 5060 Ti 16GB GDDR7, 1TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000 RGB, 650W GOLD PSU, Wi-Fi, Win 11,Montech XR",
     "price": 1299.0,
     "condition": "New",
@@ -242,15 +220,37 @@
     "title": "ABS Cyclone Ruby Gaming PC - Windows 11 - AMD Ryzen 5 9600X - Radeon RX 9060 XT 16GB - 32GB DDR5 6000 - 1TB M.2 NVMe SSD - CR9600X9060XT"
   },
   {
-    "name": "MXZ Gaming PC Computer Intel Core i5 14400F 3.6GHz,GeForce RTX 4070 Super 16GB DDR5, NVME 1 TB, 5 RGB Fans, Windows 11 Pro Ready to use, Gamer Desktop Computer (I5 14400F| RTX 4070 Super)",
-    "price": 1399.0,
+    "name": "ABS Aquilon Aqua Gaming PC - Windows 11 - Intel Core i7-14700F - GeForce RTX 5060 Ti - DLSS 4 - AI-Powered Performance - 32GB DDR5 6400 - 1TB M.2 NVMe SSD - AA14700F5060TI2",
+    "price": 1299.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/3D5-002D-000F3?Item=9SIAZBDKAN7806&cm_sp=SP-_-2853268-_-0-_-2-_-9SIAZBDKAN7806-_-gaming%20desktop-_-desktop|gaming-_-19",
+    "url": "https://www.newegg.com/abs-aquilon-aqua-gaming-desktop-pc-geforce-rtx-5060-ti-intel-core-i7-14700f-32gb-ddr5-1tb-nvme-ssd-aa14700f5060ti2-black/p/N82E16883360933",
     "partType": "prebuilts",
     "keyword": "gaming desktop",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/AZBDS2404290D0F85BC.jpg",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/83-360-933-01.jpg",
     "site": "newegg",
-    "title": "MXZ Gaming PC Computer Intel Core i5 14400F 3.6GHz,GeForce RTX 4070 Super 16GB DDR5, NVME 1 TB, 5 RGB Fans, Windows 11 Pro Ready to use, Gamer Desktop Computer (I5 14400F| RTX 4070 Super)"
+    "title": "ABS Aquilon Aqua Gaming PC - Windows 11 - Intel Core i7-14700F - GeForce RTX 5060 Ti - DLSS 4 - AI-Powered Performance - 32GB DDR5 6400 - 1TB M.2 NVMe SSD - AA14700F5060TI2"
+  },
+  {
+    "name": "Mloong Gaming PC Desktop, AMD Ryzen 5 9600X 3.9 GHz (5.4Ghz Turbo), Radeon RX 9060 XT 8GB GDDR6, 1TB Gen4 NVMe SSD, 32GB 6000Mhz DDR5 RAM, 650W PSU, Wi-Fi, Win 11 Home Prebuilt PC, White",
+    "price": 1349.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/3D5-0060-00057?Item=9SIBNXWKPS6473&cm_sp=SP-_-3044071-_-0-_-2-_-9SIBNXWKPS6473-_-gaming%20desktop-_-desktop|gaming-_-9",
+    "partType": "prebuilts",
+    "keyword": "gaming desktop",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/BNXWS25121001YLFSE4.jpg",
+    "site": "newegg",
+    "title": "Mloong Gaming PC Desktop, AMD Ryzen 5 9600X 3.9 GHz (5.4Ghz Turbo), Radeon RX 9060 XT 8GB GDDR6, 1TB Gen4 NVMe SSD, 32GB 6000Mhz DDR5 RAM, 650W PSU, Wi-Fi, Win 11 Home Prebuilt PC, White"
+  },
+  {
+    "name": "ALCPOK Gaming PC Desktop, AMD Ryzen 5 9600X 3.9GHz(5.4GHz Turbo), RTX5060ti 8GB GDDR7 DLSS4, 32GB DDR5 RAM 6000MHz, 1TB NVME SSD, ARGB Water Cooling, WiFi Prebuilt Gaming Computer Windows 11",
+    "price": 1399.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/alcpok-gaming-desktop-pcs-geforce-rtx-5060ti-8g-amd-r5-9600x-32gb-ddr5-1-tb-ssd-ssd-s5-black/p/3D5-007G-00005?Item=9SIC0MFKKC3020&cm_sp=SP-_-3003190-_-0-_-2-_-9SIC0MFKKC3020-_-gaming%20desktop-_-desktop|gaming-_-24",
+    "partType": "prebuilts",
+    "keyword": "gaming desktop",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/C0MFS251111020UCDFD.jpg",
+    "site": "newegg",
+    "title": "ALCPOK Gaming PC Desktop, AMD Ryzen 5 9600X 3.9GHz(5.4GHz Turbo), RTX5060ti 8GB GDDR7 DLSS4, 32GB DDR5 RAM 6000MHz, 1TB NVME SSD, ARGB Water Cooling, WiFi Prebuilt Gaming Computer Windows 11"
   },
   {
     "name": "Skytech Gaming Azure 3 Desktop PC, Ryzen 7 7700 3.8 GHz (5.3GHz Turbo), AMD RX 9060 XT 16GB, 1TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000 RGB, 650W GOLD PSU, Wi-Fi, Win 11",
@@ -278,7 +278,7 @@
     "name": "YEAH MAGIC Gaming PC AMD Ryzen 7 9700X Zen5 NVIDIA GeForce RTX 5060Ti 8GB 32GB 6000MHz DDR5 1TB NVME M.2 SSD 360MM AIO Liquid Cooling WiFi/AC Windows 11 Home Full Clear-Side Desktop PC",
     "price": 1439.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/3D5-0069-00070?Item=9SIBVKAKFU6785&cm_sp=SP-_-2991479-_-0-_-2-_-9SIBVKAKFU6785-_-gaming%20desktop-_-desktop|gaming-_-7",
+    "url": "https://www.newegg.com/p/3D5-0069-00070?Item=9SIBVKAKFU6785&cm_sp=SP-_-2991479-_-0-_-2-_-9SIBVKAKFU6785-_-gaming%20desktop-_-desktop|gaming-_-12",
     "partType": "prebuilts",
     "keyword": "gaming desktop",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/BVKAS250805034S6DAB.jpg",
@@ -289,23 +289,12 @@
     "name": "Skytech Gaming Shadow Desktop PC, Ryzen 7 7700 3.8 GHz (5.3GHz Turbo), NVIDIA RTX 5070 12GB, 1TB NVMe SSD, 32GB DDR5 RAM 6000 RGB, 850W GOLD PSU, Wi-Fi, Win 11",
     "price": 1499.0,
     "condition": "New",
-    "url": "https://www.newegg.com/skytech-gaming-desktop-pcs-geforce-rtx-5070-amd-ryzen-7-7700-32gb-ddr5-1tb-nvme-ssd-st-shadow4-2095-b-al-black/p/3D5-000Z-002W9?Item=9SIA1HJKG06226&cm_sp=SP-_-3029016-_-0-_-2-_-9SIA1HJKG06226-_-gaming%20desktop-_-desktop|gaming-_-6",
+    "url": "https://www.newegg.com/skytech-gaming-desktop-pcs-geforce-rtx-5070-amd-ryzen-7-7700-32gb-ddr5-1tb-nvme-ssd-st-shadow4-2095-b-al-black/p/3D5-000Z-002W9?Item=9SIA1HJKG06226&cm_sp=SP-_-3029016-_-0-_-2-_-9SIA1HJKG06226-_-gaming%20desktop-_-desktop|gaming-_-3",
     "partType": "prebuilts",
     "keyword": "gaming desktop",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/A1HJS25061007IYFNB8.jpg",
     "site": "newegg",
     "title": "Skytech Gaming Shadow Desktop PC, Ryzen 7 7700 3.8 GHz (5.3GHz Turbo), NVIDIA RTX 5070 12GB, 1TB NVMe SSD, 32GB DDR5 RAM 6000 RGB, 850W GOLD PSU, Wi-Fi, Win 11"
-  },
-  {
-    "name": "Xidax Gaming Desktop PC X-6 Series X-6 RTX 5060Ti 16GB + i7 14700F Xen Black Intel Core i7-14700F 32GB DDR5 2TB NVMe SSD GeForce RTX 5060 Ti Windows 11 Home",
-    "price": 1699.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/xidax-x-6-series-gaming-desktop-pc-geforce-rtx-5060-ti-intel-core-i7-14700f-32gb-ddr5-2tb-nvme-ssd-x-6-rtx-5060ti-16gb-i7-14700f-xen-black/p/N82E16883380029?Item=N82E16883380029&cm_sp=SP-_-3028311-_-0-_-2-_-83-380-029-_-gaming%20desktop-_-desktop|gaming-_-22",
-    "partType": "prebuilts",
-    "keyword": "gaming desktop",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/83-380-029-01.png",
-    "site": "newegg",
-    "title": "Xidax Gaming Desktop PC X-6 Series X-6 RTX 5060Ti 16GB + i7 14700F Xen Black Intel Core i7-14700F 32GB DDR5 2TB NVMe SSD GeForce RTX 5060 Ti Windows 11 Home"
   },
   {
     "name": "MSI Gaming Desktop PC Aegis RS2 AI C2NVP7-1444US Intel Core Ultra 7 265K 32GB DDR5 2TB NVMe SSD GeForce RTX 5070 Windows 11 Home Advance",
@@ -341,17 +330,6 @@
     "title": "Skytech Azure Gaming PC Desktop, Ryzen 7 9800X3D 4.7 GHz (5.2 GHz Turbo Boost), AMD RX 9070 XT 16GB GDDR6, 2TB Gen4 NVME SSD, 32GB DDR5 RAM 6000 RGB, 1000W GOLD PSU, Wi-Fi, Win 11"
   },
   {
-    "name": "ASUS Gaming Desktop PC GM700TZ-NS776 AMD Ryzen 7 9800X3D 32GB DDR5 1TB NVMe SSD AMD Radeon RX 9070 XT Windows 11 Home",
-    "price": 1949.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/asus-gaming-desktop-pc-amd-radeon-rx-9070-xt-amd-ryzen-7-9800x3d-32gb-ddr5-1tb-nvme-ssd-gm700tz-ns776-black/p/N82E16883221821",
-    "partType": "prebuilts",
-    "keyword": "gaming desktop",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/83-221-811-16.jpg",
-    "site": "newegg",
-    "title": "ASUS Gaming Desktop PC GM700TZ-NS776 AMD Ryzen 7 9800X3D 32GB DDR5 1TB NVMe SSD AMD Radeon RX 9070 XT Windows 11 Home"
-  },
-  {
     "name": "Skytech Gaming Azure 3 Gaming PC, AMD Ryzen 7 9800X3D 4.7GHz, NVIDIA RTX 5070 Ti 16GB, 2TB Gen4 NVMe SSD, 32GB DDR5 Non-RGB, 850W GOLD ATX 3 PSU, 360 ARGB AIO , Wi-Fi, Win 11, Desktop,Montech XR",
     "price": 1949.0,
     "condition": "New",
@@ -363,10 +341,21 @@
     "title": "Skytech Gaming Azure 3 Gaming PC, AMD Ryzen 7 9800X3D 4.7GHz, NVIDIA RTX 5070 Ti 16GB, 2TB Gen4 NVMe SSD, 32GB DDR5 Non-RGB, 850W GOLD ATX 3 PSU, 360 ARGB AIO , Wi-Fi, Win 11, Desktop,Montech XR"
   },
   {
+    "name": "ASUS Gaming Desktop PC GM700TZ-NS776 AMD Ryzen 7 9800X3D 32GB DDR5 1TB NVMe SSD AMD Radeon RX 9070 XT Windows 11 Home",
+    "price": 1949.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/asus-gaming-desktop-pc-amd-radeon-rx-9070-xt-amd-ryzen-7-9800x3d-32gb-ddr5-1tb-nvme-ssd-gm700tz-ns776-black/p/N82E16883221821",
+    "partType": "prebuilts",
+    "keyword": "gaming desktop",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/83-221-811-16.jpg",
+    "site": "newegg",
+    "title": "ASUS Gaming Desktop PC GM700TZ-NS776 AMD Ryzen 7 9800X3D 32GB DDR5 1TB NVMe SSD AMD Radeon RX 9070 XT Windows 11 Home"
+  },
+  {
     "name": "GIGABYTE AORUS PRIME 5 Gaming Desktop PC, AMD Ryzen 7 9700X, GIGABYTE RTX 5070 Ti, 32GB DDR5, 2TB SSD, Windows 11, Black",
     "price": 1999.0,
     "condition": "New",
-    "url": "https://www.newegg.com/gigabyte-gaming-desktop-pc-geforce-rtx-5070-ti-amd-ryzen-7-9700x-32gb-ddr5-256gb-ssd-ap5a7n7t-5000/p/N82E16883253008?Item=N82E16883253008&cm_sp=SP-_-2990692-_-0-_-2-_-83-253-008-_-gaming%20desktop-_-desktop|gaming-_-10",
+    "url": "https://www.newegg.com/gigabyte-gaming-desktop-pc-geforce-rtx-5070-ti-amd-ryzen-7-9700x-32gb-ddr5-256gb-ssd-ap5a7n7t-5000/p/N82E16883253008?Item=N82E16883253008&cm_sp=SP-_-2990692-_-0-_-2-_-83-253-008-_-gaming%20desktop-_-desktop|gaming-_-15",
     "partType": "prebuilts",
     "keyword": "gaming desktop",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/83-253-008-01.jpg",
@@ -385,17 +374,6 @@
     "title": "iBUYPOWER Element 9 Pro Black Gaming PC Desktop - Intel Core Ultra 7 265KF - NVIDIA GeForce RTX 5070Ti 16GB - 32GB DDR5 RGB - 2TB NVMe SSD - EPBI7N57T01"
   },
   {
-    "name": "Skytech Azure Gaming PC Desktop, Ryzen 7 7800X3D 4.2 GHz (5GHz Turbo), AMD RX 9070 XT 16GB, 2TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000 RGB, 850W GOLD ATX 3 PSU, 360mm ARGB AIO , Wi-Fi, Win 11,Montech XR",
-    "price": 1999.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/skytech-gaming-desktop-pcs-amd-radeon-rx-9070-xt-amd-ryzen-7-7800x3d-32gb-ddr5-2tb-nvme-ssd-st-azure3-1918-b-al-black/p/3D5-000Z-002K1",
-    "partType": "prebuilts",
-    "keyword": "gaming desktop",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/A1HJS2504230EZ3T979.jpg",
-    "site": "newegg",
-    "title": "Skytech Azure Gaming PC Desktop, Ryzen 7 7800X3D 4.2 GHz (5GHz Turbo), AMD RX 9070 XT 16GB, 2TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000 RGB, 850W GOLD ATX 3 PSU, 360mm ARGB AIO , Wi-Fi, Win 11,Montech XR"
-  },
-  {
     "name": "AVGPC Whirlwind Gaming PC AMD Ryzen 7 9700X Zen5, NVIDIA GeForce RTX 5070 Ti, 32GB 6000MHz DDR5, 2TB NVME M.2 SSD, 360MM AIO Liquid Cooling, WiFi/AC, Tempered Glass Case White, Windows 11 Home",
     "price": 1999.0,
     "condition": "New",
@@ -405,6 +383,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/B5FPS25032414T2XUFF.jpg",
     "site": "newegg",
     "title": "AVGPC Whirlwind Gaming PC AMD Ryzen 7 9700X Zen5, NVIDIA GeForce RTX 5070 Ti, 32GB 6000MHz DDR5, 2TB NVME M.2 SSD, 360MM AIO Liquid Cooling, WiFi/AC, Tempered Glass Case White, Windows 11 Home"
+  },
+  {
+    "name": "Skytech Azure Gaming PC Desktop, Ryzen 7 7800X3D 4.2 GHz (5GHz Turbo), AMD RX 9070 XT 16GB, 2TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000 RGB, 850W GOLD ATX 3 PSU, 360mm ARGB AIO , Wi-Fi, Win 11,Montech XR",
+    "price": 1999.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/skytech-gaming-desktop-pcs-amd-radeon-rx-9070-xt-amd-ryzen-7-7800x3d-32gb-ddr5-2tb-nvme-ssd-st-azure3-1918-b-al-black/p/3D5-000Z-002K1",
+    "partType": "prebuilts",
+    "keyword": "gaming desktop",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A1HJS2504230EZ3T979.jpg",
+    "site": "newegg",
+    "title": "Skytech Azure Gaming PC Desktop, Ryzen 7 7800X3D 4.2 GHz (5GHz Turbo), AMD RX 9070 XT 16GB, 2TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000 RGB, 850W GOLD ATX 3 PSU, 360mm ARGB AIO , Wi-Fi, Win 11,Montech XR"
   },
   {
     "name": "ABS Kaze II Aqua Gaming PC - Windows 11 - Intel Core i9-14900KF - GeForce RTX 5070 Ti 16GB - 32GB DDR5 6400 - 2TB M.2 NVMe SSD - KA14900KF5070TI",
@@ -443,12 +432,23 @@
     "name": "Andromeda Insights V3 Ultra 50 - RTX 5080 16GB GDDR7 | Ryzen 7 9800X3D 4.7 GHz (5.2 GHz Turbo Boost) | 32GB DDR5 6000MHz | 2TB Gen4 SSD | 850W Gold PSU | ARGB Fans | Wi-Fi + BT | Win 11",
     "price": 2599.0,
     "condition": "New",
-    "url": "https://www.newegg.com/andromeda-insights-ultra-gaming-desktop-pcs-geforce-rtx-5080-amd-ryzen-7-9800x3d-32gb-ddr5-2tb-nvme-ssd-50-vector-black/p/3D5-006J-00058?Item=9SIBWCHKG46715&cm_sp=SP-_-3022612-_-0-_-3-_-9SIBWCHKG46715-_-gaming%20desktop-_-desktop|gaming-_-16",
+    "url": "https://www.newegg.com/andromeda-insights-ultra-gaming-desktop-pcs-geforce-rtx-5080-amd-ryzen-7-9800x3d-32gb-ddr5-2tb-nvme-ssd-50-vector-black/p/3D5-006J-00058?Item=9SIBWCHKG46715&cm_sp=SP-_-3022612-_-0-_-3-_-9SIBWCHKG46715-_-gaming%20desktop-_-desktop|gaming-_-18",
     "partType": "prebuilts",
     "keyword": "gaming desktop",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/BWCHS2510241EY91LBA.jpg",
     "site": "newegg",
     "title": "Andromeda Insights V3 Ultra 50 - RTX 5080 16GB GDDR7 | Ryzen 7 9800X3D 4.7 GHz (5.2 GHz Turbo Boost) | 32GB DDR5 6000MHz | 2TB Gen4 SSD | 850W Gold PSU | ARGB Fans | Wi-Fi + BT | Win 11"
+  },
+  {
+    "name": "Skytech Gaming O11 Vision Gaming PC, AMD Ryzen 7 9800X3D 4.7GHz, NVIDIA RTX 5080 16GB, X870 Board, 2TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000, 850W GOLD ATX 3 PSU, 360 ARGB AIO , Wi-Fi, Win 11, Desktop",
+    "price": 2699.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/skytech-gaming-desktop-pcs-geforce-rtx-5080-amd-ryzen-7-9800x3d-32gb-ddr5-2tb-nvme-ssd-st-o11v-2568-w-al-white/p/3D5-000Z-003F9",
+    "partType": "prebuilts",
+    "keyword": "gaming desktop",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A1HJS25102107NM100A.jpg",
+    "site": "newegg",
+    "title": "Skytech Gaming O11 Vision Gaming PC, AMD Ryzen 7 9800X3D 4.7GHz, NVIDIA RTX 5080 16GB, X870 Board, 2TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000, 850W GOLD ATX 3 PSU, 360 ARGB AIO , Wi-Fi, Win 11, Desktop"
   },
   {
     "name": "Skytech King 95 Gaming PC Desktop, Ryzen 7 9800X3D 4.7 GHz (5.2 GHz Turbo), NVIDIA RTX 5080 16GB, 2TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000 RGB, 850W GOLD ATX 3 PSU, 360mm ARGB AIO , Wi-Fi, Win 11",
@@ -462,14 +462,14 @@
     "title": "Skytech King 95 Gaming PC Desktop, Ryzen 7 9800X3D 4.7 GHz (5.2 GHz Turbo), NVIDIA RTX 5080 16GB, 2TB Gen4 NVMe SSD, 32GB DDR5 RAM 6000 RGB, 850W GOLD ATX 3 PSU, 360mm ARGB AIO , Wi-Fi, Win 11"
   },
   {
-    "name": "ADAMANT CUSTOM 16-Core Media Workstation Gaming Desktop Computer PC AMD Ryzen 9 9950X 4.3GHz X670E TUF 32GB DDR5 1TB NVMe PRO SSD 10TB HDD 1200W Nvidia Geforce RTX 5090 32GB",
-    "price": 6299.0,
+    "name": "Skytech O11 Vision Gaming PC Desktop, AMD Ryzen 9 9900X3D 4.4GHz, NVIDIA RTX 5080 16GB, X870 Board, 4TB Gen4 NVMe SSD, 64GB DDR5 RAM, 1000W GOLD ATX 3, 360 ARGB AIO , Wi-Fi, Win 11, Lian-Li O11 Vision",
+    "price": 3399.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/1VK-01UA-01DU0?Item=9SIAK3PKAT5384&cm_sp=SP-_-3008313-_-0-_-2-_-9SIAK3PKAT5384-_-gaming%20desktop-_-desktop|gaming-_-25",
+    "url": "https://www.newegg.com/skytech-gaming-desktop-pcs-geforce-rtx-5080-amd-ryzen-9-9900x3d-64gb-ddr5-4tb-nvme-ssd-st-o11v-2406-b-al-black/p/3D5-000Z-00397?Item=9SIA1HJKMF8267&cm_sp=SP-_-3042397-_-0-_-2-_-9SIA1HJKMF8267-_-gaming%20desktop-_-desktop|gaming-_-4",
     "partType": "prebuilts",
     "keyword": "gaming desktop",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/AK3PD2409030WO69K84.jpg",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A1HJS25091808AAADFA.jpg",
     "site": "newegg",
-    "title": "ADAMANT CUSTOM 16-Core Media Workstation Gaming Desktop Computer PC AMD Ryzen 9 9950X 4.3GHz X670E TUF 32GB DDR5 1TB NVMe PRO SSD 10TB HDD 1200W Nvidia Geforce RTX 5090 32GB"
+    "title": "Skytech O11 Vision Gaming PC Desktop, AMD Ryzen 9 9900X3D 4.4GHz, NVIDIA RTX 5080 16GB, X870 Board, 4TB Gen4 NVMe SSD, 64GB DDR5 RAM, 1000W GOLD ATX 3, 360 ARGB AIO , Wi-Fi, Win 11, Lian-Li O11 Vision"
   }
 ]

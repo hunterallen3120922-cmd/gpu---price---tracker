@@ -58,7 +58,7 @@
     "name": "ONEBOOM X400 2280 1TB M.2 NVMe PCIe 4.0 Gaming SSD, Speed Up to 7400MB/s, 3D NAND TLC, Internal Solid State Disk Compatible for PS5, M.2 2280 with Heatsink 1TB",
     "price": 100.0,
     "condition": "New",
-    "url": "https://www.newegg.com/oneboom-1tb-x400-series-nvme-1-4/p/0D9-010Y-00001?Item=9SIC05YKFJ7364&cm_sp=SP-_-2922757-_-0-_-6-_-9SIC05YKFJ7364-_-1tb%20nvme%20ssd-_-1tb|nvme-_-3",
+    "url": "https://www.newegg.com/oneboom-1tb-x400-series-nvme-1-4/p/0D9-010Y-00001?Item=9SIC05YKFJ7364&cm_sp=SP-_-2922757-_-0-_-6-_-9SIC05YKFJ7364-_-1tb%20nvme%20ssd-_-1tb|nvme-_-5",
     "partType": "ssd",
     "keyword": "1tb nvme ssd",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/C05YS25051404L82591.jpg",
@@ -75,17 +75,6 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/20-331-417-01.jpg",
     "site": "newegg",
     "title": "Team Group MP33 M.2 2280 1TB PCIe 3.0 x4 with NVMe 1.3 3D NAND Internal Solid State Drive (SSD) TM8FP6001T0C101"
-  },
-  {
-    "name": "SAMSUNG 990 EVO PLUS SSD 1TB",
-    "price": 104.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/samsung-1tb-990-evo-plus-nvme-2-0/p/N82E16820147899",
-    "partType": "ssd",
-    "keyword": "1tb nvme ssd",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-147-899-10.jpg",
-    "site": "newegg",
-    "title": "SAMSUNG 990 EVO PLUS SSD 1TB"
   },
   {
     "name": "PNY CS2150 M.2 2280 1TB PCI-Express 5.0 x4 3D NAND Internal Solid State Drive (SSD) M280CS2150-1TB-TB",
@@ -143,6 +132,17 @@
     "title": "Team Group MP44S M.2 2230 1TB PCIe 4.0 x4 with NVMe, STEAM Deck Compatible, Internal Solid State Drive (SSD) TM5FF3001T0C101"
   },
   {
+    "name": "Kingston NV3 M.2 2280 1TB PCIe 4.0 x4 NVMe Internal Solid State Drive (SSD) SNV3S/1000G Up to 6000 MB/s",
+    "price": 117.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/kingston-1tb-snv3s/p/N82E16820242902",
+    "partType": "ssd",
+    "keyword": "1tb nvme ssd",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-242-902-02.jpg",
+    "site": "newegg",
+    "title": "Kingston NV3 M.2 2280 1TB PCIe 4.0 x4 NVMe Internal Solid State Drive (SSD) SNV3S/1000G Up to 6000 MB/s"
+  },
+  {
     "name": "Crucial P310 M.2 2280 1TB PCI-Express 4.0 x4 NVMe 3D NAND Internal Solid State Drive Speed Up to 7100 MBps (SSD) CT1000P310SSD8",
     "price": 118.0,
     "condition": "New",
@@ -174,17 +174,6 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/20-985-133-04.jpg",
     "site": "newegg",
     "title": "Team Group T-FORCE G50 M.2 2280 1TB PCIe 4.0 x4 with NVMe 1.4 TLC Internal Solid State Drive (SSD) TM8FFE001T0C129"
-  },
-  {
-    "name": "Kingston NV3 M.2 2280 1TB PCIe 4.0 x4 NVMe Internal Solid State Drive (SSD) SNV3S/1000G Up to 6000 MB/s",
-    "price": 119.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/kingston-1tb-snv3s/p/N82E16820242902",
-    "partType": "ssd",
-    "keyword": "1tb nvme ssd",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-242-902-02.jpg",
-    "site": "newegg",
-    "title": "Kingston NV3 M.2 2280 1TB PCIe 4.0 x4 NVMe Internal Solid State Drive (SSD) SNV3S/1000G Up to 6000 MB/s"
   },
   {
     "name": "Corsair MP600 Elite M.2 2280 1TB PCI-Express 4.0 x4, NVMe 1.4 3D TLC Internal Solid State Drive Up to 7000 MB/sec (SSD) CSSD-F1000GBMP600ENH",
@@ -231,17 +220,6 @@
     "title": "Team Group MP44 M.2 2280 1TB PCIe 4.0 x4 with NVMe Laptop & Desktop & NUC & NAS Internal Solid State Drive (SSD), (R/W Speed up to 7,400/6,500MB/s) TM8FPW001T0C101"
   },
   {
-    "name": "WD Blue SN5100 1TB NVMe SSD, PCIe Gen 4.0, up to 7,100 MB/s read speeds",
-    "price": 127.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/sandisk-1tb-wd-blue-nvme/p/N82E16820173682",
-    "partType": "ssd",
-    "keyword": "1tb nvme ssd",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-173-682-17.jpg",
-    "site": "newegg",
-    "title": "WD Blue SN5100 1TB NVMe SSD, PCIe Gen 4.0, up to 7,100 MB/s read speeds"
-  },
-  {
     "name": "Western Digital WD_BLACK SN770 M.2 2280 1TB PCIe Gen4 16GT/s, up to 4 Lanes Internal Solid State Drive (SSD) WDS100T3X0E",
     "price": 128.0,
     "condition": "New",
@@ -251,6 +229,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/20-250-217-V05.jpg",
     "site": "newegg",
     "title": "Western Digital WD_BLACK SN770 M.2 2280 1TB PCIe Gen4 16GT/s, up to 4 Lanes Internal Solid State Drive (SSD) WDS100T3X0E"
+  },
+  {
+    "name": "WD Blue SN5100 1TB NVMe SSD, PCIe Gen 4.0, up to 7,100 MB/s read speeds",
+    "price": 133.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/sandisk-1tb-wd-blue-nvme/p/N82E16820173682",
+    "partType": "ssd",
+    "keyword": "1tb nvme ssd",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-173-682-17.jpg",
+    "site": "newegg",
+    "title": "WD Blue SN5100 1TB NVMe SSD, PCIe Gen 4.0, up to 7,100 MB/s read speeds"
   },
   {
     "name": "WD_BLACK 1TB SN850X NVMe Internal Gaming SSD Solid State Drive - Gen4 PCIe, M.2 2280, Up to 7,300 MB/s - WDS100T2X0E",
@@ -385,6 +374,17 @@
     "title": "WD Red SN700 NVMe SSD, 1TB of NVMe Solid-State Drive for NAS Devices"
   },
   {
+    "name": "SAMSUNG 990 EVO PLUS SSD 1TB",
+    "price": 191.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/samsung-1tb-990-evo-plus-nvme-2-0/p/N82E16820147899",
+    "partType": "ssd",
+    "keyword": "1tb nvme ssd",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/20-147-899-10.jpg",
+    "site": "newegg",
+    "title": "SAMSUNG 990 EVO PLUS SSD 1TB"
+  },
+  {
     "name": "Crucial T700 GEN5 NMVE M.2 SSD 1TB PCI-Express 5.0 x4 TLC NAND² Internal Solid State Drive (SSD) CT1000T700SSD3",
     "price": 199.0,
     "condition": "New",
@@ -410,7 +410,7 @@
     "name": "SABRENT Rocket 5 1TB Advanced Performance Internal M.2 PCIe GEN 5 14GB/s X4 NVMe SSD (SB-RKT5-1TB)",
     "price": 246.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/0D9-001Y-000C1?Item=9SIBK19K9K3296&cm_sp=SP-_-2989538-_-0-_-2-_-9SIBK19K9K3296-_-1tb%20nvme%20ssd-_-1tb|nvme|ssd-_-5",
+    "url": "https://www.newegg.com/p/0D9-001Y-000C1?Item=9SIBK19K9K3296&cm_sp=SP-_-2989538-_-0-_-2-_-9SIBK19K9K3296-_-1tb%20nvme%20ssd-_-1tb|nvme|ssd-_-9",
     "partType": "ssd",
     "keyword": "1tb nvme ssd",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/BK19D24031310CPTJ37.jpg",

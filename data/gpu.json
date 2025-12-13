@@ -3,7 +3,7 @@
     "name": "SongryVGA GT 730 Low Profile Graphics Card,4GB GDDR3 128-bit 2xHDMI Outputs 1080P PCI-e 2.0 x16 Slot DirectX OpenGL 4.6 Support, Ideal for HTPC Mini Computers",
     "price": 54.0,
     "condition": "New",
-    "url": "https://www.newegg.com/songryvga-sy732h41-gt-730-4gb-video-cards-single-fan/p/27N-0092-00001?Item=9SIC0JHKGF4400&cm_sp=SP-_-2986212-_-0-_-3-_-9SIC0JHKGF4400-_-rtx%202070-_-2070|rtx-_-7",
+    "url": "https://www.newegg.com/songryvga-sy732h41-gt-730-4gb-video-cards-single-fan/p/27N-0092-00001?Item=9SIC0JHKGF4400&cm_sp=SP-_-2986212-_-0-_-3-_-9SIC0JHKGF4400-_-rtx%202070-_-2070|rtx-_-15",
     "partType": "gpu",
     "keyword": "rtx 2070",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/C0JHS2508200LIN7N2C.jpg",
@@ -14,7 +14,7 @@
     "name": "SongryVGA GT 730 4GB Low Profile Graphics Card,GDDR3 PCIe 2.0 128-bit Dual HDMI Ports for SFF And All In One PCs",
     "price": 55.0,
     "condition": "New",
-    "url": "https://www.newegg.com/songryvga-sy734h21-n-gt-730-4gb-video-cards-single-fan/p/1FT-00JN-00016?Item=9SIC0JHKJW6113&cm_sp=SP-_-2986212-_-0-_-3-_-9SIC0JHKJW6113-_-rtx%202070-_-2070|rtx-_-13",
+    "url": "https://www.newegg.com/songryvga-sy734h21-n-gt-730-4gb-video-cards-single-fan/p/1FT-00JN-00016?Item=9SIC0JHKJW6113&cm_sp=SP-_-2986212-_-0-_-3-_-9SIC0JHKJW6113-_-rtx%202070-_-2070|rtx-_-18",
     "partType": "gpu",
     "keyword": "rtx 2070",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/C0JHS2508200LH4001C.jpg",
@@ -25,7 +25,7 @@
     "name": "SongryVGA GT 730 2GB Multi Monitors Graphics Card, 4 HDMI GDDR3 64-bit,Dual Slot,for Stock Trading,Surveillance,and Projection",
     "price": 69.0,
     "condition": "New",
-    "url": "https://www.newegg.com/songryvga-sy734h22-geforce-gt-730-2gb-video-cards-single-fan/p/1FT-00JN-00007?Item=9SIC0JHKGS6207&cm_sp=SP-_-2986252-_-0-_-3-_-9SIC0JHKGS6207-_-rtx%202070-_-2070|rtx-_-6",
+    "url": "https://www.newegg.com/songryvga-sy734h22-geforce-gt-730-2gb-video-cards-single-fan/p/1FT-00JN-00007?Item=9SIC0JHKGS6207&cm_sp=SP-_-2986252-_-0-_-3-_-9SIC0JHKGS6207-_-rtx%202070-_-2070|rtx-_-9",
     "partType": "gpu",
     "keyword": "rtx 2070",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/C0JHS2511240FVGKVD4.jpg",
@@ -44,17 +44,6 @@
     "title": "REFURBISHED MSI GeForce RTX 2070 8GB GDDR6 PCI Express 3.0 x16 Graphics Card RTX 2070 ARMOR 8G"
   },
   {
-    "name": "REFURBISHED ASUS GeForce RTX 2070 Super Overclocked 8G EVO GDDR6 Dual-Fan Edition HDMI DisplayPort Gaming Graphics Card (DUAL-RTX2070S-O8G-EVO)",
-    "price": 169.0,
-    "condition": "Open Box",
-    "url": "https://www.newegg.com/asus-dual-rtx2070s-o8g-evo-geforce-rtx-2070-super-8gb-graphics-card-double-fans/p/N82E16814126332T",
-    "partType": "gpu",
-    "keyword": "rtx 2070",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/14-126-332-V02.jpg",
-    "site": "newegg",
-    "title": "REFURBISHED ASUS GeForce RTX 2070 Super Overclocked 8G EVO GDDR6 Dual-Fan Edition HDMI DisplayPort Gaming Graphics Card (DUAL-RTX2070S-O8G-EVO)"
-  },
-  {
     "name": "REFURBISHED EVGA GeForce RTX 2070 SUPER XC GAMING, 08G-P4-3172-KR, 8GB GDDR6, Dual HDB Fans, RGB LED, Metal Backplate",
     "price": 169.0,
     "condition": "Open Box",
@@ -64,6 +53,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/14-487-454-01.jpg",
     "site": "newegg",
     "title": "REFURBISHED EVGA GeForce RTX 2070 SUPER XC GAMING, 08G-P4-3172-KR, 8GB GDDR6, Dual HDB Fans, RGB LED, Metal Backplate"
+  },
+  {
+    "name": "REFURBISHED MSI RTX 2070 SUPER GAMING X TRIO GeForce RTX 2070 SUPER Video Card",
+    "price": 299.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/msi-rtx-2070-super-gaming-x-trio-geforce-rtx-2070-super-8gb-graphics-card/p/1FT-0009-00A23",
+    "partType": "gpu",
+    "keyword": "rtx 2070",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AGKCD2204110PGPS656.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED MSI RTX 2070 SUPER GAMING X TRIO GeForce RTX 2070 SUPER Video Card"
   },
   {
     "name": "REFURBISHED GIGABYTE GeForce RTX 2070 8GB GDDR6 PCI Express 3.0 x16 ATX Graphics Card GV-N2070WF3-8GC",
@@ -88,6 +88,17 @@
     "title": "REFURBISHED MSI GeForce RTX 2070 SUPER DirectX 12 RTX 2070 SUPER GAMING X TRIO 8GB 256-Bit GDDR6 PCI Express 3.0 x16 HDCP Ready SLI Support Video Card"
   },
   {
+    "name": "REFURBISHED MSI GeForce RTX 2070 SUPER DirectX 12 RTX 2070 SUPER GAMING X TRIO 8GB 256-Bit GDDR6 PCI Express 3.0 x16 HDCP Ready SLI Support Video Card",
+    "price": 349.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/msi-rtx-2070-super-gaming-x-trio/p/1FT-0009-005M3",
+    "partType": "gpu",
+    "keyword": "rtx 2070",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ARA8S210405dFKX3.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED MSI GeForce RTX 2070 SUPER DirectX 12 RTX 2070 SUPER GAMING X TRIO 8GB 256-Bit GDDR6 PCI Express 3.0 x16 HDCP Ready SLI Support Video Card"
+  },
+  {
     "name": "REFURBISHED GIGABYTE GeForce RTX 2070 8GB GDDR6 PCI Express 3.0 x16 ATX Graphics Card GV-N2070GAMING OC-8GC",
     "price": 359.0,
     "condition": "Open Box",
@@ -97,28 +108,6 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/14-932-162-Z01.jpg",
     "site": "newegg",
     "title": "REFURBISHED GIGABYTE GeForce RTX 2070 8GB GDDR6 PCI Express 3.0 x16 ATX Graphics Card GV-N2070GAMING OC-8GC"
-  },
-  {
-    "name": "REFURBISHED MSI RTX 2070 SUPER GAMING X TRIO GeForce RTX 2070 SUPER Video Card",
-    "price": 579.0,
-    "condition": "Open Box",
-    "url": "https://www.newegg.com/msi-rtx-2070-super-gaming-x-trio-geforce-rtx-2070-super-8gb-graphics-card/p/1FT-0009-00A23",
-    "partType": "gpu",
-    "keyword": "rtx 2070",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/AGKCD2204110PGPS656.jpg",
-    "site": "newegg",
-    "title": "REFURBISHED MSI RTX 2070 SUPER GAMING X TRIO GeForce RTX 2070 SUPER Video Card"
-  },
-  {
-    "name": "REFURBISHED MSI GeForce RTX 2070 SUPER DirectX 12 RTX 2070 SUPER GAMING X TRIO 8GB 256-Bit GDDR6 PCI Express 3.0 x16 HDCP Ready SLI Support Video Card",
-    "price": 620.0,
-    "condition": "Open Box",
-    "url": "https://www.newegg.com/msi-rtx-2070-super-gaming-x-trio/p/1FT-0009-005M3",
-    "partType": "gpu",
-    "keyword": "rtx 2070",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/ARA8S210405dFKX3.jpg",
-    "site": "newegg",
-    "title": "REFURBISHED MSI GeForce RTX 2070 SUPER DirectX 12 RTX 2070 SUPER GAMING X TRIO 8GB 256-Bit GDDR6 PCI Express 3.0 x16 HDCP Ready SLI Support Video Card"
   },
   {
     "name": "MSI GeForce RTX 2070 8GB GDDR6 PCI Express 3.0 x16 Graphics Card RTX 2070 ARMOR 8G",
@@ -154,15 +143,15 @@
     "title": "EVGA GeForce RTX 2070 XC ULTRA GAMING, 08G-P4-2173-KR, 8GB GDDR6, Dual HDB Fans & RGB LED"
   },
   {
-    "name": "GIGABYTE GeForce RTX 2070 Super GAMING OC WHITE 8G Graphics Card, 3 x WINDFORCE Fans, 8GB 256-Bit GDDR6, GV-N207SGAMINGOC WHITE-8GC Video Card",
+    "name": "GIGABYTE GeForce RTX 2070 Super GAMING OC 3X 8G Graphics Card, 3 x WINDFORCE Fans, 8GB 256-Bit GDDR6, GV-N207SGAMING OC-8GD Video Card",
     "price": 745.0,
     "condition": "New",
-    "url": "https://www.newegg.com/gigabyte-gv-n207sgamingoc-white-8gc-geforce-rtx-2070-super-8gb-graphics-card-windforce-3x/p/N82E16814932178",
+    "url": "https://www.newegg.com/gigabyte-gv-n207sgaming-oc-8gd-geforce-rtx-2070-super-8gb-graphics-card-windforce-3x/p/N82E16814932212",
     "partType": "gpu",
     "keyword": "rtx 2070",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/14-932-178-V08.jpg",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/14-932-212-V04.jpg",
     "site": "newegg",
-    "title": "GIGABYTE GeForce RTX 2070 Super GAMING OC WHITE 8G Graphics Card, 3 x WINDFORCE Fans, 8GB 256-Bit GDDR6, GV-N207SGAMINGOC WHITE-8GC Video Card"
+    "title": "GIGABYTE GeForce RTX 2070 Super GAMING OC 3X 8G Graphics Card, 3 x WINDFORCE Fans, 8GB 256-Bit GDDR6, GV-N207SGAMING OC-8GD Video Card"
   },
   {
     "name": "MSI GeForce RTX 2070 SUPER 8GB GDDR6 PCI Express 3.0 x16 SLI Support Graphics Card RTX 2070 Super Armor OC",
@@ -418,6 +407,17 @@
     "title": "ASUS RTX 2070 Dual OC 8GB GDDR6 Graphics Card (90YV0C82-M0NA00)"
   },
   {
+    "name": "ASUS Turbo RTX 2070 8GB GDDR6 Graphics Card (90YV0C80-M0NA00)",
+    "price": 775.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/asus-geforce-rtx-2070-8gb-graphics-card/p/1FT-000Y-001R7",
+    "partType": "gpu",
+    "keyword": "rtx 2070",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AD7H_1_201811152060161052.jpg",
+    "site": "newegg",
+    "title": "ASUS Turbo RTX 2070 8GB GDDR6 Graphics Card (90YV0C80-M0NA00)"
+  },
+  {
     "name": "ASUS Turbo GeForce RTX 2070 SUPER TURBO-RTX2070S-8G-EVO 8GB 256-Bit GDDR6 PCI Express 3.0 HDCP Ready SLI Support Video Card",
     "price": 795.0,
     "condition": "New",
@@ -432,7 +432,7 @@
     "name": "GIGABYTE Gaming GeForce RTX 5080 16GB GDDR7 PCI Express 5.0 Graphics Card GV-N5080GAMING OC-16GD",
     "price": 1319.0,
     "condition": "New",
-    "url": "https://www.newegg.com/gigabyte-gv-n5080gaming-oc-16gd-geforce-rtx-5080-16gb-graphics-card/p/N82E16814932753?Item=N82E16814932753&cm_sp=SP-_-2986547-_-0-_-3-_-14-932-753-_-rtx%202070-_-2070|rtx-_-16",
+    "url": "https://www.newegg.com/gigabyte-gv-n5080gaming-oc-16gd-geforce-rtx-5080-16gb-graphics-card/p/N82E16814932753?Item=N82E16814932753&cm_sp=SP-_-2986547-_-0-_-3-_-14-932-753-_-rtx%202070-_-2070|rtx-_-21",
     "partType": "gpu",
     "keyword": "rtx 2070",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/14-932-753-03.png",

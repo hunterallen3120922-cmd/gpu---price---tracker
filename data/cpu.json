@@ -1,5 +1,137 @@
 [
   {
+    "name": "USED - VERY GOOD Intel Core i7-930 - Core i7 Bloomfield Quad-Core 2.8 GHz LGA 1366 130W Desktop Processor - BX80601930",
+    "price": 33.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-930-bloomfield-lga-1366-desktop-processor/p/N82E16819115225",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-115-225-03.jpg",
+    "site": "newegg",
+    "title": "USED - VERY GOOD Intel Core i7-930 - Core i7 Bloomfield Quad-Core 2.8 GHz LGA 1366 130W Desktop Processor - BX80601930"
+  },
+  {
+    "name": "USED - LIKE NEW Intel Core i7-3820 - Core i7 3rd Gen Sandy Bridge-E Quad-Core 3.6GHz (3.8GHz Turbo Boost) LGA 2011 130W Desktop Processor - BX80619i73820",
+    "price": 38.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-3rd-gen-core-i7-3820-sandy-bridge-e-lga-2011-desktop-processor/p/N82E16819115229",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-115-229-03.jpg",
+    "site": "newegg",
+    "title": "USED - LIKE NEW Intel Core i7-3820 - Core i7 3rd Gen Sandy Bridge-E Quad-Core 3.6GHz (3.8GHz Turbo Boost) LGA 2011 130W Desktop Processor - BX80619i73820"
+  },
+  {
+    "name": "USED - LIKE NEW Intel Core i7-3930K - Core i7 3rd Gen Sandy Bridge-E 6-Core 3.2GHz (3.8GHz Turbo) LGA 2011 130W Desktop Processor - BX80619i73930K",
+    "price": 39.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-3rd-gen-core-i7-3930k-sandy-bridge-e-lga-2011-desktop-processor/p/N82E16819116492",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-116-492-02.jpg",
+    "site": "newegg",
+    "title": "USED - LIKE NEW Intel Core i7-3930K - Core i7 3rd Gen Sandy Bridge-E 6-Core 3.2GHz (3.8GHz Turbo) LGA 2011 130W Desktop Processor - BX80619i73930K"
+  },
+  {
+    "name": "USED - VERY GOOD Intel Core i7-4820K - Core i7 4th Gen Ivy Bridge-E Quad-Core 3.7GHz (Turbo 3.9GHz) LGA 2011 130W Desktop Processor - BX80633i74820K",
+    "price": 49.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-4th-gen-core-i7-4820k-ivy-bridge-e-lga-2011-desktop-processor/p/N82E16819116940",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-116-940-03.jpg",
+    "site": "newegg",
+    "title": "USED - VERY GOOD Intel Core i7-4820K - Core i7 4th Gen Ivy Bridge-E Quad-Core 3.7GHz (Turbo 3.9GHz) LGA 2011 130W Desktop Processor - BX80633i74820K"
+  },
+  {
+    "name": "Intel Core i3 8th Gen - OEM Core i3-8100 Coffee Lake Quad-Core 3.6 GHz LGA 1151 (300 Series) CM8068403377308 Desktop Processor Intel UHD Graphics 630",
+    "price": 49.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i3-8th-gen-core-i3-8100-coffee-lake-lga-1151-desktop-cpu-processor/p/N82E16819117838",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-117-838-S01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i3 8th Gen - OEM Core i3-8100 Coffee Lake Quad-Core 3.6 GHz LGA 1151 (300 Series) CM8068403377308 Desktop Processor Intel UHD Graphics 630"
+  },
+  {
+    "name": "USED - LIKE NEW Intel Core i7-980X Extreme Edition - Core i7 Extreme Edition Gulftown 6-Core 3.33 GHz LGA 1366 130W Desktop Processor - BX80613I7980X",
+    "price": 54.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-extreme-edition-core-i7-980x-extreme-edition-gulftown-lga-1366-desktop-processor/p/N82E16819115223",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-115-223-03.jpg",
+    "site": "newegg",
+    "title": "USED - LIKE NEW Intel Core i7-980X Extreme Edition - Core i7 Extreme Edition Gulftown 6-Core 3.33 GHz LGA 1366 130W Desktop Processor - BX80613I7980X"
+  },
+  {
+    "name": "REFURBISHED Intel Core i3-7350K - Core i3 7th Gen Kaby Lake Dual-Core 4.2 GHz LGA 1151 60W Intel HD Graphics 630 Desktop CPU Processor - BX80677I37350K",
+    "price": 54.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/intel-core-i3-7th-gen-core-i3-7350k-kaby-lake-lga-1151-desktop-cpu-processor/p/N82E16819118119",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-119-S01.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED Intel Core i3-7350K - Core i3 7th Gen Kaby Lake Dual-Core 4.2 GHz LGA 1151 60W Intel HD Graphics 630 Desktop CPU Processor - BX80677I37350K"
+  },
+  {
+    "name": "Intel Core i3-7100 - Core i3 7th Gen Kaby Lake Dual-Core 3.9 GHz LGA 1151 51W Intel HD Graphics 630 Desktop CPU Processor - CM8067703014612",
+    "price": 56.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i3-7th-gen-core-i3-7100-kaby-lake-lga-1151-desktop-cpu-processor/p/N82E16819117737",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AAYY_1_201806171239107762.jpg",
+    "site": "newegg",
+    "title": "Intel Core i3-7100 - Core i3 7th Gen Kaby Lake Dual-Core 3.9 GHz LGA 1151 51W Intel HD Graphics 630 Desktop CPU Processor - CM8067703014612"
+  },
+  {
+    "name": "Intel Core i7 3rd Gen - Core i7-3770 Ivy Bridge Quad-Core 3.4GHz (3.9GHz Turbo) LGA 1155 77W CM8063701211600 Desktop Processor Intel HD Graphics 4000",
+    "price": 59.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-3rd-gen-core-i7-3770-ivy-bridge-lga-1155-desktop-processor/p/N82E16819116957",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A22FD2509270LYS7EF9.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7 3rd Gen - Core i7-3770 Ivy Bridge Quad-Core 3.4GHz (3.9GHz Turbo) LGA 1155 77W CM8063701211600 Desktop Processor Intel HD Graphics 4000"
+  },
+  {
+    "name": "USED - VERY GOOD Intel Core i7-5930K - Core i7 5th Gen Haswell-E 6-Core 3.5 GHz LGA 2011-v3 140W Desktop Processor - BX80648I75930K",
+    "price": 59.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-5th-gen-core-i7-5930k-haswell-e-lga-2011-v3-desktop-processor/p/N82E16819117403",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-117-403-01.jpg",
+    "site": "newegg",
+    "title": "USED - VERY GOOD Intel Core i7-5930K - Core i7 5th Gen Haswell-E 6-Core 3.5 GHz LGA 2011-v3 140W Desktop Processor - BX80648I75930K"
+  },
+  {
+    "name": "USED - LIKE NEW Intel Core i7-4790 BX80646I74790 - Core i7 4th Gen Haswell Quad-Core up to 4.0GHz LGA 1150 84W Intel HD Graphics 4600 Desktop Processor",
+    "price": 65.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-4th-gen-core-i7-4790-haswell-lga-1150-processors-desktops/p/274-000A-01NH5",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AYTVS221107074YRF2B.jpg",
+    "site": "newegg",
+    "title": "USED - LIKE NEW Intel Core i7-4790 BX80646I74790 - Core i7 4th Gen Haswell Quad-Core up to 4.0GHz LGA 1150 84W Intel HD Graphics 4600 Desktop Processor"
+  },
+  {
+    "name": "USED - VERY GOOD Intel Core i7-3770S - Core i7 3rd Gen Ivy Bridge Quad-Core 3.1GHz (3.9GHz Turbo) LGA 1155 65W Intel HD Graphics 4000 Desktop Processor - BX80637I73770S",
+    "price": 65.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-3rd-gen-core-i7-3770s-ivy-bridge-lga-1155-desktop-processor/p/N82E16819116503",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-116-503-03.jpg",
+    "site": "newegg",
+    "title": "USED - VERY GOOD Intel Core i7-3770S - Core i7 3rd Gen Ivy Bridge Quad-Core 3.1GHz (3.9GHz Turbo) LGA 1155 65W Intel HD Graphics 4000 Desktop Processor - BX80637I73770S"
+  },
+  {
     "name": "REFURBISHED Intel Core i7-4770 - Core i7 4th Gen Haswell Quad-Core 3.4 GHz LGA 1150 84W Intel HD Graphics 4600 Desktop Processor - SR149",
     "price": 68.0,
     "condition": "Open Box",
@@ -9,6 +141,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-117-813-S01.jpg",
     "site": "newegg",
     "title": "REFURBISHED Intel Core i7-4770 - Core i7 4th Gen Haswell Quad-Core 3.4 GHz LGA 1150 84W Intel HD Graphics 4600 Desktop Processor - SR149"
+  },
+  {
+    "name": "REFURBISHED Intel Core i7-6800K Broadwell-E 6-Core 3.4 GHz LGA 2011-v3 140W BX80671I76800K Desktop Processor",
+    "price": 78.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/intel-core-i7-6th-gen-core-i7-6800k-broadwell-e-lga-2011-v3-processors-desktops/p/274-000A-01M88",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ADDZS200302Cj0rc.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED Intel Core i7-6800K Broadwell-E 6-Core 3.4 GHz LGA 2011-v3 140W BX80671I76800K Desktop Processor"
   },
   {
     "name": "Intel Core i7-2700K - Core i7 2nd Gen Sandy Bridge Quad-Core 3.5GHz (3.9GHz Turbo) LGA 1155 95W Intel HD Graphics 3000 Desktop Processor - BX80623i72700K",
@@ -55,6 +198,17 @@
     "title": "REFURBISHED Intel Core i7-4770T - Core i7 4th Gen Haswell Quad-Core 2.5 GHz LGA 1150 45W Intel HD Graphics 4600 Desktop Processor - SR14N"
   },
   {
+    "name": "Intel Core i3-7350K - Core i3 7th Gen Kaby Lake 4.2 GHz LGA 1151 60W Intel HD Graphics 630 Desktop CPU Processor - CM8067703014431",
+    "price": 85.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i3-7th-gen-core-i3-7350k-kaby-lake-lga-1151-desktop-cpu-processor/p/N82E16819117773",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-117-773-S01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i3-7350K - Core i3 7th Gen Kaby Lake 4.2 GHz LGA 1151 60W Intel HD Graphics 630 Desktop CPU Processor - CM8067703014431"
+  },
+  {
     "name": "REFURBISHED Intel Core i5-12400F - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Desktop Processor - BX8071512400F",
     "price": 89.0,
     "condition": "Open Box",
@@ -64,6 +218,39 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-360-03.jpg",
     "site": "newegg",
     "title": "REFURBISHED Intel Core i5-12400F - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Desktop Processor - BX8071512400F"
+  },
+  {
+    "name": "USED - VERY GOOD Intel Core i7-3970X Extreme Edition - Core i7 Extreme Edition Sandy Bridge-E 6-Core 3.5GHz (4.0GHz Turbo) LGA 2011 150W Desktop Processor - BX80619i73970X",
+    "price": 89.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-extreme-edition-core-i7-3970x-extreme-edition-sandy-bridge-e-lga-2011-desktop-processor/p/N82E16819116877",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-116-877-02.jpg",
+    "site": "newegg",
+    "title": "USED - VERY GOOD Intel Core i7-3970X Extreme Edition - Core i7 Extreme Edition Sandy Bridge-E 6-Core 3.5GHz (4.0GHz Turbo) LGA 2011 150W Desktop Processor - BX80619i73970X"
+  },
+  {
+    "name": "Intel Core i3-12100F - Core i3 12th Gen Alder Lake Quad-Core 3.3 GHz LGA 1700 58W Desktop Processor - OEM Processor",
+    "price": 89.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i3-12th-gen-core-i3-12100f-alder-lake-lga-1700-processors-desktops/p/274-000A-01P20",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ASGMS2407180LK97Y3E.jpg",
+    "site": "newegg",
+    "title": "Intel Core i3-12100F - Core i3 12th Gen Alder Lake Quad-Core 3.3 GHz LGA 1700 58W Desktop Processor - OEM Processor"
+  },
+  {
+    "name": "Intel Core i3-13100F Desktop Processor 4 cores (4 P-cores + 0 E-cores) 12MB Cache, up to 4.5 GHz - Box",
+    "price": 91.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i3-13th-gen-core-i3-13100f-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118433",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-433-02.png",
+    "site": "newegg",
+    "title": "Intel Core i3-13100F Desktop Processor 4 cores (4 P-cores + 0 E-cores) 12MB Cache, up to 4.5 GHz - Box"
   },
   {
     "name": "Intel Core i7-4790 - Core i7 4th Gen Haswell Quad-Core 3.6 GHz LGA 1150 84W Intel HD Graphics 4600 Desktop Processor - CM8064601560113",
@@ -77,6 +264,17 @@
     "title": "Intel Core i7-4790 - Core i7 4th Gen Haswell Quad-Core 3.6 GHz LGA 1150 84W Intel HD Graphics 4600 Desktop Processor - CM8064601560113"
   },
   {
+    "name": "Intel Core i7-6800K - Core i7 6th Gen Broadwell-E 6-Core 3.4 GHz LGA 2011-v3 140W Desktop Processor - CM8067102056201",
+    "price": 95.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-6th-gen-core-i7-6800k-broadwell-e-lga-2011-v3-desktop-processor/p/N82E16819117650",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A1N8_1_20160718432113046.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-6800K - Core i7 6th Gen Broadwell-E 6-Core 3.4 GHz LGA 2011-v3 140W Desktop Processor - CM8067102056201"
+  },
+  {
     "name": "Intel Core i3-14100F - Core i3 14th Gen Raptor Lake 4-Core (4P+0E) LGA 1700 58W None Integrated Graphics Processor - BX8071514100F",
     "price": 96.0,
     "condition": "New",
@@ -88,6 +286,17 @@
     "title": "Intel Core i3-14100F - Core i3 14th Gen Raptor Lake 4-Core (4P+0E) LGA 1700 58W None Integrated Graphics Processor - BX8071514100F"
   },
   {
+    "name": "USED - LIKE NEW Intel BX80677I77700T 7th Generation Core i7-7700T Processor",
+    "price": 97.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-7th-gen-core-i7-7700t-kaby-lake-lga-1151-desktop-processor/p/274-000A-000F4",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A1N8_1_20170504248946598.jpg",
+    "site": "newegg",
+    "title": "USED - LIKE NEW Intel BX80677I77700T 7th Generation Core i7-7700T Processor"
+  },
+  {
     "name": "Intel Core i7-4790K - Core i7 4th Gen Devil's Canyon Quad-Core 4.0 GHz LGA 1150 88W Intel HD Graphics 4600 Desktop Processor - BXF80646I74790K",
     "price": 99.0,
     "condition": "New",
@@ -97,6 +306,28 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-117-547-01.jpg",
     "site": "newegg",
     "title": "Intel Core i7-4790K - Core i7 4th Gen Devil's Canyon Quad-Core 4.0 GHz LGA 1150 88W Intel HD Graphics 4600 Desktop Processor - BXF80646I74790K"
+  },
+  {
+    "name": "AMD RYZEN 7 3700X 8-Core 3.6 GHz (4.4 GHz Max Boost) Socket AM4 65W 100-100000071 Desktop Processor - OEM",
+    "price": 101.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-7-3700x/p/N82E16819113574",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-574-S02.jpg",
+    "site": "newegg",
+    "title": "AMD RYZEN 7 3700X 8-Core 3.6 GHz (4.4 GHz Max Boost) Socket AM4 65W 100-100000071 Desktop Processor - OEM"
+  },
+  {
+    "name": "Intel Pentium G7400 - Pentium Gold Alder Lake Dual-Core 3.7 GHz LGA 1700 Processor 46W Intel UHD Graphics 710 Desktop Processor - BX80715G7400",
+    "price": 106.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-pentium-gold-pentium-g7400-alder-lake-lga-1700-desktop-cpu-processor/p/N82E16819118376",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A24GD2202150ESBUV6B.jpg",
+    "site": "newegg",
+    "title": "Intel Pentium G7400 - Pentium Gold Alder Lake Dual-Core 3.7 GHz LGA 1700 Processor 46W Intel UHD Graphics 710 Desktop Processor - BX80715G7400"
   },
   {
     "name": "Intel Core i7 7th Gen - Core i7-7700 Kaby Lake Quad-Core 3.6 GHz LGA 1151 65W CM8067702868314 Desktop Processor",
@@ -132,15 +363,48 @@
     "title": "REFURBISHED Intel Core i7-7700K - Core i7 7th Gen Kaby Lake Quad-Core 4.2 GHz LGA 1151 91W Intel HD Graphics 630 Desktop CPU Processor - BX80677I77700K"
   },
   {
-    "name": "Intel Core i5-12400F - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Desktop Processor - BX8071512400F",
-    "price": 124.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/intel-core-i5-12th-gen-core-i5-12400f-alder-lake-lga-1700-desktop-cpu-processor/p/N82E16819118360",
+    "name": "REFURBISHED Intel Core i7 6th Gen - Core i7-6700K 8M Skylake Quad-Core 4.0 GHz LGA 1151 91W BX80662I76700K Desktop Processor Intel HD Graphics 530 OEM,No Box",
+    "price": 110.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/p/274-000A-01NN3",
     "partType": "cpu",
-    "keyword": "i5 12400f",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-360-08.jpg",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AKWUS23071416WOX757.jpg",
     "site": "newegg",
-    "title": "Intel Core i5-12400F - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Desktop Processor - BX8071512400F"
+    "title": "REFURBISHED Intel Core i7 6th Gen - Core i7-6700K 8M Skylake Quad-Core 4.0 GHz LGA 1151 91W BX80662I76700K Desktop Processor Intel HD Graphics 530 OEM,No Box"
+  },
+  {
+    "name": "Intel Core i7-2600 - Core i7 2nd Gen Sandy Bridge Quad-Core 3.4GHz (3.8GHz Turbo Boost) LGA 1155 95W Intel HD Graphics 2000 Desktop Processor - BX80623I72600",
+    "price": 116.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-2nd-gen-core-i7-2600-sandy-bridge-lga-1155-desktop-processor/p/N82E16819115071",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-115-071-02.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-2600 - Core i7 2nd Gen Sandy Bridge Quad-Core 3.4GHz (3.8GHz Turbo Boost) LGA 1155 95W Intel HD Graphics 2000 Desktop Processor - BX80623I72600"
+  },
+  {
+    "name": "Intel Core i7-6850K - Core i7 6th Gen Broadwell-E 6-Core 3.6 GHz LGA 2011-v3 140W Desktop Processor - CM8067102056100 - Tray Only",
+    "price": 119.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-6th-gen-core-i7-6850k-broadwell-e-lga-2011-v3-desktop-processor/p/N82E16819117648",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A1N8_1_201607221254091880.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-6850K - Core i7 6th Gen Broadwell-E 6-Core 3.6 GHz LGA 2011-v3 140W Desktop Processor - CM8067102056100 - Tray Only"
+  },
+  {
+    "name": "Intel Core i3-14100 - Core i3 14th Gen Raptor Lake 4-Core (4P+0E) LGA 1700 60W Intel UHD Graphics 730 Processor - BX8071514100",
+    "price": 121.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i3-14th-gen-core-i3-14100-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118483",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-483-01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i3-14100 - Core i3 14th Gen Raptor Lake 4-Core (4P+0E) LGA 1700 60W Intel UHD Graphics 730 Processor - BX8071514100"
   },
   {
     "name": "Intel Core i7-4790K - Core i7 4th Gen Devil's Canyon Quad-Core 4.0 GHz LGA 1150 88W Intel HD Graphics 4600 Desktop Processor - BX80646I74790K",
@@ -163,6 +427,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-117-749.jpg",
     "site": "newegg",
     "title": "Intel Core i7-7700K Kaby Lake Quad-Core 4.2 GHz LGA 1151 95W CM8067702868535 OEM Processors - Desktops"
+  },
+  {
+    "name": "Intel Core i7-920 - Core i7 Bloomfield Quad-Core 2.66 GHz LGA 1366 130W Processor - BX80601920",
+    "price": 125.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-920-bloomfield-lga-1366-processor/p/N82E16819115202",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-115-202-05.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-920 - Core i7 Bloomfield Quad-Core 2.66 GHz LGA 1366 130W Processor - BX80601920"
   },
   {
     "name": "Intel Core i7-2600K - Core i7 2nd Gen Sandy Bridge Quad-Core 3.4GHz (3.8GHz Turbo Boost) LGA 1155 95W Intel HD Graphics 3000 Desktop Processor - BX80623I72600K",
@@ -198,6 +473,17 @@
     "title": "AMD Ryzen 5 5600 - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.5 GHz Socket AM4 65W Desktop Processor - 100-000000927"
   },
   {
+    "name": "Intel Core i7-6900K - Core i7 6th Gen Broadwell-E 8-Core 3.2 GHz LGA 2011-v3 140W Desktop Processor - CM8067102056010",
+    "price": 129.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-6th-gen-core-i7-6900k-broadwell-e-lga-2011-v3-desktop-processor/p/N82E16819117646",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A0ZX_1_20170510602594021.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-6900K - Core i7 6th Gen Broadwell-E 8-Core 3.2 GHz LGA 2011-v3 140W Desktop Processor - CM8067102056010"
+  },
+  {
     "name": "Intel Core i7-3770K - Core i7 3rd Gen Ivy Bridge Quad-Core 3.5GHz (3.9GHz Turbo) LGA 1155 77W Intel HD Graphics 4000 Desktop Processor - BX80637I73770K",
     "price": 135.0,
     "condition": "New",
@@ -220,6 +506,61 @@
     "title": "Intel Core i5-11400F - Core i5 11th Gen Rocket Lake 6-Core 2.6 GHz LGA 1200 65W None Integrated Graphics Desktop CPU Processor - BX8070811400F"
   },
   {
+    "name": "USED - LIKE NEW Intel Core i7-8700 Coffee Lake Desktop Processor i7 8th Gen, 6-Core up to 4.6 GHz LGA 1151(300 Series) 65W BX80684I78700 Intel UHD Graphics 630",
+    "price": 136.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-8th-gen-core-i7-8700-coffee-lake-lga-1151-processors-desktops/p/274-000A-01ND0",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AYTVS22042103C0PF18.jpg",
+    "site": "newegg",
+    "title": "USED - LIKE NEW Intel Core i7-8700 Coffee Lake Desktop Processor i7 8th Gen, 6-Core up to 4.6 GHz LGA 1151(300 Series) 65W BX80684I78700 Intel UHD Graphics 630"
+  },
+  {
+    "name": "AMD Ryzen 5 5600X 6-Core 3.7 GHz Socket AM4 65W 100-100000065CBX Desktop Processor -OEM (NOT BOX EDITION)",
+    "price": 136.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-5-5600x-ryzen-5-5000-g-series/p/274-000M-001G6",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/APMXS210104O4Dom.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 5 5600X 6-Core 3.7 GHz Socket AM4 65W 100-100000065CBX Desktop Processor -OEM (NOT BOX EDITION)"
+  },
+  {
+    "name": "AMD Ryzen 5 5600X 6-core, 12-Thread Unlocked Desktop Processor - Tray Version (No Cooler)",
+    "price": 136.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-5-5600x-ryzen-5-5000-series/p/274-000M-001H3",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A8TKS210309OGtEu.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 5 5600X 6-core, 12-Thread Unlocked Desktop Processor - Tray Version (No Cooler)"
+  },
+  {
+    "name": "AMD Ryzen 5 5600G - Ryzen 5 5000 G-Series Cezanne (Zen 3) 6-Core 3.9 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-000000252",
+    "price": 136.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-5-5000-g-series-ryzen-5-5600g-cezanne-socket-am4-desktop-cpu-processor/p/N82E16819113684",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-684-S01.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 5 5600G - Ryzen 5 5000 G-Series Cezanne (Zen 3) 6-Core 3.9 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-000000252"
+  },
+  {
+    "name": "Intel Core i5-12400F - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Desktop Processor - BX8071512400F",
+    "price": 137.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-12th-gen-core-i5-12400f-alder-lake-lga-1700-desktop-cpu-processor/p/N82E16819118360",
+    "partType": "cpu",
+    "keyword": "i5 12400f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-360-08.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-12400F - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Desktop Processor - BX8071512400F"
+  },
+  {
     "name": "REFURBISHED Intel Core i7-12700F - Core i7 12th Gen Alder Lake 12-Core (8P+4E) 2.1 GHz LGA 1700 65W Desktop Processor - BX8071512700F",
     "price": 139.0,
     "condition": "Open Box",
@@ -229,6 +570,50 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-359-03.jpg",
     "site": "newegg",
     "title": "REFURBISHED Intel Core i7-12700F - Core i7 12th Gen Alder Lake 12-Core (8P+4E) 2.1 GHz LGA 1700 65W Desktop Processor - BX8071512700F"
+  },
+  {
+    "name": "Intel Core i3-12100 - Core i3 12th Gen Alder Lake Quad-Core 3.3 GHz LGA 1700 Processor 60W Intel UHD Graphics 730 Desktop Processor - BX8071512100",
+    "price": 139.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i3-12th-gen-core-i3-12100-alder-lake-lga-1700-desktop-cpu-processor/p/N82E16819118370",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A24GD2203220DB6YE7D.jpg",
+    "site": "newegg",
+    "title": "Intel Core i3-12100 - Core i3 12th Gen Alder Lake Quad-Core 3.3 GHz LGA 1700 Processor 60W Intel UHD Graphics 730 Desktop Processor - BX8071512100"
+  },
+  {
+    "name": "Intel Core i7 6th Gen - Core i7-6700K 8M Skylake Quad-Core 4.0 GHz LGA 1151 91W BX80662I76700K Desktop Processor Intel HD Graphics 530 OEM,No Box",
+    "price": 139.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/274-000A-01N77",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AYTVD22032502RVZZ16.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7 6th Gen - Core i7-6700K 8M Skylake Quad-Core 4.0 GHz LGA 1151 91W BX80662I76700K Desktop Processor Intel HD Graphics 530 OEM,No Box"
+  },
+  {
+    "name": "Intel Core i7-6700K - Core i7 6th Gen Skylake Quad-Core 4.0 GHz LGA 1151 91W Intel HD Graphics 530 Desktop Processor - CM8066201919901",
+    "price": 139.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-6th-gen-core-i7-6700k-skylake-lga-1151-desktop-processor/p/N82E16819117582",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AAM1_131068555141898270fiBFlwmeVE.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-6700K - Core i7 6th Gen Skylake Quad-Core 4.0 GHz LGA 1151 91W Intel HD Graphics 530 Desktop Processor - CM8066201919901"
+  },
+  {
+    "name": "REFURBISHED AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W Desktop Processor - 100-100000065BOX",
+    "price": 139.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/amd-ryzen-5-5000-series-ryzen-5-5600x-vermeer-socket-am4-processors-desktops/p/274-000M-001P4",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ADDZS2109122B192.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W Desktop Processor - 100-100000065BOX"
   },
   {
     "name": "AMD Ryzen 5 5600 - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.5 GHz Socket AM4 65W None Integrated Graphics Desktop CPU Processor - 100-100000927BOX",
@@ -253,6 +638,39 @@
     "title": "AMD Ryzen 5 5600 - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.5 GHz Socket AM4 65W None Integrated Graphics Desktop Processor - 100-100000927CBX - International Version With Warranty Of Three Years"
   },
   {
+    "name": "REFURBISHED Intel Core i7 i7-7700 Quad-core (4 Core) 3.60 GHz OEM Processor",
+    "price": 144.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/p/274-000A-01MG9",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A85V_1_20190802689541583.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED Intel Core i7 i7-7700 Quad-core (4 Core) 3.60 GHz OEM Processor"
+  },
+  {
+    "name": "REFURBISHED Intel Core i7-8700K Coffee Lake 6-Core 3.7 GHz (4.7 GHz Turbo) LGA 1151 (300 Series) CM8068403358220 Desktop Processor Intel UHD Graphics 630",
+    "price": 147.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/intel-core-i7-8th-gen-core-i7-8700k-coffee-lake-lga-1151-processors-desktops/p/274-000A-01M91",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AK3PS200328B4onu.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED Intel Core i7-8700K Coffee Lake 6-Core 3.7 GHz (4.7 GHz Turbo) LGA 1151 (300 Series) CM8068403358220 Desktop Processor Intel UHD Graphics 630"
+  },
+  {
+    "name": "REFURBISHED AMD Ryzen 5 5600G - Ryzen 5 5000 G-Series Cezanne (Zen 3) 6-Core 3.9 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-100000252BOX",
+    "price": 148.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/amd-ryzen-5-5600g-ryzen-5-5000-g-series-cezanne-zen-3-socket-am4-processors-desktops/p/274-000M-00239",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/BMM4S2509180W91JH88.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED AMD Ryzen 5 5600G - Ryzen 5 5000 G-Series Cezanne (Zen 3) 6-Core 3.9 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-100000252BOX"
+  },
+  {
     "name": "Intel Core i7 7th Gen - Core i7-7700 Kaby Lake Quad-Core 3.6 GHz LGA 1151 65W BX80677I77700 Desktop Processor",
     "price": 149.0,
     "condition": "New",
@@ -273,6 +691,39 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-117-824-Z01.jpg",
     "site": "newegg",
     "title": "Intel Core i5 8th Gen - Core i5-8400 Coffee Lake 6-Core 2.8 GHz (4.0 GHz Turbo) LGA 1151 (300 Series) 65W BX80684I58400 Desktop Processor Intel UHD Graphics 630"
+  },
+  {
+    "name": "Intel Core i7-2600S - Core i7 2nd Gen Sandy Bridge Quad-Core 2.8GHz (3.8GHz Turbo Boost) LGA 1155 65W Intel HD Graphics 2000 Desktop Processor - BX80623I72600S",
+    "price": 149.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-2nd-gen-core-i7-2600s-sandy-bridge-lga-1155-desktop-processor/p/N82E16819115228",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-115-228-02.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-2600S - Core i7 2nd Gen Sandy Bridge Quad-Core 2.8GHz (3.8GHz Turbo Boost) LGA 1155 65W Intel HD Graphics 2000 Desktop Processor - BX80623I72600S"
+  },
+  {
+    "name": "REFURBISHED Intel Core i7-8700 Coffee Lake Desktop Processor i7 8th Gen, Core 6 Cores up to 4.6 GHz LGA 1151 (300 Series) 65W CM8068403358316 OEM",
+    "price": 150.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/intel-core-i7-8th-gen-core-i7-8700-coffee-lake-lga-1151-processors-desktops/p/274-000A-01NM7",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AUNCS2306070I7OO520.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED Intel Core i7-8700 Coffee Lake Desktop Processor i7 8th Gen, Core 6 Cores up to 4.6 GHz LGA 1151 (300 Series) 65W CM8068403358316 OEM"
+  },
+  {
+    "name": "USED - LIKE NEW Intel Core i7-8700 Coffee Lake Desktop Processor i7 8th Gen, Core 6 Cores up to 4.6 GHz LGA 1151 (300 Series) 65W CM8068403358316 OEM, International Version No Warranty",
+    "price": 150.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-8700-core-i7-8th-gen/p/274-000A-01NC8",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AYTVS2204130I7N1MB5.jpg",
+    "site": "newegg",
+    "title": "USED - LIKE NEW Intel Core i7-8700 Coffee Lake Desktop Processor i7 8th Gen, Core 6 Cores up to 4.6 GHz LGA 1151 (300 Series) 65W CM8068403358316 OEM, International Version No Warranty"
   },
   {
     "name": "Intel Core i7-4930K - Core i7 4th Gen Ivy Bridge-E 6-Core 3.4 GHz LGA 2011 130W Desktop Processor - BX80633i74930K",
@@ -297,6 +748,17 @@
     "title": "Intel Core i7 8th Gen - Core i7-8700 Coffee Lake 6-Core 3.2 GHz (4.6 GHz Turbo) LGA 1151 (300 Series) 65W CM8068403358316 Desktop Processor Intel UHD Graphics 630"
   },
   {
+    "name": "AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop Processor - 100-000000263",
+    "price": 156.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-7-5000-g-series-ryzen-7-5700g-cezanne-socket-am4-desktop-cpu-processor/p/N82E16819113730",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A1K6S22092103Z0ZK91.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop Processor - 100-000000263"
+  },
+  {
     "name": "Intel Core i5-12400F - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Desktop Processor-OEM Processor",
     "price": 159.0,
     "condition": "New",
@@ -308,15 +770,15 @@
     "title": "Intel Core i5-12400F - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Desktop Processor-OEM Processor"
   },
   {
-    "name": "AMD Ryzen 7 5800X - Ryzen 7 5000 Series Vermeer (Zen 3) 8-Core 3.8 GHz Socket AM4 105W None Integrated Graphics Desktop CPU Processor - 100-100000063WOF",
+    "name": "AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop Processor-OEM, No Box",
     "price": 164.0,
     "condition": "New",
-    "url": "https://www.newegg.com/amd-ryzen-7-5000-series-ryzen-7-5800x-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113665",
+    "url": "https://www.newegg.com/amd-ryzen-7-5000-g-series-ryzen-7-5700g-cezanne-socket-am4-processors-desktops/p/274-000M-001T6",
     "partType": "cpu",
-    "keyword": "ryzen 7 5800x",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-665-V01.jpg",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/APBUS2208240FWL32F3.jpg",
     "site": "newegg",
-    "title": "AMD Ryzen 7 5800X - Ryzen 7 5000 Series Vermeer (Zen 3) 8-Core 3.8 GHz Socket AM4 105W None Integrated Graphics Desktop CPU Processor - 100-100000063WOF"
+    "title": "AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop Processor-OEM, No Box"
   },
   {
     "name": "Intel Core i7-6700K Skylake Desktop Processor, i7 6th Gen 8M Skylake Quad-Core(4 Core) up to 4.2 GHz LGA 1151 91W BX80662I76700K Desktop Processor Intel HD Graphics 530",
@@ -328,6 +790,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/AYTVS22080107HCTK44.jpg",
     "site": "newegg",
     "title": "Intel Core i7-6700K Skylake Desktop Processor, i7 6th Gen 8M Skylake Quad-Core(4 Core) up to 4.2 GHz LGA 1151 91W BX80662I76700K Desktop Processor Intel HD Graphics 530"
+  },
+  {
+    "name": "REFURBISHED Intel Core i7-8700K Coffee Lake 6-Core 3.7 GHz (4.7 GHz Turbo) LGA 1151 (300 Series) 95W BX80684I78700K Desktop Processor Intel UHD Graphics 630",
+    "price": 165.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/intel-core-i7-8th-gen-core-i7-8700k-coffee-lake-lga-1151-processors-desktops/p/274-000A-01MF3",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ADDZS201101pBuVx.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED Intel Core i7-8700K Coffee Lake 6-Core 3.7 GHz (4.7 GHz Turbo) LGA 1151 (300 Series) 95W BX80684I78700K Desktop Processor Intel UHD Graphics 630"
   },
   {
     "name": "Intel Core i7-4770 - Core i7 4th Gen Haswell Quad-Core 3.4 GHz LGA 1150 84W Intel HD Graphics Desktop Processor - BX80646I74770",
@@ -429,6 +902,50 @@
     "title": "Intel Core i5-11400 - Core i5 11th Gen Rocket Lake 6-Core 2.6 GHz LGA 1200 65W Intel UHD Graphics 730 Desktop CPU Processor - BX8070811400"
   },
   {
+    "name": "Intel OEM Core i7 i7-8700K Hexa-core (6 Core) 3.70 GHz Processor - Socket H4 LGA-1151 (CM8068403358220)",
+    "price": 169.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/2MN-0004-00880",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AKVHD2201300WJ9QJ31.jpg",
+    "site": "newegg",
+    "title": "Intel OEM Core i7 i7-8700K Hexa-core (6 Core) 3.70 GHz Processor - Socket H4 LGA-1151 (CM8068403358220)"
+  },
+  {
+    "name": "AMD Ryzen 7 5700X - Ryzen 7 5000 Series Vermeer (Zen 3) 8-Core 3.4 GHz Socket AM4 65W None Integrated Graphics Desktop CPU Processor - 100-100000926WOF",
+    "price": 169.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-7-5000-series-ryzen-7-5700x-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113735",
+    "partType": "cpu",
+    "keyword": "ryzen 7 5700x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-735-V01.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 7 5700X - Ryzen 7 5000 Series Vermeer (Zen 3) 8-Core 3.4 GHz Socket AM4 65W None Integrated Graphics Desktop CPU Processor - 100-100000926WOF"
+  },
+  {
+    "name": "AMD Ryzen 7 5700X - Ryzen 7 5000 Series Vermeer (Zen 3) 8-Core 3.4 GHz Socket AM4 65W Desktop Processor (Tray, OEM) - 100-000000926",
+    "price": 169.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-7-5000-series-ryzen-7-5700x-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113746",
+    "partType": "cpu",
+    "keyword": "ryzen 7 5700x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-746-01.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 7 5700X - Ryzen 7 5000 Series Vermeer (Zen 3) 8-Core 3.4 GHz Socket AM4 65W Desktop Processor (Tray, OEM) - 100-000000926"
+  },
+  {
+    "name": "AMD Ryzen 7 5700X - Ryzen 7 5000 Series 8-Core 3.4 GHz Socket AM4 65W None Integrated Graphics Desktop Processor - 100-100000926WOZ - International Version With Warranty Of Three Years",
+    "price": 172.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/274-000M-001Z8",
+    "partType": "cpu",
+    "keyword": "ryzen 7 5700x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ASGMS2407300F0PNZ59.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 7 5700X - Ryzen 7 5000 Series 8-Core 3.4 GHz Socket AM4 65W None Integrated Graphics Desktop Processor - 100-100000926WOZ - International Version With Warranty Of Three Years"
+  },
+  {
     "name": "Intel Core i5-10400 - Core i5 10th Gen Comet Lake 6-Core 2.9 GHz LGA 1200 65W Intel UHD Graphics 630 Desktop CPU Processor - BX8070110400",
     "price": 174.0,
     "condition": "New",
@@ -462,6 +979,28 @@
     "title": "Intel Core i7-875K - Core i7 Lynnfield Quad-Core 2.93 GHz LGA 1156 95W Unlocked Desktop Processor - BX80605I7875K"
   },
   {
+    "name": "REFURBISHED Intel Core i7-9700K Coffee Lake 8-Core 3.6 GHz (4.9 GHz Turbo) LGA 1151 (300 Series) 95W BX80684I79700K Desktop Processor Intel UHD Graphics 630",
+    "price": 176.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/intel-core-i7-9th-gen-core-i7-9700k-coffee-lake-lga-1151-processors-desktops/p/274-000A-01M94",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AK3PS200328B4onu.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED Intel Core i7-9700K Coffee Lake 8-Core 3.6 GHz (4.9 GHz Turbo) LGA 1151 (300 Series) 95W BX80684I79700K Desktop Processor Intel UHD Graphics 630"
+  },
+  {
+    "name": "AMD Ryzen 7 5800X - Ryzen 7 5000 Series 8-Core 3.8 GHz Socket AM4 105W Desktop Processor - 100-000000063",
+    "price": 178.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-7-5800x/p/N82E16819113669",
+    "partType": "cpu",
+    "keyword": "ryzen 7 5800x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-669-S01.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 7 5800X - Ryzen 7 5000 Series 8-Core 3.8 GHz Socket AM4 105W Desktop Processor - 100-000000063"
+  },
+  {
     "name": "Intel Core i7 7th Gen - Core i7-7700K Kaby Lake Quad-Core 4.2 GHz LGA 1151 91W BX80677I77700K Desktop Processor",
     "price": 178.0,
     "condition": "New",
@@ -473,17 +1012,6 @@
     "title": "Intel Core i7 7th Gen - Core i7-7700K Kaby Lake Quad-Core 4.2 GHz LGA 1151 91W BX80677I77700K Desktop Processor"
   },
   {
-    "name": "Intel Core i7-4820K - Core i7 4th Gen Ivy Bridge-E Quad-Core 3.7GHz (Turbo 3.9GHz) LGA 2011 130W Desktop Processor - BX80633i74820K",
-    "price": 178.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/intel-core-i7-4th-gen-core-i7-4820k-ivy-bridge-e-lga-2011-desktop-processor/p/N82E16819116940",
-    "partType": "cpu",
-    "keyword": "i7 12700f",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-116-940-03.jpg",
-    "site": "newegg",
-    "title": "Intel Core i7-4820K - Core i7 4th Gen Ivy Bridge-E Quad-Core 3.7GHz (Turbo 3.9GHz) LGA 2011 130W Desktop Processor - BX80633i74820K"
-  },
-  {
     "name": "Intel Core i7-4790S - Core i7 4th Gen Haswell Quad-Core 3.2 GHz LGA 1150 65W Intel HD Graphics 4600 Desktop Processor - BX80646I74790S",
     "price": 179.0,
     "condition": "New",
@@ -493,6 +1021,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-116-988-03.jpg",
     "site": "newegg",
     "title": "Intel Core i7-4790S - Core i7 4th Gen Haswell Quad-Core 3.2 GHz LGA 1150 65W Intel HD Graphics 4600 Desktop Processor - BX80646I74790S"
+  },
+  {
+    "name": "REFURBISHED AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop Processor - 100-100000263BOX",
+    "price": 179.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/amd-ryzen-7-5000-g-series-ryzen-7-5700g-cezanne-socket-am4-processors-desktops/p/274-000M-00231",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ADDZS2505220J06E50E.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop Processor - 100-100000263BOX"
   },
   {
     "name": "Intel Core i7-5820K - Core i7 4th Gen Haswell-E 6-Core 3.3 GHz LGA 2011-v3 140W Desktop Processor - BX80648I75820K",
@@ -517,26 +1056,26 @@
     "title": "Intel Core i5-12600K - Core i5 12th Gen Alder Lake 10-Core (6P+4E) 3.7 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop Processor - BX8071512600K"
   },
   {
-    "name": "AMD Ryzen 7 5800X - Ryzen 7 5000 Series 8-Core 3.8 GHz Socket AM4 105W Desktop Processor - 100-000000063",
-    "price": 190.0,
+    "name": "AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-100000263BOX",
+    "price": 189.0,
     "condition": "New",
-    "url": "https://www.newegg.com/amd-ryzen-7-5800x/p/N82E16819113669",
+    "url": "https://www.newegg.com/amd-ryzen-7-5000-g-series-ryzen-7-5700g-cezanne-socket-am4-desktop-cpu-processor/p/N82E16819113682",
     "partType": "cpu",
-    "keyword": "ryzen 7 5800x",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-669-S01.jpg",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-682-V01.jpg",
     "site": "newegg",
-    "title": "AMD Ryzen 7 5800X - Ryzen 7 5000 Series 8-Core 3.8 GHz Socket AM4 105W Desktop Processor - 100-000000063"
+    "title": "AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-100000263BOX"
   },
   {
-    "name": "Intel Core i5 X-Series - Core i5-7640X Kaby Lake-X Quad-Core 4.0 GHz LGA 2066 112W BX80677I57640X Desktop Processor",
-    "price": 193.0,
+    "name": "AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-100000263MPK",
+    "price": 189.0,
     "condition": "New",
-    "url": "https://www.newegg.com/intel-core-i5-x-series-core-i5-7640x-kaby-lake-x-lga-2066-desktop-cpu-processor/p/N82E16819117791",
+    "url": "https://www.newegg.com/amd-ryzen-7-5000-g-series-ryzen-7-5700g-cezanne-socket-am4-desktop-cpu-processor/p/N82E16819113687",
     "partType": "cpu",
-    "keyword": "i7 12700f",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-117-791-S05.jpg",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-687-01.jpg",
     "site": "newegg",
-    "title": "Intel Core i5 X-Series - Core i5-7640X Kaby Lake-X Quad-Core 4.0 GHz LGA 2066 112W BX80677I57640X Desktop Processor"
+    "title": "AMD Ryzen 7 5700G - Ryzen 7 5000 G-Series Cezanne (Zen 3) 8-Core 3.8 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-100000263MPK"
   },
   {
     "name": "Intel Core i7 9th Gen - Core i7-9700 Coffee Lake 8-Core 3.0 GHz (4.7 GHz Turbo) LGA 1151 (300 Series) 65W BX80684I79700 Desktop Processor Intel UHD Graphics 630",
@@ -572,6 +1111,28 @@
     "title": "Intel Core i7 9th Gen - Core i7-9700F Coffee Lake 8-Core 3.0 GHz (4.7 GHz Turbo) LGA 1151 (300 Series) 65W BX80684i79700F Desktop Processor Without Graphics"
   },
   {
+    "name": "Intel Core i7-9700K 3.6 GHz LGA 1151 (300 Series) CM8068403874215 Desktop Processor - OEM",
+    "price": 199.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-9th-gen-core-i7-9700k-coffee-lake-lga-1151-desktop-processor/p/N82E16819118084",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A4M5_1_20191218982144287.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-9700K 3.6 GHz LGA 1151 (300 Series) CM8068403874215 Desktop Processor - OEM"
+  },
+  {
+    "name": "Intel Core i5-13400F Desktop Processor 10 cores (6 P-cores + 4 E-cores) 20MB Cache, up to 4.6 GHz - Box",
+    "price": 199.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-13th-gen-core-i5-13400f-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118431",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-431-04.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-13400F Desktop Processor 10 cores (6 P-cores + 4 E-cores) 20MB Cache, up to 4.6 GHz - Box"
+  },
+  {
     "name": "Intel Core i5-14400F - Core i5 14th Gen Raptor Lake 10-Core (6P+4E) LGA 1700 65W None Integrated Graphics Processor - BX8071514400F",
     "price": 204.0,
     "condition": "New",
@@ -583,6 +1144,28 @@
     "title": "Intel Core i5-14400F - Core i5 14th Gen Raptor Lake 10-Core (6P+4E) LGA 1700 65W None Integrated Graphics Processor - BX8071514400F"
   },
   {
+    "name": "AMD Ryzen 5 5600G - Ryzen 5 5000 G-Series Cezanne (Zen 3) 6-Core 3.9 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-100000252BOX",
+    "price": 204.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-5-5000-g-series-ryzen-5-5600g-cezanne-socket-am4-desktop-cpu-processor/p/N82E16819113683",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-683-V01.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 5 5600G - Ryzen 5 5000 G-Series Cezanne (Zen 3) 6-Core 3.9 GHz Socket AM4 65W AMD Radeon Graphics Desktop CPU Processor - 100-100000252BOX"
+  },
+  {
+    "name": "Intel Core i5-12500 - Core i5 12th Gen Alder Lake 6-Core 3.0 GHz LGA 1700 65W Intel UHD Graphics 770 Desktop Processor - BX8071512500",
+    "price": 206.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-12th-gen-core-i5-12500-alder-lake-lga-1700-desktop-cpu-processor/p/N82E16819118374",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-374-S01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-12500 - Core i5 12th Gen Alder Lake 6-Core 3.0 GHz LGA 1700 65W Intel UHD Graphics 770 Desktop Processor - BX8071512500"
+  },
+  {
     "name": "REFURBISHED Intel Core i7-13700KF - Core i7 13th Gen Raptor Lake 16-Core (8P+8E) P-core Base Frequency: 3.4 GHz E-core Base Frequency: 2.5 GHz LGA 1700 125W None Integrated Graphics Desktop CPU Processor - BX8071",
     "price": 209.0,
     "condition": "Open Box",
@@ -592,6 +1175,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-415-V05.jpg",
     "site": "newegg",
     "title": "REFURBISHED Intel Core i7-13700KF - Core i7 13th Gen Raptor Lake 16-Core (8P+8E) P-core Base Frequency: 3.4 GHz E-core Base Frequency: 2.5 GHz LGA 1700 125W None Integrated Graphics Desktop CPU Processor - BX8071"
+  },
+  {
+    "name": "AMD Ryzen 5 5600X - Ryzen 5 5000 Series 6-Core 3.7 GHz Socket AM4 65W Desktop Processor - 100-000000065",
+    "price": 212.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-5-5600x/p/N82E16819113670",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-670-V01.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 5 5600X - Ryzen 5 5000 Series 6-Core 3.7 GHz Socket AM4 65W Desktop Processor - 100-000000065"
   },
   {
     "name": "Intel Core i5-14400 - Core i5 14th Gen Raptor Lake 10-Core (6P+4E) LGA 1700 65W Intel UHD Graphics 730 Processor - BX8071514400",
@@ -616,6 +1210,28 @@
     "title": "REFURBISHED Intel Core i7-13700K - Core i7 13th Gen Raptor Lake 16-Core (8P+8E) P-core Base Frequency: 3.4 GHz E-core Base Frequency: 2.5 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop CPU Processor - BX8071513"
   },
   {
+    "name": "Intel Core Ultra 5 245KF - Core Ultra 5 (Series 2) Arrow Lake 14-Core (6P+8E), LGA 1851, 125W Desktop Processor - BX80768245KF",
+    "price": 214.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-ultra-5-245kf-arrow-lake-lga-1851-desktop-cpu-processor/p/N82E16819118509",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-509-07.jpg",
+    "site": "newegg",
+    "title": "Intel Core Ultra 5 245KF - Core Ultra 5 (Series 2) Arrow Lake 14-Core (6P+8E), LGA 1851, 125W Desktop Processor - BX80768245KF"
+  },
+  {
+    "name": "AMD Ryzen 7 5800X - Ryzen 7 5000 Series Vermeer (Zen 3) 8-Core 3.8 GHz Socket AM4 105W None Integrated Graphics Desktop CPU Processor - 100-100000063WOF",
+    "price": 219.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-7-5000-series-ryzen-7-5800x-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113665",
+    "partType": "cpu",
+    "keyword": "ryzen 7 5800x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-665-V01.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 7 5800X - Ryzen 7 5000 Series Vermeer (Zen 3) 8-Core 3.8 GHz Socket AM4 105W None Integrated Graphics Desktop CPU Processor - 100-100000063WOF"
+  },
+  {
     "name": "Intel Core i7-9700K - Core i7 9th Gen Coffee Lake 8-Core 3.6 GHz LGA 1151 (300 Series) 95W Intel HD Graphics 630 Desktop Processor - CM8068403874212",
     "price": 220.0,
     "condition": "New",
@@ -627,19 +1243,8 @@
     "title": "Intel Core i7-9700K - Core i7 9th Gen Coffee Lake 8-Core 3.6 GHz LGA 1151 (300 Series) 95W Intel HD Graphics 630 Desktop Processor - CM8068403874212"
   },
   {
-    "name": "AMD Ryzen 5 5600 6-Core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler",
-    "price": 227.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/p/3C6-00C4-00016",
-    "partType": "cpu",
-    "keyword": "ryzen 5 5600",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/BCS7S2311130JS7VG1B.jpg",
-    "site": "newegg",
-    "title": "AMD Ryzen 5 5600 6-Core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler"
-  },
-  {
     "name": "AMD Ryzen 7 5800X 8-Core 3.8 GHz Socket AM4 105W 36MB Cache, Unlocked 100-100000063WOZ Desktop Processor",
-    "price": 237.0,
+    "price": 224.0,
     "condition": "New",
     "url": "https://www.newegg.com/amd-ryzen-7-5800x/p/274-000M-001F7",
     "partType": "cpu",
@@ -649,15 +1254,37 @@
     "title": "AMD Ryzen 7 5800X 8-Core 3.8 GHz Socket AM4 105W 36MB Cache, Unlocked 100-100000063WOZ Desktop Processor"
   },
   {
-    "name": "AMD Ryzen 7 5800X 8-Core 3.8 GHz Socket AM4 105W Desktop Processor - Tray Version",
-    "price": 238.0,
+    "name": "Intel Core i5-14400F - Core i5 14th Gen Raptor Lake 10-Core (6P+4E) LGA 1700 65W None Integrated Graphics Processor - CM8071505093011",
+    "price": 230.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/274-000M-001H4",
+    "url": "https://www.newegg.com/intel-core-i5-14th-gen-core-i5-14400f-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118491",
     "partType": "cpu",
-    "keyword": "ryzen 7 5800x",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/A8TKD21032781Z34.jpg",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AFYUD2209270S7P9S17.jpg",
     "site": "newegg",
-    "title": "AMD Ryzen 7 5800X 8-Core 3.8 GHz Socket AM4 105W Desktop Processor - Tray Version"
+    "title": "Intel Core i5-14400F - Core i5 14th Gen Raptor Lake 10-Core (6P+4E) LGA 1700 65W None Integrated Graphics Processor - CM8071505093011"
+  },
+  {
+    "name": "AMD Ryzen 5 5600 6-Core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler",
+    "price": 233.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/3C6-00C4-00016",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/BCS7S2311130JS7VG1B.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 5 5600 6-Core, 12-Thread Unlocked Desktop Processor with Wraith Stealth Cooler"
+  },
+  {
+    "name": "Intel Core i5-12400 - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Intel UHD Graphics 730 Desktop Processor - BX8071512400",
+    "price": 233.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-12th-gen-core-i5-12400-alder-lake-lga-1700-desktop-cpu-processor/p/N82E16819118358",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-358-S02.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-12400 - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Intel UHD Graphics 730 Desktop Processor - BX8071512400"
   },
   {
     "name": "Intel Core i7 9th Gen - Core i7-9700K Coffee Lake 8-Core 3.6 GHz (4.9 GHz Turbo) LGA 1151 (300 Series) 95W BX80684I79700K Desktop Processor Intel UHD Graphics 630",
@@ -682,6 +1309,28 @@
     "title": "Intel Core i5-14600KF - Core i5 14th Gen 14-Core (6P+8E) LGA 1700 125W None Integrated Graphics Desktop Processor - Boxed - BX8071514600KF"
   },
   {
+    "name": "USED - LIKE NEW Intel Core i7-10700 Comet Lake 8-Core 2.9 GHz LGA 1200 65W BX8070110700 Desktop Processor Intel UHD Graphics 630",
+    "price": 239.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-10th-gen-core-i7-10700-comet-lake-lga-1200-desktop-processor/p/N82E16819118276",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/V336D200701A095U.jpg",
+    "site": "newegg",
+    "title": "USED - LIKE NEW Intel Core i7-10700 Comet Lake 8-Core 2.9 GHz LGA 1200 65W BX8070110700 Desktop Processor Intel UHD Graphics 630"
+  },
+  {
+    "name": "AMD Ryzen 7 5800X 8-Core 3.8 GHz Socket AM4 105W Desktop Processor - Tray Version",
+    "price": 244.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/274-000M-001H4",
+    "partType": "cpu",
+    "keyword": "ryzen 7 5800x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A8TKD21032781Z34.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 7 5800X 8-Core 3.8 GHz Socket AM4 105W Desktop Processor - Tray Version"
+  },
+  {
     "name": "Intel Core i7-12700F - Core i7 12th Gen Alder Lake 12-Core (8P+4E) 2.1 GHz LGA 1700 65W Desktop Processor - BX8071512700F",
     "price": 244.0,
     "condition": "New",
@@ -691,6 +1340,28 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-359-03.jpg",
     "site": "newegg",
     "title": "Intel Core i7-12700F - Core i7 12th Gen Alder Lake 12-Core (8P+4E) 2.1 GHz LGA 1700 65W Desktop Processor - BX8071512700F"
+  },
+  {
+    "name": "Intel Core i5-12600 - Core i5 12th Gen Alder Lake 6-Core 3.3 GHz LGA 1700 65W Intel UHD Graphics 770 Desktop Processor - BX8071512600",
+    "price": 249.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-12th-gen-core-i5-12600-alder-lake-lga-1700-desktop-cpu-processor/p/N82E16819118371",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-371-S01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-12600 - Core i5 12th Gen Alder Lake 6-Core 3.3 GHz LGA 1700 65W Intel UHD Graphics 770 Desktop Processor - BX8071512600"
+  },
+  {
+    "name": "AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W None Integrated Graphics Desktop CPU Processor - 100-100000065BOX",
+    "price": 250.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-5-5000-series-ryzen-5-5600x-vermeer-socket-am4-desktop-cpu-processor/p/N82E16819113666",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-666-V01.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 5 5600X - Ryzen 5 5000 Series Vermeer (Zen 3) 6-Core 3.7 GHz Socket AM4 65W None Integrated Graphics Desktop CPU Processor - 100-100000065BOX"
   },
   {
     "name": "Intel Core i7 11th Gen - Core i7-11700K Rocket Lake 8-Core 3.6 GHz LGA 1200 125W BX8070811700K Desktop Processor Intel UHD Graphics 750",
@@ -704,10 +1375,21 @@
     "title": "Intel Core i7 11th Gen - Core i7-11700K Rocket Lake 8-Core 3.6 GHz LGA 1200 125W BX8070811700K Desktop Processor Intel UHD Graphics 750"
   },
   {
+    "name": "Intel Core i5-12600KF - Core i5 12th Gen Alder Lake 10-Core (6P+4E) 3.7 GHz LGA 1700 125W Desktop Processor - BX8071512600KF",
+    "price": 255.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-12th-gen-core-i5-12600kf-alder-lake-lga-1700-desktop-processor/p/N82E16819118402",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-402-S01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-12600KF - Core i5 12th Gen Alder Lake 10-Core (6P+4E) 3.7 GHz LGA 1700 125W Desktop Processor - BX8071512600KF"
+  },
+  {
     "name": "Intel Xeon Silver 4210 Processor 10 Core 2.20GHZ 14MB 85W CPU CD8069503956302 (OEM Tray Processor)",
     "price": 257.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/3C6-008J-00371?Item=9SIATRNKH31544&cm_sp=SP-_-3009988-_-0-_-3-_-9SIATRNKH31544-_-i5%2012400f-_-12400f|i5-_-8",
+    "url": "https://www.newegg.com/p/3C6-008J-00371?Item=9SIATRNKH31544&cm_sp=SP-_-3009988-_-0-_-3-_-9SIATRNKH31544-_-i5%2012400f-_-12400f|i5-_-9",
     "partType": "cpu",
     "keyword": "i5 12400f",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/BSTDD2412300MRKOA8E.jpg",
@@ -748,15 +1430,15 @@
     "title": "Intel Core i5-14600K - Core i5 14th Gen 14-Core (6P+8E) LGA 1700 125W Intel UHD Graphics 770 Processor - Tray - CM8071504821015"
   },
   {
-    "name": "REFURBISHED Intel Core i7-14700KF - Core i7 14th Gen 20-Core (8P+12E) LGA 1700 125W None Integrated Graphics Desktop Processor - Boxed - BX8071514700KF",
+    "name": "Intel Core i7-9700K Coffee Lake Desktop Processor, i7 9th Gen LGA 1151 (300 Series) 95W 8-Core up to 4.9 GHz Desktop Processor Intel UHD Graphics 630 BX80684I79700K - OEM",
     "price": 259.0,
-    "condition": "Open Box",
-    "url": "https://www.newegg.com/intel-core-i7-14th-gen-core-i7-14700kf-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118468T",
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-9th-gen-core-i7-9700k-coffee-lake-lga-1151-processors-desktops/p/274-000A-01NE9",
     "partType": "cpu",
     "keyword": "i7 12700f",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-468-03.jpg",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AYTVS22071506DV8J17.jpg",
     "site": "newegg",
-    "title": "REFURBISHED Intel Core i7-14700KF - Core i7 14th Gen 20-Core (8P+12E) LGA 1700 125W None Integrated Graphics Desktop Processor - Boxed - BX8071514700KF"
+    "title": "Intel Core i7-9700K Coffee Lake Desktop Processor, i7 9th Gen LGA 1151 (300 Series) 95W 8-Core up to 4.9 GHz Desktop Processor Intel UHD Graphics 630 BX80684I79700K - OEM"
   },
   {
     "name": "Intel Core i7-5960X - Core i7 4th Gen Haswell-E 8-Core 3.0 GHz LGA 2011-v3 140W Desktop Processor - BX80648I75960X",
@@ -770,6 +1452,17 @@
     "title": "Intel Core i7-5960X - Core i7 4th Gen Haswell-E 8-Core 3.0 GHz LGA 2011-v3 140W Desktop Processor - BX80648I75960X"
   },
   {
+    "name": "Intel Core i7-870 - Core i7 Lynnfield Quad-Core 2.93 GHz LGA 1156 95W Processor - BX80605I7870",
+    "price": 275.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-870-lynnfield-lga-1156-processor/p/N82E16819115213",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-115-213-03.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-870 - Core i7 Lynnfield Quad-Core 2.93 GHz LGA 1156 95W Processor - BX80605I7870"
+  },
+  {
     "name": "Intel Core i9-12900KF - Core i9 12th Gen Alder Lake 16-Core (8P+8E) 3.2 GHz LGA 1700 125W Desktop Processor - BX8071512900KF",
     "price": 279.0,
     "condition": "New",
@@ -779,6 +1472,28 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-341-06.jpg",
     "site": "newegg",
     "title": "Intel Core i9-12900KF - Core i9 12th Gen Alder Lake 16-Core (8P+8E) 3.2 GHz LGA 1700 125W Desktop Processor - BX8071512900KF"
+  },
+  {
+    "name": "Intel Core i5-13600KF - Core i5 13th Gen Raptor Lake 14-Core (6P+8E) 3.5 GHz LGA 1700 125W None Integrated Graphics Desktop CPU Processor - BX8071513600KF",
+    "price": 279.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-13th-gen-core-i5-13600kf-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118417",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-417-V01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-13600KF - Core i5 13th Gen Raptor Lake 14-Core (6P+8E) 3.5 GHz LGA 1700 125W None Integrated Graphics Desktop CPU Processor - BX8071513600KF"
+  },
+  {
+    "name": "REFURBISHED Share Intel Core i7-12700KF 12-Core 3.60GHz 125W BX8071512700KF FCLGA1700 Processor",
+    "price": 280.0,
+    "condition": "Open Box",
+    "url": "https://www.newegg.com/p/274-000A-01P56",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/BDKWS25071119IM9179.jpg",
+    "site": "newegg",
+    "title": "REFURBISHED Share Intel Core i7-12700KF 12-Core 3.60GHz 125W BX8071512700KF FCLGA1700 Processor"
   },
   {
     "name": "Intel Core i7-11700K - Core i7 11th Gen Rocket Lake 8-Core 3.6 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop CPU Processor - BX8070811700K",
@@ -847,17 +1562,6 @@
     "title": "Intel Core i7-10700KF - Core i7 10th Gen Comet Lake 8-Core 3.8 GHz LGA 1200 125W Desktop Processor - CM8070104282437"
   },
   {
-    "name": "Intel Core i7-10700F - Core i7 10th Gen Comet Lake 8-Core 2.9 GHz LGA 1200 65W Desktop CPU Processor - CM8070104282329",
-    "price": 297.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/intel-core-i7-10th-gen-core-i7-10700f-comet-lake-lga-1200-desktop-cpu-processor/p/N82E16819118159",
-    "partType": "cpu",
-    "keyword": "i7 12700f",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-159-S01.jpg",
-    "site": "newegg",
-    "title": "Intel Core i7-10700F - Core i7 10th Gen Comet Lake 8-Core 2.9 GHz LGA 1200 65W Desktop CPU Processor - CM8070104282329"
-  },
-  {
     "name": "AMD Ryzen 7 5800X 8-core, 16-Thread Unlocked Desktop Processor",
     "price": 298.0,
     "condition": "New",
@@ -878,6 +1582,39 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-116-491-02.jpg",
     "site": "newegg",
     "title": "Intel Core i7-3960X Extreme Edition - Core i7 Extreme Edition Sandy Bridge-E 6-Core 3.3GHz (3.9GHz Turbo) LGA 2011 130W Desktop Processor - BX80619i73960X"
+  },
+  {
+    "name": "Intel Core Ultra 7 265KF - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E), LGA 1851, 125W Desktop Processor - BX80768265KF",
+    "price": 298.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-ultra-7-265kf-arrow-lake-lga-1851-desktop-cpu-processor/p/N82E16819118507",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-507-07.jpg",
+    "site": "newegg",
+    "title": "Intel Core Ultra 7 265KF - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E), LGA 1851, 125W Desktop Processor - BX80768265KF"
+  },
+  {
+    "name": "Intel Core Ultra 7 265K - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E), LGA 1851, 125W Desktop Processor - BX80768265K",
+    "price": 299.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-ultra-7-265k-arrow-lake-lga-1851-desktop-cpu-processor/p/N82E16819118506",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-506-06.jpg",
+    "site": "newegg",
+    "title": "Intel Core Ultra 7 265K - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E), LGA 1851, 125W Desktop Processor - BX80768265K"
+  },
+  {
+    "name": "AMD Ryzen 7 7700X - Zen 4 8-Core 4.5 GHz - Socket AM5 - 105W Desktop Processor (100-100000591WOF)",
+    "price": 299.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-7-7700x-ryzen-7-7000-series-raphael-zen-4-socket-am5/p/N82E16819113768",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-768-01.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 7 7700X - Zen 4 8-Core 4.5 GHz - Socket AM5 - 105W Desktop Processor (100-100000591WOF)"
   },
   {
     "name": "Intel Core i9 X-Series - Core i9-9900X Skylake X 10-Core 3.5 GHz (4.4 GHz Turbo) LGA 2066 165W BX80673I99900X Desktop Processor",
@@ -924,6 +1661,17 @@
     "title": "USED - LIKE NEW Intel Core i7-13700F Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30MB Cache, up to 5.2 GHz - Box"
   },
   {
+    "name": "Intel Core i5-13600K - Core i5 13th Gen Raptor Lake 14-Core (6P+8E) 3.5 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop CPU Processor - BX8071513600K",
+    "price": 322.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-13th-gen-core-i5-13600k-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118416",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-416-V01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-13600K - Core i5 13th Gen Raptor Lake 14-Core (6P+8E) 3.5 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop CPU Processor - BX8071513600K"
+  },
+  {
     "name": "Intel Core i7-14700KF - Core i7 14th Gen 20-Core (8P+12E) LGA 1700 125W None Integrated Graphics Desktop Processor - Boxed - BX8071514700KF",
     "price": 326.0,
     "condition": "New",
@@ -946,6 +1694,17 @@
     "title": "Intel Core i7-11700K Rocket Lake 8-Core 3.6 GHz LGA 1200 125W CM8070804488629 Desktop Processor Intel UHD Graphics 750 (ABS Only)"
   },
   {
+    "name": "Intel Core Ultra 7 265F - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E) Performance-core Base Frequency: 2.4 GHz Efficient-core Base Frequency: 1.8 GHz LGA 1851 65W None Integrated Graphics Desk",
+    "price": 334.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-ultra-7-265f-arrow-lake-lga-1851-desktop-cpu-processor/p/N82E16819118576",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-575-01.jpg",
+    "site": "newegg",
+    "title": "Intel Core Ultra 7 265F - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E) Performance-core Base Frequency: 2.4 GHz Efficient-core Base Frequency: 1.8 GHz LGA 1851 65W None Integrated Graphics Desk"
+  },
+  {
     "name": "Intel Core i7-10700K Comet Lake 8-Core 3.8 GHz LGA 1200 125W CM8070104282436 Desktop Processor Intel UHD Graphics 630",
     "price": 339.0,
     "condition": "New",
@@ -955,6 +1714,28 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-151-S01.jpg",
     "site": "newegg",
     "title": "Intel Core i7-10700K Comet Lake 8-Core 3.8 GHz LGA 1200 125W CM8070104282436 Desktop Processor Intel UHD Graphics 630"
+  },
+  {
+    "name": "Intel Core i5-14500 - Core i5 14th Gen Raptor Lake 14-Core (6P+8E) LGA 1700 65W Intel UHD Graphics 770 Processor - BX8071514500",
+    "price": 345.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-14th-gen-core-i5-14500-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118478",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-478-01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-14500 - Core i5 14th Gen Raptor Lake 14-Core (6P+8E) LGA 1700 65W Intel UHD Graphics 770 Processor - BX8071514500"
+  },
+  {
+    "name": "Intel Core Ultra 7 265 - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E) Performance-core Base Frequency: 2.4 GHz Efficient-core Base Frequency: 1.8 GHz LGA 1851 65W Intel Graphics Desktop CPU Pro",
+    "price": 349.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-ultra-7-265-arrow-lake-lga-1851-desktop-cpu-processor/p/N82E16819118575",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-575-03.jpg",
+    "site": "newegg",
+    "title": "Intel Core Ultra 7 265 - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E) Performance-core Base Frequency: 2.4 GHz Efficient-core Base Frequency: 1.8 GHz LGA 1851 65W Intel Graphics Desktop CPU Pro"
   },
   {
     "name": "Intel Core i7-14700K - Core i7 14th Gen 20-Core (8P+12E) LGA 1700 125W Intel UHD Graphics 770 Processor - Boxed - BX8071514700K",
@@ -1012,6 +1793,17 @@
     "title": "Intel Core i9 9th Gen - Core i9-9900KF Coffee Lake 8-Core, 16-Thread, 3.6 GHz (5.0 GHz Turbo) LGA 1151 (300 Series) 95W BX80684I99900KF Desktop Processor Without Graphics"
   },
   {
+    "name": "Intel Core Ultra 7 265F - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E) LGA 1851 65W None Integrated Graphics Processor - AT8076806411",
+    "price": 369.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-ultra-7-265f-arrow-lake-lga-1851-desktop-cpu-processor/p/N82E16819118581",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A0ZXD2505100JNUQQB9.jpg",
+    "site": "newegg",
+    "title": "Intel Core Ultra 7 265F - Core Ultra 7 (Series 2) Arrow Lake 20-Core (8P+12E) LGA 1851 65W None Integrated Graphics Processor - AT8076806411"
+  },
+  {
     "name": "Intel Core i7-14700 - Core i7 14th Gen Raptor Lake 20-Core (8P+12E) LGA 1700 65W Intel UHD Graphics 770 Processor - BX8071514700",
     "price": 379.0,
     "condition": "New",
@@ -1056,17 +1848,6 @@
     "title": "Intel Core i7-11700 - Core i7 11th Gen Rocket Lake 8-Core 2.5 GHz LGA 1200 65W Intel UHD Graphics 750 Desktop Processor - CM8070804491214"
   },
   {
-    "name": "Intel Core i7-14700F - Core i7 14th Gen Raptor Lake 20-Core (8P+12E) LGA 1700 65W None Integrated Graphics Processor - CM8071504820816",
-    "price": 397.0,
-    "condition": "New",
-    "url": "https://www.newegg.com/intel-core-i7-14th-gen-core-i7-14700f-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118488",
-    "partType": "cpu",
-    "keyword": "i7 12700f",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/AFYUD2209270S7P9S17.jpg",
-    "site": "newegg",
-    "title": "Intel Core i7-14700F - Core i7 14th Gen Raptor Lake 20-Core (8P+12E) LGA 1700 65W None Integrated Graphics Processor - CM8071504820816"
-  },
-  {
     "name": "Intel Core i9-12900KS - Core i9 12th Gen Alder Lake 16-Core (8P+8E) 3.4 GHz LGA 1700 150W Intel UHD Graphics 770 Desktop Processor - BX8071512900KS",
     "price": 399.0,
     "condition": "New",
@@ -1076,6 +1857,17 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-392-V07.jpg",
     "site": "newegg",
     "title": "Intel Core i9-12900KS - Core i9 12th Gen Alder Lake 16-Core (8P+8E) 3.4 GHz LGA 1700 150W Intel UHD Graphics 770 Desktop Processor - BX8071512900KS"
+  },
+  {
+    "name": "Intel Core i9 9th Gen - Core i9-9900K Coffee Lake 8-Core, 16-Thread, 3.6 GHz (5.0 GHz Turbo) LGA 1151 (300 Series) 95W BX806849900K Desktop Processor Intel UHD Graphics 630",
+    "price": 399.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i9-9th-gen-core-i9-9900k-coffee-lake-lga-1151-desktop-cpu-processor/p/N82E16819118147",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-147-V06.jpg",
+    "site": "newegg",
+    "title": "Intel Core i9 9th Gen - Core i9-9900K Coffee Lake 8-Core, 16-Thread, 3.6 GHz (5.0 GHz Turbo) LGA 1151 (300 Series) 95W BX806849900K Desktop Processor Intel UHD Graphics 630"
   },
   {
     "name": "AMD Ryzen 7 5800X 3.8GHz 32MB L3 Processor",
@@ -1100,6 +1892,17 @@
     "title": "Intel Core i7-6950X - Core i7 6th Gen Broadwell-E 10-Core 3.0 GHz LGA 2011-v3 140W Desktop Processor - BX80671I76950X"
   },
   {
+    "name": "AMD Ryzen 7 7800X3D - Ryzen 7 7000 Series Zen 4 8-Core 4.2 GHz - Socket AM5 120W - AMD Radeon Graphics Desktop Processor - 100-100000910WOF",
+    "price": 414.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-7-7800x3d-ryzen-7-7000-series-raphael-zen-4-socket-am5/p/N82E16819113793",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-793-03.png",
+    "site": "newegg",
+    "title": "AMD Ryzen 7 7800X3D - Ryzen 7 7000 Series Zen 4 8-Core 4.2 GHz - Socket AM5 120W - AMD Radeon Graphics Desktop Processor - 100-100000910WOF"
+  },
+  {
     "name": "Intel Core i7-14790F Raptor Lake Desktop Processor Game Special Edition i7 14th Gen, 16 Cores up to 5.4 GHz Turbo LGA 1700 65W Without Graphics and Fan -Black Box",
     "price": 415.0,
     "condition": "New",
@@ -1120,6 +1923,28 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/A24GD2203110EQRUQC1.jpg",
     "site": "newegg",
     "title": "Intel Core i9-12900 - Core i9 12th Gen Alder Lake 16-Core (8P+8E) 2.4 GHz LGA 1700 Processor 65W Intel UHD Graphics 770 Desktop Processor - BX8071512900"
+  },
+  {
+    "name": "Intel Core i7-13790F Raptor Lake Desktop Processor Game Special Edition i7 13th Gen, 16 Cores up to 5.2 GHz Turbo LGA 1700 65W Without Graphics and Fan -Black Box, BXC8071513790F",
+    "price": 425.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-12490f/p/274-000A-01NJ4",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AYTVS2303170ELO3979.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-13790F Raptor Lake Desktop Processor Game Special Edition i7 13th Gen, 16 Cores up to 5.2 GHz Turbo LGA 1700 65W Without Graphics and Fan -Black Box, BXC8071513790F"
+  },
+  {
+    "name": "AMD Ryzen 5 5600X 6-Core 3.7 GHz Socket AM4 65W 100-100000065CBX Desktop Processor",
+    "price": 430.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/amd-ryzen-5-5600x-ryzen-5-5000-series/p/274-000M-001G3",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A12KS2012100b4cK.jpg",
+    "site": "newegg",
+    "title": "AMD Ryzen 5 5600X 6-Core 3.7 GHz Socket AM4 65W 100-100000065CBX Desktop Processor"
   },
   {
     "name": "Intel Core i9-14900KF - Core i9 14th Gen 24-Core (8P+16E) LGA 1700 125W None Integrated Graphics Processor - Boxed - BX8071514900KF",
@@ -1155,15 +1980,26 @@
     "title": "Intel Core i7-13700K - Core i7 13th Gen Raptor Lake 16-Core (8P+8E) P-core Base Frequency: 3.4 GHz E-core Base Frequency: 2.5 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop CPU Processor - BX8071513"
   },
   {
-    "name": "Intel Core i9-14900K - Core i9 14th Gen 24-Core (8P+16E) LGA 1700 125W Intel UHD Graphics 770 Desktop Processor - Boxed - BX8071514900K",
-    "price": 469.0,
+    "name": "Intel Core i9-12900K - Core i9 12th Gen Alder Lake 16-Core (8P+8E) 3.2 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop Processor - CM8071504549230 - OEM",
+    "price": 464.0,
     "condition": "New",
-    "url": "https://www.newegg.com/intel-core-i9-14th-gen-core-i9-14900k-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118462",
+    "url": "https://www.newegg.com/intel-core-i9-12th-gen-core-i9-12900k-alder-lake-lga-1700-desktop-cpu-processor/p/N82E16819118340",
     "partType": "cpu",
     "keyword": "i7 12700f",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-462-03.jpg",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-340-S01.jpg",
     "site": "newegg",
-    "title": "Intel Core i9-14900K - Core i9 14th Gen 24-Core (8P+16E) LGA 1700 125W Intel UHD Graphics 770 Desktop Processor - Boxed - BX8071514900K"
+    "title": "Intel Core i9-12900K - Core i9 12th Gen Alder Lake 16-Core (8P+8E) 3.2 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop Processor - CM8071504549230 - OEM"
+  },
+  {
+    "name": "Intel Core i5 X-Series - Core i5-7640X Kaby Lake-X Quad-Core 4.0 GHz LGA 2066 112W BX80677I57640X Desktop Processor",
+    "price": 471.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-x-series-core-i5-7640x-kaby-lake-x-lga-2066-desktop-cpu-processor/p/N82E16819117791",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-117-791-S05.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5 X-Series - Core i5-7640X Kaby Lake-X Quad-Core 4.0 GHz LGA 2066 112W BX80677I57640X Desktop Processor"
   },
   {
     "name": "Intel Core i9-10900KF - Core i9 10th Gen Comet Lake 10-Core 3.7 GHz LGA 1200 125W None Integrated Graphics Desktop CPU Processor - BX8070110900KF",
@@ -1177,6 +2013,28 @@
     "title": "Intel Core i9-10900KF - Core i9 10th Gen Comet Lake 10-Core 3.7 GHz LGA 1200 125W None Integrated Graphics Desktop CPU Processor - BX8070110900KF"
   },
   {
+    "name": "Intel Core i9-11900K - Core i9 11th Gen Rocket Lake 8-Core 3.5 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811900K",
+    "price": 499.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i9-11th-gen-core-i9-11900k-rocket-lake-lga-1200-desktop-processor/p/N82E16819118356",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-356-S01.jpg",
+    "site": "newegg",
+    "title": "Intel Core i9-11900K - Core i9 11th Gen Rocket Lake 8-Core 3.5 GHz LGA 1200 125W Intel UHD Graphics 750 Desktop Processor - BX8070811900K"
+  },
+  {
+    "name": "Intel Core i7-10700K Desktop Processor 8 Cores up to 5.1 GHz Unlocked LGA1200 (Intel 400 Series Chipset) 125W (BX8070110700K)",
+    "price": 506.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/3C6-008J-002H2",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/BTSND2404080G68MX9D.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-10700K Desktop Processor 8 Cores up to 5.1 GHz Unlocked LGA1200 (Intel 400 Series Chipset) 125W (BX8070110700K)"
+  },
+  {
     "name": "Intel Core i9-13900K - Core i9 13th Gen Raptor Lake 24-Core (8P+16E) P-core Base Frequency: 3.0 GHz E-core Base Frequency: 2.2 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop CPU Processor - BX807151",
     "price": 507.0,
     "condition": "New",
@@ -1188,15 +2046,37 @@
     "title": "Intel Core i9-13900K - Core i9 13th Gen Raptor Lake 24-Core (8P+16E) P-core Base Frequency: 3.0 GHz E-core Base Frequency: 2.2 GHz LGA 1700 125W Intel UHD Graphics 770 Desktop CPU Processor - BX807151"
   },
   {
-    "name": "Intel Core i9-13900KF - Core i9 13th Gen Raptor Lake 24-Core (8P+16E) P-core Base Frequency: 3.0 GHz E-core Base Frequency: 2.2 GHz LGA 1700 125W None Integrated Graphics Desktop CPU Processor - BX807",
-    "price": 508.0,
+    "name": "Intel Core i9-13900K - Core i9 13th Gen Raptor Lake 24-Core (8P+16E) P-core Base Frequency: 3.0 GHz E-core Base Frequency: 2.2 GHz LGA 1700 Processor Base Power: 125W Maximum Turbo Power: 253W Intel U",
+    "price": 529.0,
     "condition": "New",
-    "url": "https://www.newegg.com/intel-core-i9-13th-gen-core-i9-13900kf-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118413",
+    "url": "https://www.newegg.com/intel-core-i9-13th-gen-core-i9-13900k-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118418",
     "partType": "cpu",
     "keyword": "i7 12700f",
-    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-413-V07.jpg",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AYTVS2303090IKIXR94.jpg",
     "site": "newegg",
-    "title": "Intel Core i9-13900KF - Core i9 13th Gen Raptor Lake 24-Core (8P+16E) P-core Base Frequency: 3.0 GHz E-core Base Frequency: 2.2 GHz LGA 1700 125W None Integrated Graphics Desktop CPU Processor - BX807"
+    "title": "Intel Core i9-13900K - Core i9 13th Gen Raptor Lake 24-Core (8P+16E) P-core Base Frequency: 3.0 GHz E-core Base Frequency: 2.2 GHz LGA 1700 Processor Base Power: 125W Maximum Turbo Power: 253W Intel U"
+  },
+  {
+    "name": "Intel Core Ultra 9 285K - Core Ultra 9 (Series 2) Arrow Lake 24-Core (8P+16E), LGA 1851, 125W Desktop Processor - BX80768285K",
+    "price": 529.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-ultra-9-285k-arrow-lake-lga-1851-desktop-cpu-processor/p/N82E16819118505",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-505-08.jpg",
+    "site": "newegg",
+    "title": "Intel Core Ultra 9 285K - Core Ultra 9 (Series 2) Arrow Lake 24-Core (8P+16E), LGA 1851, 125W Desktop Processor - BX80768285K"
+  },
+  {
+    "name": "Intel Core i5-14500 - Core i5 14th Gen Raptor Lake 14-Core (6P+8E) LGA 1700 65W Intel UHD Graphics 770 Processor - CM8071505093104",
+    "price": 534.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i5-14th-gen-core-i5-14500-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118479",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AFYUD24030611IWUJ49.jpg",
+    "site": "newegg",
+    "title": "Intel Core i5-14500 - Core i5 14th Gen Raptor Lake 14-Core (6P+8E) LGA 1700 65W Intel UHD Graphics 770 Processor - CM8071505093104"
   },
   {
     "name": "Intel Core i7-13700K - Core i7 13th Gen Raptor Lake 16-Core (8P+8E) P-core Base Frequency: 3.4 GHz E-core Base Frequency: 2.5 GHz LGA 1700 Processor Base Power: 125W Maximum Turbo Power: 253W Intel UH",
@@ -1211,7 +2091,7 @@
   },
   {
     "name": "Intel Core i5-12400F - Core i5 12th Gen Alder Lake 6-Core 2.5 GHz LGA 1700 65W Desktop Processor and ASUS TUF GAMING B660M-PLUS WIFI D4 LGA 1700 (Intel 12th Gen) mATX Gaming Motherboard",
-    "price": 539.0,
+    "price": 537.0,
     "condition": "New",
     "url": "https://www.newegg.com/intel-core-i5-12th-gen-core-i5-12400f-alder-lake-lga-1700-processors-desktops/p/274-000A-01NG0",
     "partType": "cpu",
@@ -1243,6 +2123,17 @@
     "title": "Intel Core i9-14900F - Core i9 14th Gen Raptor Lake 24-Core (8P+16E) LGA 1700 65W None Integrated Graphics Processor - BX8071514900F"
   },
   {
+    "name": "Intel Core i9-14900F - Core i9 14th Gen Raptor Lake 24-Core (8P+16E) LGA 1700 65W None Integrated Graphics Processor - CM8071504820610",
+    "price": 557.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i9-14th-gen-core-i9-14900f-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118486",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AFYUD24030511GI4E8A.jpg",
+    "site": "newegg",
+    "title": "Intel Core i9-14900F - Core i9 14th Gen Raptor Lake 24-Core (8P+16E) LGA 1700 65W None Integrated Graphics Processor - CM8071504820610"
+  },
+  {
     "name": "Intel Core i9-14900 - Core i9 14th Gen Raptor Lake 24-Core (8P+16E) LGA 1700 65W Intel UHD Graphics 770 Processor - BX8071514900",
     "price": 569.0,
     "condition": "New",
@@ -1252,6 +2143,50 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-474-01.jpg",
     "site": "newegg",
     "title": "Intel Core i9-14900 - Core i9 14th Gen Raptor Lake 24-Core (8P+16E) LGA 1700 65W Intel UHD Graphics 770 Processor - BX8071514900"
+  },
+  {
+    "name": "Intel Core Ultra 9 285 - Core Ultra 9 (Series 2) Arrow Lake 24-Core (8P+16E) Performance-core Base Frequency: 2.5 GHz Efficient-core Base Frequency: 1.9 GHz LGA 1851 65W Intel Graphics Desktop CPU Pro",
+    "price": 569.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-ultra-9-285-arrow-lake-lga-1851-desktop-cpu-processor/p/N82E16819118574",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-574-03.jpg",
+    "site": "newegg",
+    "title": "Intel Core Ultra 9 285 - Core Ultra 9 (Series 2) Arrow Lake 24-Core (8P+16E) Performance-core Base Frequency: 2.5 GHz Efficient-core Base Frequency: 1.9 GHz LGA 1851 65W Intel Graphics Desktop CPU Pro"
+  },
+  {
+    "name": "Intel Core i9-12900KS - Core i9 12th Gen Alder Lake 16-Core (8P+8E) 3.4 GHz LGA 1700 Processor 150W Intel UHD Graphics 770 Desktop Processor - CM8071504569915",
+    "price": 614.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i9-12th-gen-core-i9-12900ks-alder-lake-lga-1700-desktop-cpu-processor/p/N82E16819118393",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A1K6S2206120H0Q1WFD.jpg",
+    "site": "newegg",
+    "title": "Intel Core i9-12900KS - Core i9 12th Gen Alder Lake 16-Core (8P+8E) 3.4 GHz LGA 1700 Processor 150W Intel UHD Graphics 770 Desktop Processor - CM8071504569915"
+  },
+  {
+    "name": "Intel Core i9-13900KF - Core i9 13th Gen Raptor Lake 24-Core (8P+16E) P-core Base Frequency: 3.0 GHz E-core Base Frequency: 2.2 GHz LGA 1700 125W None Integrated Graphics Desktop CPU Processor - BX807",
+    "price": 630.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i9-13th-gen-core-i9-13900kf-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118413",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/19-118-413-V07.jpg",
+    "site": "newegg",
+    "title": "Intel Core i9-13900KF - Core i9 13th Gen Raptor Lake 24-Core (8P+16E) P-core Base Frequency: 3.0 GHz E-core Base Frequency: 2.2 GHz LGA 1700 125W None Integrated Graphics Desktop CPU Processor - BX807"
+  },
+  {
+    "name": "Intel Core i7-14700F - Core i7 14th Gen Raptor Lake 20-Core (8P+12E) LGA 1700 65W None Integrated Graphics Processor - CM8071504820816",
+    "price": 643.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i7-14th-gen-core-i7-14700f-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118488",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AFYUD2209270S7P9S17.jpg",
+    "site": "newegg",
+    "title": "Intel Core i7-14700F - Core i7 14th Gen Raptor Lake 20-Core (8P+12E) LGA 1700 65W None Integrated Graphics Processor - CM8071504820816"
   },
   {
     "name": "Cougar Carrier Barebones Kit | Ryzen 5600 | Windows 11 Pro | 16GB RAM | 512GB SSD",
@@ -1287,6 +2222,17 @@
     "title": "Intel Core i9-14900KS - Core i9 14th Gen Raptor Lake 24-Core (8P+16E) Performance-core 3.2 GHz, Efficient-core 2.4 GHz LGA 1700 150W Intel UHD Graphics 770 Desktop CPU (Retail Box)"
   },
   {
+    "name": "Micro Center Intel Core i9-12900K 16 (8P+8E) Cores up to 5.2 GHz Unlocked LGA 1700 Desktop Processor with Integrated Intel UHD Graphics 770 Bundle with ASUS Prime Z790-V WiFi DDR5 ATX Motherboard",
+    "price": 818.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/3C6-00Z1-002H0",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/BR2DD240209083AWE5A.jpg",
+    "site": "newegg",
+    "title": "Micro Center Intel Core i9-12900K 16 (8P+8E) Cores up to 5.2 GHz Unlocked LGA 1700 Desktop Processor with Integrated Intel UHD Graphics 770 Bundle with ASUS Prime Z790-V WiFi DDR5 ATX Motherboard"
+  },
+  {
     "name": "Intel Core i7-13700 Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30MB Cache, up to 5.2 GHz - Box",
     "price": 847.0,
     "condition": "New",
@@ -1299,7 +2245,7 @@
   },
   {
     "name": "Intel Core i7-12700KF - Core i7 12th Gen Alder Lake 12-Core (8P+4E) 3.6 GHz LGA 1700 125W Desktop Processor and ASUS ROG Strix Z690-E Gaming WiFi 6E LGA 1700 Intel 12th Gen ATX Gaming Motherboard",
-    "price": 947.0,
+    "price": 954.0,
     "condition": "New",
     "url": "https://www.newegg.com/intel-core-i7-12th-gen-core-i7-12700kf-alder-lake-lga-1700-processors-desktops/p/274-000A-01NG8",
     "partType": "cpu",
@@ -1312,7 +2258,7 @@
     "name": "INTEL INTEL XEON Silver 4215R Processor (11M Cache, 3.20 GHZ) FCLGA3647, Tray Computer Components Processors - Server XEON (CD8069504449200)",
     "price": 982.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/2MN-0004-008R5?Item=9SIATRNKFW2286&cm_sp=SP-_-3010426-_-0-_-3-_-9SIATRNKFW2286-_-i5%2012400f-_-12400f|i5-_-17",
+    "url": "https://www.newegg.com/p/2MN-0004-008R5?Item=9SIATRNKFW2286&cm_sp=SP-_-3010426-_-0-_-3-_-9SIATRNKFW2286-_-i5%2012400f-_-12400f|i5-_-18",
     "partType": "cpu",
     "keyword": "i5 12400f",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/AKVHD2201300WPIRL97.jpg",
@@ -1367,7 +2313,7 @@
     "name": "Intel CPU BX806955218 Xeon Gold 5218 16C 32T 2.3GHz 22M FC-LGA14B",
     "price": 1050.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/3C6-008J-003K2?Item=9SIATRNKGY2680&cm_sp=SP-_-3009988-_-0-_-3-_-9SIATRNKGY2680-_-i5%2012400f-_-12400f|i5-_-26",
+    "url": "https://www.newegg.com/p/3C6-008J-003K2?Item=9SIATRNKGY2680&cm_sp=SP-_-3009988-_-0-_-3-_-9SIATRNKGY2680-_-i5%2012400f-_-12400f|i5-_-27",
     "partType": "cpu",
     "keyword": "i5 12400f",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/BZ6KD2504300G8MPXDA.jpg",
@@ -1389,7 +2335,7 @@
     "name": "AMD EPYC 8224P 24/48 160 SP6 64MB 3000 - 100-000001134",
     "price": 1066.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/274-000M-001Y3?Item=9SIATRNKFW1770&cm_sp=SP-_-3010426-_-0-_-3-_-9SIATRNKFW1770-_-ryzen%205%205600-_-5600|ryzen-_-9",
+    "url": "https://www.newegg.com/p/274-000M-001Y3?Item=9SIATRNKFW1770&cm_sp=SP-_-3010426-_-0-_-3-_-9SIATRNKFW1770-_-ryzen%205%205600-_-5600|ryzen-_-5",
     "partType": "cpu",
     "keyword": "ryzen 5 5600",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/A1K6S2402201CHMTJBE.jpg",
@@ -1397,8 +2343,19 @@
     "title": "AMD EPYC 8224P 24/48 160 SP6 64MB 3000 - 100-000001134"
   },
   {
+    "name": "Cougar Battleship Gaming Computer | Ryzen 7 5700X | RTX 3060Ti 8GB | 16GB RAM | 1TB SSD",
+    "price": 1079.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/3D5-003S-000N1",
+    "partType": "cpu",
+    "keyword": "ryzen 7 5700x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AKWUS2210185ktJK.jpg",
+    "site": "newegg",
+    "title": "Cougar Battleship Gaming Computer | Ryzen 7 5700X | RTX 3060Ti 8GB | 16GB RAM | 1TB SSD"
+  },
+  {
     "name": "Intel Core i7-13700K - Core i7 13th Gen Raptor Lake 16-Core (8P+8E) LGA 1700 125W Intel UHD Graphics 770 Desktop Processor and ASUS ROG Strix Z790-E Gaming WiFi 6E DDR5 LGA 1700 ATX Motherboard",
-    "price": 1096.0,
+    "price": 1103.0,
     "condition": "New",
     "url": "https://www.newegg.com/intel-core-i7-13th-gen-core-i7-13700k-raptor-lake-lga-1700-processors-desktops/p/274-000A-01NH8",
     "partType": "cpu",
@@ -1406,6 +2363,28 @@
     "image_url": "https://c1.neweggimages.com/productimage/nb300/AYTVS22121608K0WI9D.jpg",
     "site": "newegg",
     "title": "Intel Core i7-13700K - Core i7 13th Gen Raptor Lake 16-Core (8P+8E) LGA 1700 125W Intel UHD Graphics 770 Desktop Processor and ASUS ROG Strix Z790-E Gaming WiFi 6E DDR5 LGA 1700 ATX Motherboard"
+  },
+  {
+    "name": "HAJAAN BREEZE PRO Gaming Tower PC - AMD Ryzen 5 5600G Processor, 16GB DDR4 RAM, 512GB SSD, 4TB HDD, Nvidia GeForce GTX 1050 Ti 4GB, WIFI, Gaming Headset, Windows 11 Pro",
+    "price": 1180.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/hajaan-gaming-desktop-geforce-gtx-1050-ti-3-90ghz-16gb-ddr4-512gb-ssd-4tb-hdd-breeze-pro-black/p/3D5-001V-000H1",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ARZCD2208240XMNW465.jpg",
+    "site": "newegg",
+    "title": "HAJAAN BREEZE PRO Gaming Tower PC - AMD Ryzen 5 5600G Processor, 16GB DDR4 RAM, 512GB SSD, 4TB HDD, Nvidia GeForce GTX 1050 Ti 4GB, WIFI, Gaming Headset, Windows 11 Pro"
+  },
+  {
+    "name": "HAJAAN BREEZE PRO Gaming Tower PC - AMD Ryzen 5 5600G Processor, 16GB DDR4 RAM, 512GB SSD, 4TB HDD, Nvidia GeForce GTX 1650 4GB, WIFI, Gaming Headset, Windows 11 Pro",
+    "price": 1180.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/hajaan-gaming-desktop-geforce-gtx-1650-3-90ghz-16gb-ddr4-512gb-ssd-4tb-hdd-breeze-pro-black/p/3D5-001V-000J4",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ARZCD2208240XMNW465.jpg",
+    "site": "newegg",
+    "title": "HAJAAN BREEZE PRO Gaming Tower PC - AMD Ryzen 5 5600G Processor, 16GB DDR4 RAM, 512GB SSD, 4TB HDD, Nvidia GeForce GTX 1650 4GB, WIFI, Gaming Headset, Windows 11 Pro"
   },
   {
     "name": "HAJAAN BREEZE PRO Gaming Tower PC - Intel Core i5 12400F UpTo 4.40GHz - GeForce RTX 3050 8GB GDDR6 - 16GB DDR4 - 512GB SSD - Wi-Fi Ready - Windows 11 Pro",
@@ -1455,7 +2434,7 @@
     "name": "Intel Xeon E-2386G Processor (12M Cache, 3.50 GHz) FC-LGA14A Model CM8070804494716",
     "price": 1308.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/274-000A-01NY0?Item=9SIATRNKFY8944&cm_sp=SP-_-3010320-_-0-_-3-_-9SIATRNKFY8944-_-i5%2012400f-_-12400f|i5-_-11",
+    "url": "https://www.newegg.com/p/274-000A-01NY0?Item=9SIATRNKFY8944&cm_sp=SP-_-3010320-_-0-_-3-_-9SIATRNKFY8944-_-i5%2012400f-_-12400f|i5-_-12",
     "partType": "cpu",
     "keyword": "i5 12400f",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/A1K6S24021707WQ7663.jpg",
@@ -1463,10 +2442,21 @@
     "title": "Intel Xeon E-2386G Processor (12M Cache, 3.50 GHz) FC-LGA14A Model CM8070804494716"
   },
   {
+    "name": "HAJAAN Gaming Computer Desktop PC | AMD Ryzen 5 5600G Processor 3.9GHz | 16GB DDR4 RAM | 512GB SSD | GeForce RTX 3050 8GB GDDR6 | Wi-Fi Ready | VR Ready | Windows 11 Pro",
+    "price": 1339.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/hajaan-gaming-desktop-geforce-rtx-3050-3-90ghz-16gb-ddr4-512gb-ssd-breeze-black/p/3D5-001V-000V0",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ARZCD2211181BO6HAF1.jpg",
+    "site": "newegg",
+    "title": "HAJAAN Gaming Computer Desktop PC | AMD Ryzen 5 5600G Processor 3.9GHz | 16GB DDR4 RAM | 512GB SSD | GeForce RTX 3050 8GB GDDR6 | Wi-Fi Ready | VR Ready | Windows 11 Pro"
+  },
+  {
     "name": "Intel CD8069504393400 Xeon W-2265 3.50GHz LGA-2066 Processor",
     "price": 1349.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/3C6-008J-001N5?Item=9SIATRNKFY9204&cm_sp=SP-_-3010320-_-0-_-3-_-9SIATRNKFY9204-_-i5%2012400f-_-12400f|i5-_-20",
+    "url": "https://www.newegg.com/p/3C6-008J-001N5?Item=9SIATRNKFY9204&cm_sp=SP-_-3010320-_-0-_-3-_-9SIATRNKFY9204-_-i5%2012400f-_-12400f|i5-_-21",
     "partType": "cpu",
     "keyword": "i5 12400f",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/AJZYS2401190N6NTCBD.jpg",
@@ -1485,6 +2475,28 @@
     "title": "Streamer Desktop Bundle | RTX 2060 12GB | Ryzen 5600 | Curved Monitor, Webcam & Logitech Keyboard, Mouse, Headset, and Microphone"
   },
   {
+    "name": "HAJAAN Gaming Computer Desktop PC | AMD Ryzen 5 5600G Processor 3.9GHz | 16GB DDR4 RAM | 1TB SSD | GeForce RTX 3050 8GB GDDR6 | Wi-Fi Ready | VR Ready | Windows 11 Pro",
+    "price": 1367.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/hajaan-gaming-desktop-geforce-rtx-3050-3-90ghz-16gb-ddr4-1tb-ssd-breeze-black/p/3D5-001V-000V3",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AZ8YD2201110TKF1159.jpg",
+    "site": "newegg",
+    "title": "HAJAAN Gaming Computer Desktop PC | AMD Ryzen 5 5600G Processor 3.9GHz | 16GB DDR4 RAM | 1TB SSD | GeForce RTX 3050 8GB GDDR6 | Wi-Fi Ready | VR Ready | Windows 11 Pro"
+  },
+  {
+    "name": "HAJAAN BREEZE PRO Gaming Tower PC - AMD Ryzen 5 5600G Processor, 16GB DDR4 RAM, 512GB SSD, 4TB HDD, Nvidia GeForce RTX 2060 6GB, WIFI, Gaming Headset, Windows 11 Pro",
+    "price": 1382.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/hajaan-gaming-desktop-geforce-rtx-2060-3-90ghz-16gb-ddr4-512gb-ssd-4tb-hdd-breeze-pro-black/p/3D5-001V-000J6",
+    "partType": "cpu",
+    "keyword": "ryzen 5 5600g",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/ARZCD2208240XMNW465.jpg",
+    "site": "newegg",
+    "title": "HAJAAN BREEZE PRO Gaming Tower PC - AMD Ryzen 5 5600G Processor, 16GB DDR4 RAM, 512GB SSD, 4TB HDD, Nvidia GeForce RTX 2060 6GB, WIFI, Gaming Headset, Windows 11 Pro"
+  },
+  {
     "name": "Streamer Desktop Bundle | RTX 3060 12GB | Ryzen 5600 | Curved Monitor, Webcam & Logitech Keyboard, Mouse, Headset, and Microphone",
     "price": 1392.0,
     "condition": "New",
@@ -1499,7 +2511,7 @@
     "name": "Intel Xeon Gold 6330 - 2 GHz - 28-core - 56 threads - 42 MB cache - LGA4189 Socket - Box",
     "price": 1449.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/274-000A-01NV0?Item=9SIATRNK8M6744&cm_sp=SP-_-3010539-_-0-_-3-_-9SIATRNK8M6744-_-i5%2012400f-_-12400f|i5-_-14",
+    "url": "https://www.newegg.com/p/274-000A-01NV0?Item=9SIATRNK8M6744&cm_sp=SP-_-3010539-_-0-_-3-_-9SIATRNK8M6744-_-i5%2012400f-_-12400f|i5-_-15",
     "partType": "cpu",
     "keyword": "i5 12400f",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/AFYUD2307120T5Y56C9.jpg",
@@ -1507,10 +2519,32 @@
     "title": "Intel Xeon Gold 6330 - 2 GHz - 28-core - 56 threads - 42 MB cache - LGA4189 Socket - Box"
   },
   {
+    "name": "Intel Core i9-13900 Desktop Processor - 24 cores (8 P-cores + 16 E-cores) - 36MB Cache, up to 5.6 GHz - Box",
+    "price": 1497.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/intel-core-i9-13th-gen-core-i9-13900-raptor-lake-lga-1700-desktop-cpu-processor/p/N82E16819118425",
+    "partType": "cpu",
+    "keyword": "i7 12700f",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/A0ZXD2510200HG18T48.jpg",
+    "site": "newegg",
+    "title": "Intel Core i9-13900 Desktop Processor - 24 cores (8 P-cores + 16 E-cores) - 36MB Cache, up to 5.6 GHz - Box"
+  },
+  {
+    "name": "GRI Gaming Bundle | Ryzen 7 5700x | 32GB DDR4 | RTX 4070 12GB | 2TB NVMe | Razer Monitor Bundle | WiFi 6E Built-in",
+    "price": 1600.0,
+    "condition": "New",
+    "url": "https://www.newegg.com/p/3D5-006R-003F5",
+    "partType": "cpu",
+    "keyword": "ryzen 7 5700x",
+    "image_url": "https://c1.neweggimages.com/productimage/nb300/AKWUD24101414X4S386.jpg",
+    "site": "newegg",
+    "title": "GRI Gaming Bundle | Ryzen 7 5700x | 32GB DDR4 | RTX 4070 12GB | 2TB NVMe | Razer Monitor Bundle | WiFi 6E Built-in"
+  },
+  {
     "name": "AMD Ryzen Threadripper PRO 5975WX - Ryzen Threadripper PRO Chagall PRO (Zen 3) 32-Core 3.6 GHz Socket sWRX8 280W Desktop CPU Processor - 100-000000445",
     "price": 1714.0,
     "condition": "New",
-    "url": "https://www.newegg.com/amd-ryzen-threadripper-pro-5975wx-chagall-pro-socket-swrx8-desktop-cpu-processor/p/N82E16819113760?Item=9SIATRNKGH1570&cm_sp=SP-_-3010214-_-0-_-3-_-9SIATRNKGH1570-_-ryzen%205%205600-_-5|5600|ryzen-_-24",
+    "url": "https://www.newegg.com/amd-ryzen-threadripper-pro-5975wx-chagall-pro-socket-swrx8-desktop-cpu-processor/p/N82E16819113760?Item=9SIATRNKGH1570&cm_sp=SP-_-3010214-_-0-_-3-_-9SIATRNKGH1570-_-ryzen%205%205600-_-5|5600|ryzen-_-21",
     "partType": "cpu",
     "keyword": "ryzen 5 5600",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/9B19-113-760-01.jpg",
@@ -1521,7 +2555,7 @@
     "name": "AMD Ryzen Threadripper PRO 5965WX - Ryzen Threadripper PRO Chagall PRO (Zen 3) 24-Core 3.8 GHz Socket sWRX8 280W Desktop Processor - 100-000000446",
     "price": 2198.0,
     "condition": "New",
-    "url": "https://www.newegg.com/amd-ryzen-threadripper-pro-5965wx-chagall-pro-socket-swrx8-desktop-cpu-processor/p/N82E16819113762?Item=9SIATRNKFW2014&cm_sp=SP-_-3010426-_-0-_-3-_-9SIATRNKFW2014-_-ryzen%205%205600-_-5|5600|ryzen-_-21",
+    "url": "https://www.newegg.com/amd-ryzen-threadripper-pro-5965wx-chagall-pro-socket-swrx8-desktop-cpu-processor/p/N82E16819113762?Item=9SIATRNKFW2014&cm_sp=SP-_-3010426-_-0-_-3-_-9SIATRNKFW2014-_-ryzen%205%205600-_-5|5600|ryzen-_-18",
     "partType": "cpu",
     "keyword": "ryzen 5 5600",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/19-113-762-01.jpg",
@@ -1532,7 +2566,7 @@
     "name": "REFURBISHED AMD 100-000000087 Ryzen Threadripper 3995WX Pro 64-Core 2.7GHz 256MB Processor",
     "price": 4328.0,
     "condition": "Open Box",
-    "url": "https://www.newegg.com/p/274-000M-00206?Item=9SIATRNKD75958&cm_sp=SP-_-3010539-_-0-_-3-_-9SIATRNKD75958-_-ryzen%205%205600-_-5|5600|ryzen-_-18",
+    "url": "https://www.newegg.com/p/274-000M-00206?Item=9SIATRNKD75958&cm_sp=SP-_-3010539-_-0-_-3-_-9SIATRNKD75958-_-ryzen%205%205600-_-5|5600|ryzen-_-15",
     "partType": "cpu",
     "keyword": "ryzen 5 5600",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/BDKWS2409181AU19EEB.jpg",
@@ -1543,7 +2577,7 @@
     "name": "AMD Ryzen Threadripper PRO 5995WX - Ryzen Threadripper PRO Chagall PRO (Zen 3) 64-Core 2.7 GHz Socket sWRX8 280W Desktop CPU Processor - 100-000000444",
     "price": 4604.0,
     "condition": "New",
-    "url": "https://www.newegg.com/amd-ryzen-threadripper-pro-5995wx-chagall-pro-socket-swrx8-desktop-cpu-processor/p/N82E16819113761?Item=9SIATRNKFW2036&cm_sp=SP-_-3010426-_-0-_-3-_-9SIATRNKFW2036-_-ryzen%205%205600-_-5|5600|ryzen-_-15",
+    "url": "https://www.newegg.com/amd-ryzen-threadripper-pro-5995wx-chagall-pro-socket-swrx8-desktop-cpu-processor/p/N82E16819113761?Item=9SIATRNKFW2036&cm_sp=SP-_-3010426-_-0-_-3-_-9SIATRNKFW2036-_-ryzen%205%205600-_-5|5600|ryzen-_-12",
     "partType": "cpu",
     "keyword": "ryzen 5 5600",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/A25VD2305090NKH6A1C.jpg",
@@ -1554,7 +2588,7 @@
     "name": "Intel Xeon W 3300 W-3375 Octatriaconta-core (38 Core) 2.50 GHz Processor - OEM Pack - 57 MB L3 Cache - 64-bit Processing - 4 GHz Overclocking Speed - 10 nm - Socket LGA-4189 - 270 W - 76 Threads",
     "price": 5941.0,
     "condition": "New",
-    "url": "https://www.newegg.com/p/274-000A-01NK5?Item=9SIATRNFF13278&cm_sp=SP-_-3010645-_-0-_-3-_-9SIATRNFF13278-_-i5%2012400f-_-12400f|i5-_-23",
+    "url": "https://www.newegg.com/p/274-000A-01NK5?Item=9SIATRNFF13278&cm_sp=SP-_-3010645-_-0-_-3-_-9SIATRNFF13278-_-i5%2012400f-_-12400f|i5-_-24",
     "partType": "cpu",
     "keyword": "i5 12400f",
     "image_url": "https://c1.neweggimages.com/productimage/nb300/A1K6S23052800DLJV4D.jpg",
