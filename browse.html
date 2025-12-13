@@ -235,7 +235,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <div class="filter-group">
 <label class="filter-label">Sort By</label>
 <select class="filter-select" id="sortFilter" onchange="applyFilters()">
-<option value="default">Default</option>
+<option value="relevance">Best Value (Recommended)</option>
 <option value="price-low">Price: Low to High</option>
 <option value="price-high">Price: High to Low</option>
 <option value="newest">Newest First</option>
@@ -423,6 +423,25 @@ function applyFilters() {
         return true;
     });
     
+    // Calculate median prices by part type for relevance sorting
+    const medianByType = {};
+    const partsByType = {};
+    
+    // Group parts by type
+    filteredParts.forEach(part => {
+        if (!partsByType[part.partType]) {
+            partsByType[part.partType] = [];
+        }
+        partsByType[part.partType].push(part.price);
+    });
+    
+    // Calculate median for each type
+    Object.keys(partsByType).forEach(type => {
+        const prices = partsByType[type].sort((a, b) => a - b);
+        const median = prices[Math.floor(prices.length / 2)];
+        medianByType[type] = median;
+    });
+    
     // Sort parts
     switch(sort) {
         case 'price-low':
@@ -434,6 +453,24 @@ function applyFilters() {
         case 'newest':
             // Reverse array for newest first
             filteredParts.reverse();
+            break;
+        case 'relevance':
+        default:
+            // Sort by how close to median (best value)
+            filteredParts.sort((a, b) => {
+                const medianA = medianByType[a.partType] || a.price;
+                const medianB = medianByType[b.partType] || b.price;
+                
+                // Calculate distance from median (as percentage)
+                const distanceA = Math.abs(a.price - medianA) / medianA;
+                const distanceB = Math.abs(b.price - medianB) / medianB;
+                
+                // Prefer items closer to median, with slight preference for below median
+                const scoreA = distanceA - (a.price < medianA ? 0.1 : 0);
+                const scoreB = distanceB - (b.price < medianB ? 0.1 : 0);
+                
+                return scoreA - scoreB;
+            });
             break;
     }
     
@@ -448,13 +485,12 @@ function resetFilters() {
     document.getElementById('maxPrice').value = '';
     document.getElementById('brandFilter').value = 'all';
     document.getElementById('conditionFilter').value = 'all';
-    document.getElementById('sortFilter').value = 'default';
+    document.getElementById('sortFilter').value = 'relevance';
     document.getElementById('ratingFilter').value = 'all';
     document.getElementById('stockFilter').value = 'all';
     
     filteredParts = [...allParts];
-    displayParts(filteredParts);
-    updateResultsCount();
+    applyFilters();
 }
 
 function updateResultsCount() {
