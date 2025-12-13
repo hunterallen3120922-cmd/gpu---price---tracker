@@ -27,6 +27,31 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .filter-tab{padding:.75rem 1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;color:var(--text-secondary);cursor:pointer;transition:all .3s;font-weight:500}
 .filter-tab:hover{border-color:var(--accent);color:var(--text-primary)}
 .filter-tab.active{background:var(--accent);color:white;border-color:var(--accent)}
+.filters-section{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:2rem;animation:fadeInUp 0.8s ease-out 0.4s;animation-fill-mode:backwards}
+.filters-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-bottom:1rem}
+.filter-group{display:flex;flex-direction:column;gap:.5rem}
+.filter-label{font-weight:600;font-size:.875rem;color:var(--text-primary);margin-bottom:.25rem}
+.filter-select{background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:.75rem;color:var(--text-primary);font-size:.875rem;cursor:pointer;transition:all .2s}
+.filter-select:hover{border-color:var(--accent)}
+.filter-select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+.price-inputs{display:flex;gap:.5rem;align-items:center}
+.price-input{background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:.75rem;color:var(--text-primary);font-size:.875rem;width:100%;transition:all .2s}
+.price-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+.price-separator{color:var(--text-secondary)}
+.advanced-toggle{background:var(--bg-secondary);border:1px solid var(--border);padding:.75rem 1rem;border-radius:8px;cursor:pointer;transition:all .3s;display:flex;justify-content:space-between;align-items:center;margin-top:1rem}
+.advanced-toggle:hover{border-color:var(--accent);background:rgba(59,130,246,.1)}
+.advanced-toggle-text{font-weight:600;color:var(--text-primary)}
+.advanced-toggle-icon{color:var(--text-secondary);transition:transform .3s}
+.advanced-toggle.active .advanced-toggle-icon{transform:rotate(180deg)}
+.advanced-options{max-height:0;overflow:hidden;transition:max-height 0.3s ease-out,margin-top 0.3s ease-out}
+.advanced-options.active{max-height:800px;margin-top:1rem}
+.filter-actions{display:flex;gap:.5rem;margin-top:1rem}
+.filter-button{padding:.75rem 1.5rem;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:all .2s}
+.filter-button.primary{background:var(--accent);color:white}
+.filter-button.primary:hover{background:var(--accent-hover);transform:translateY(-2px)}
+.filter-button.secondary{background:var(--bg-secondary);color:var(--text-secondary);border:1px solid var(--border)}
+.filter-button.secondary:hover{border-color:var(--accent);color:var(--text-primary)}
+.results-count{color:var(--text-secondary);font-size:.875rem;margin-bottom:1rem;animation:fadeInUp 0.8s ease-out 0.5s;animation-fill-mode:backwards}
 .parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--card-size),1fr));gap:1.5rem;transition:opacity 0.15s ease-out}
 .part-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;position:relative;animation:fadeInUp 0.6s ease-out;animation-fill-mode:backwards}
 .part-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:rgba(59,130,246,.3)}
@@ -57,13 +82,18 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .size-label-mobile{display:block}
 .filter-tabs{gap:.25rem}
 .filter-tab{padding:.5rem 1rem;font-size:.875rem}
+.filters-section{padding:1rem}
+.filters-grid{grid-template-columns:1fr;gap:.75rem}
 .parts-grid{gap:1rem}
 .part-image{aspect-ratio:4/5;object-fit:contain}
+.filter-actions{flex-direction:column}
+.filter-button{width:100%}
 }
 
 @media (max-width: 480px) {
 .browse-header h1{font-size:1.5rem}
 .part-image{aspect-ratio:3/4}
+.filters-section{padding:.75rem}
 }
 </style>
 </head>
@@ -98,6 +128,116 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <div class="filter-tab" onclick="filterParts('ssd')">Storage</div>
 </div>
 
+<div class="filters-section">
+<div class="filters-grid">
+<div class="filter-group">
+<label class="filter-label">Part Type</label>
+<select class="filter-select" id="partTypeFilter" onchange="applyFilters()">
+<option value="all">All Types</option>
+<option value="gpu">Graphics Cards</option>
+<option value="cpu">Processors</option>
+<option value="motherboard">Motherboards</option>
+<option value="psu">Power Supplies</option>
+<option value="case">Cases</option>
+<option value="ssd">Storage</option>
+</select>
+</div>
+
+<div class="filter-group">
+<label class="filter-label">Site</label>
+<select class="filter-select" id="siteFilter" onchange="applyFilters()">
+<option value="all">All Sites</option>
+<option value="ebay">eBay</option>
+<option value="newegg">Newegg</option>
+</select>
+</div>
+
+<div class="filter-group">
+<label class="filter-label">Price Range</label>
+<div class="price-inputs">
+<input type="number" class="price-input" id="minPrice" placeholder="Min" min="0" onchange="applyFilters()">
+<span class="price-separator">—</span>
+<input type="number" class="price-input" id="maxPrice" placeholder="Max" min="0" onchange="applyFilters()">
+</div>
+</div>
+
+<div class="filter-group">
+<label class="filter-label">Brand</label>
+<select class="filter-select" id="brandFilter" onchange="applyFilters()">
+<option value="all">All Brands</option>
+<option value="msi">MSI</option>
+<option value="asus">ASUS</option>
+<option value="gigabyte">Gigabyte</option>
+<option value="evga">EVGA</option>
+<option value="corsair">Corsair</option>
+<option value="samsung">Samsung</option>
+<option value="intel">Intel</option>
+<option value="amd">AMD</option>
+<option value="nvidia">NVIDIA</option>
+<option value="crucial">Crucial</option>
+<option value="western digital">Western Digital</option>
+<option value="seagate">Seagate</option>
+</select>
+</div>
+</div>
+
+<div class="advanced-toggle" onclick="toggleAdvanced()">
+<span class="advanced-toggle-text">⚙️ Advanced Options</span>
+<span class="advanced-toggle-icon">▼</span>
+</div>
+
+<div class="advanced-options" id="advancedOptions">
+<div class="filters-grid">
+<div class="filter-group">
+<label class="filter-label">Condition</label>
+<select class="filter-select" id="conditionFilter" onchange="applyFilters()">
+<option value="all">All Conditions</option>
+<option value="New">New</option>
+<option value="Open Box">Open Box</option>
+<option value="Used">Used</option>
+<option value="Refurbished">Refurbished</option>
+</select>
+</div>
+
+<div class="filter-group">
+<label class="filter-label">Sort By</label>
+<select class="filter-select" id="sortFilter" onchange="applyFilters()">
+<option value="default">Default</option>
+<option value="price-low">Price: Low to High</option>
+<option value="price-high">Price: High to Low</option>
+<option value="newest">Newest First</option>
+</select>
+</div>
+
+<div class="filter-group">
+<label class="filter-label">Minimum Rating</label>
+<select class="filter-select" id="ratingFilter" onchange="applyFilters()">
+<option value="all">Any Rating</option>
+<option value="4">4+ Stars</option>
+<option value="4.5">4.5+ Stars</option>
+<option value="5">5 Stars Only</option>
+</select>
+</div>
+
+<div class="filter-group">
+<label class="filter-label">Stock Status</label>
+<select class="filter-select" id="stockFilter" onchange="applyFilters()">
+<option value="all">All Items</option>
+<option value="in-stock">In Stock Only</option>
+<option value="deals">On Sale Only</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class="filter-actions">
+<button class="filter-button primary" onclick="applyFilters()">Apply Filters</button>
+<button class="filter-button secondary" onclick="resetFilters()">Reset All</button>
+</div>
+</div>
+
+<div class="results-count" id="resultsCount">Showing all parts</div>
+
 <div id="loading" class="loading">
 <div class="spinner"></div>
 <p>Loading all parts...</p>
@@ -110,6 +250,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 const FALLBACK_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750"><rect width="100%" height="100%" fill="#0b1220"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="42" fill="#7aa2ff">No Image</text></svg>');
 
 let allParts = [];
+let filteredParts = [];
 let currentFilter = 'all';
 let cardSize = 300; // Default size in pixels
 
@@ -120,6 +261,13 @@ function upgradeEbayImg(url) {
 
 function calculateSavings() {
     return Math.round(Math.random() * 30) + 10;
+}
+
+function toggleAdvanced() {
+    const advancedOptions = document.getElementById('advancedOptions');
+    const toggle = document.querySelector('.advanced-toggle');
+    advancedOptions.classList.toggle('active');
+    toggle.classList.toggle('active');
 }
 
 async function loadAllParts() {
@@ -145,10 +293,90 @@ async function loadAllParts() {
             return;
         }
         
-        displayParts(allParts);
+        filteredParts = [...allParts];
+        displayParts(filteredParts);
+        updateResultsCount();
     } catch (error) {
         console.error('Error loading parts:', error);
         document.getElementById('loading').innerHTML = '<p>Error loading parts. Please try again later.</p>';
+    }
+}
+
+function applyFilters() {
+    const partType = document.getElementById('partTypeFilter').value;
+    const site = document.getElementById('siteFilter').value;
+    const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+    const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+    const brand = document.getElementById('brandFilter').value;
+    const condition = document.getElementById('conditionFilter').value;
+    const sort = document.getElementById('sortFilter').value;
+    
+    // Filter parts
+    filteredParts = allParts.filter(part => {
+        // Part type filter
+        if (partType !== 'all' && part.partType !== partType) return false;
+        
+        // Site filter
+        if (site !== 'all' && part.site.toLowerCase() !== site.toLowerCase()) return false;
+        
+        // Price filter
+        if (part.price < minPrice || part.price > maxPrice) return false;
+        
+        // Brand filter
+        if (brand !== 'all') {
+            const title = part.title.toLowerCase();
+            if (!title.includes(brand.toLowerCase())) return false;
+        }
+        
+        // Condition filter
+        if (condition !== 'all' && part.condition !== condition) return false;
+        
+        return true;
+    });
+    
+    // Sort parts
+    switch(sort) {
+        case 'price-low':
+            filteredParts.sort((a, b) => a.price - b.price);
+            break;
+        case 'price-high':
+            filteredParts.sort((a, b) => b.price - a.price);
+            break;
+        case 'newest':
+            // Reverse array for newest first
+            filteredParts.reverse();
+            break;
+    }
+    
+    displayParts(filteredParts);
+    updateResultsCount();
+}
+
+function resetFilters() {
+    document.getElementById('partTypeFilter').value = 'all';
+    document.getElementById('siteFilter').value = 'all';
+    document.getElementById('minPrice').value = '';
+    document.getElementById('maxPrice').value = '';
+    document.getElementById('brandFilter').value = 'all';
+    document.getElementById('conditionFilter').value = 'all';
+    document.getElementById('sortFilter').value = 'default';
+    document.getElementById('ratingFilter').value = 'all';
+    document.getElementById('stockFilter').value = 'all';
+    
+    filteredParts = [...allParts];
+    displayParts(filteredParts);
+    updateResultsCount();
+}
+
+function updateResultsCount() {
+    const count = filteredParts.length;
+    const total = allParts.length;
+    const countEl = document.getElementById('resultsCount');
+    
+    if (count === total) {
+        countEl.textContent = `Showing all ${total} parts`;
+    } else {
+        countEl.textContent = `Showing ${count} of ${total} parts`;
     }
 }
 
@@ -195,12 +423,11 @@ function filterParts(category) {
     document.querySelectorAll('.filter-tab').forEach(tab => tab.classList.remove('active'));
     event.target.classList.add('active');
     
-    // Filter parts
-    const filtered = category === 'all' 
-        ? allParts 
-        : allParts.filter(p => p.partType === category);
+    // Update the dropdown
+    document.getElementById('partTypeFilter').value = category;
     
-    displayParts(filtered);
+    // Apply filters
+    applyFilters();
 }
 
 function increaseCardSize() {
