@@ -50,6 +50,40 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .loading{text-align:center;padding:4rem 2rem;color:var(--text-secondary)}
 .spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 1rem}
 @keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
+nav{animation:fadeIn 0.6s ease-out}
+.hero h1{animation:fadeInUp 0.8s ease-out 0.1s;animation-fill-mode:backwards}
+.hero p{animation:fadeInUp 0.8s ease-out 0.2s;animation-fill-mode:backwards}
+.hero .cta-button{animation:fadeInUp 0.8s ease-out;animation-fill-mode:backwards}
+.hero .cta-button:nth-child(1){animation-delay:0.3s}
+.hero .cta-button:nth-child(2){animation-delay:0.4s}
+.section-header{animation:fadeInUp 0.6s ease-out}
+.ai-badge{animation:float 3s ease-in-out infinite}
+.deal-card{animation:fadeInUp 0.6s ease-out;animation-fill-mode:backwards}
+.deal-card:nth-child(1){animation-delay:0.1s}
+.deal-card:nth-child(2){animation-delay:0.15s}
+.deal-card:nth-child(3){animation-delay:0.2s}
+.deal-card:nth-child(4){animation-delay:0.25s}
+.deal-card:nth-child(5){animation-delay:0.3s}
+.deal-card:nth-child(6){animation-delay:0.35s}
+.modal.active .modal-content{animation:scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)}
+.choice-button{animation:slideInLeft 0.5s ease-out;animation-fill-mode:backwards}
+.choice-button:nth-child(1){animation-delay:0.1s}
+.choice-button:nth-child(2){animation-delay:0.2s}
+.build-part{animation:slideInLeft 0.5s ease-out;animation-fill-mode:backwards}
+.build-part:nth-child(1){animation-delay:0.1s}
+.build-part:nth-child(2){animation-delay:0.15s}
+.build-part:nth-child(3){animation-delay:0.2s}
+.build-part:nth-child(4){animation-delay:0.25s}
+.build-part:nth-child(5){animation-delay:0.3s}
+.build-part:nth-child(6){animation-delay:0.35s}
+.build-total{animation:scaleIn 0.6s ease-out 0.4s;animation-fill-mode:backwards}
+.logo{background:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 50%,#3b82f6 100%);background-size:200% auto;animation:shimmer 3s linear infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:1000;align-items:center;justify-content:center;padding:2rem}
 .modal.active{display:flex}
 .modal-content{background:var(--bg-card);border-radius:24px;max-width:800px;width:100%;max-height:90vh;overflow-y:auto;padding:2rem;position:relative;border:1px solid var(--border)}
