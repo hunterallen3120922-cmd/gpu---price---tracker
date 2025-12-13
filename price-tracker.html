@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=5, user-scalable=yes"/>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<title>Price Tracker - PC Parts Tracker</title>
+<style>
+:root{color-scheme:dark;--bg-primary:#0a0e17;--bg-secondary:#0f172a;--bg-card:#1e293b;--accent:#3b82f6;--accent-hover:#2563eb;--text-primary:#f1f5f9;--text-secondary:#cbd5e1;--border:rgba(255,255,255,.08)}
+:root.light-mode{color-scheme:light;--bg-primary:#f8fafc;--bg-secondary:#ffffff;--bg-card:#ffffff;--accent:#3b82f6;--accent-hover:#2563eb;--text-primary:#0f172a;--text-secondary:#64748b;--border:rgba(0,0,0,.1)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;transition:background-color 0.3s ease,color 0.3s ease}
+nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);animation:fadeIn 0.6s ease-out}
+.nav-container{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.back-link{color:var(--text-secondary);text-decoration:none;font-weight:500;transition:color .2s}
+.back-link:hover{color:var(--text-primary)}
+.tracker-container{max-width:1400px;margin:2rem auto;padding:0 2rem}
+.tracker-header{text-align:center;margin-bottom:3rem;animation:fadeInUp 0.8s ease-out}
+.tracker-header h1{font-size:2.5rem;font-weight:900;margin-bottom:1rem}
+.tracker-header p{color:var(--text-secondary);font-size:1.1rem}
+.search-section{max-width:800px;margin:0 auto 3rem;animation:fadeInUp 0.8s ease-out 0.1s;animation-fill-mode:backwards}
+.search-box{display:flex;gap:1rem;margin-bottom:1.5rem}
+.search-input{flex:1;padding:1rem 1.5rem;background:var(--bg-card);border:2px solid var(--border);border-radius:12px;color:var(--text-primary);font-size:1rem;transition:all .3s}
+.search-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+.search-button{padding:1rem 2rem;background:var(--accent);color:white;border:none;border-radius:12px;font-weight:600;font-size:1rem;cursor:pointer;transition:all .3s}
+.search-button:hover{background:var(--accent-hover);transform:translateY(-2px)}
+.search-button:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.results-section{display:none}
+.results-section.active{display:block;animation:fadeInUp 0.6s ease-out}
+.price-card{background:var(--bg-card);border:1px solid var(--border);border-radius:24px;padding:2rem;margin-bottom:2rem;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.price-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:2rem;gap:2rem}
+.price-title h2{font-size:2rem;margin-bottom:.5rem}
+.price-subtitle{color:var(--text-secondary);font-size:.875rem}
+.price-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-bottom:2rem}
+.stat-box{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center}
+.stat-label{font-size:.875rem;color:var(--text-secondary);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.05em}
+.stat-value{font-size:2rem;font-weight:900;color:var(--accent)}
+.stat-value.median{color:#10b981}
+.stat-value.high{color:#ef4444}
+.stat-value.low{color:#3b82f6}
+.price-chart{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:2rem}
+.chart-title{font-weight:600;margin-bottom:1rem}
+.chart-bars{display:flex;align-items:flex-end;gap:.5rem;height:200px;margin-bottom:1rem}
+.chart-bar{flex:1;background:var(--accent);border-radius:4px 4px 0 0;transition:all .3s;position:relative;cursor:pointer}
+.chart-bar:hover{background:var(--accent-hover);transform:translateY(-4px)}
+.chart-label{text-align:center;font-size:.75rem;color:var(--text-secondary);margin-top:.5rem}
+.listings-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+.listing-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1rem;transition:all .3s}
+.listing-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.listing-title{font-size:.9rem;margin-bottom:.5rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.listing-meta{display:flex;gap:.5rem;margin-bottom:.5rem;flex-wrap:wrap}
+.listing-tag{font-size:.75rem;padding:.25rem .5rem;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);border-radius:6px;color:#93c5fd}
+.listing-price{font-size:1.5rem;font-weight:800;margin-bottom:.5rem}
+.listing-price.below-median{color:#10b981}
+.listing-price.above-median{color:#ef4444}
+.listing-price.median{color:var(--text-primary)}
+.loading{text-align:center;padding:4rem 2rem;color:var(--text-secondary)}
+.spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 1rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.no-results{text-align:center;padding:3rem;color:var(--text-secondary)}
+.no-results h3{font-size:1.5rem;margin-bottom:1rem}
+
+@media (max-width: 768px) {
+.nav-container{padding:1rem}
+.tracker-container{padding:0 1rem}
+.tracker-header h1{font-size:2rem}
+.search-box{flex-direction:column}
+.price-header{flex-direction:column}
+.price-stats{grid-template-columns:1fr}
+.listings-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-container">
+<a href="index.html" class="logo">PC Parts Tracker</a>
+<a href="index.html" class="back-link">← Back to Home</a>
+</div>
+</nav>
+
+<div class="tracker-container">
+<div class="tracker-header">
+<h1>💰 Price Tracker</h1>
+<p>Analyze current market prices and identify the best deals on PC components</p>
+</div>
+
+<div class="search-section">
+<div class="search-box">
+<input type="text" class="search-input" id="searchInput" placeholder="Search for a component (e.g., RTX 3060, 650W PSU, B450 Motherboard)">
+<button class="search-button" id="searchBtn" onclick="searchPrice()">Track Price</button>
+</div>
+</div>
+
+<div id="loading" class="loading" style="display:none">
+<div class="spinner"></div>
+<p>Analyzing prices...</p>
+</div>
+
+<div id="results" class="results-section"></div>
+</div>
+
+<script>
+// Load saved theme
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-mode');
+    }
+}
+loadTheme();
+
+let allParts = [];
+let searchResults = [];
+
+async function loadAllParts() {
+    try {
+        const categories = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
+        allParts = [];
+        
+        for (const category of categories) {
+            try {
+                const response = await fetch(`data/${category}.json`, { cache: 'no-store' });
+                if (response.ok) {
+                    const parts = await response.json();
+                    const validParts = parts.filter(p => p.price && p.price > 0);
+                    allParts.push(...validParts);
+                }
+            } catch (error) {
+                console.warn(`Failed to load ${category}:`, error);
+            }
+        }
+    } catch (error) {
+        console.error('Error loading parts:', error);
+    }
+}
+
+async function searchPrice() {
+    const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+    
+    if (!searchTerm) {
+        alert('Please enter a component to search for');
+        return;
+    }
+    
+    // Show loading
+    document.getElementById('loading').style.display = 'block';
+    document.getElementById('results').classList.remove('active');
+    
+    // Load data if not already loaded
+    if (allParts.length === 0) {
+        await loadAllParts();
+    }
+    
+    // Filter parts matching the search term
+    searchResults = allParts.filter(part => {
+        const title = part.title.toLowerCase();
+        return title.includes(searchTerm);
+    });
+    
+    // Simulate processing time
+    setTimeout(() => {
+        document.getElementById('loading').style.display = 'none';
+        displayResults(searchTerm);
+    }, 500);
+}
+
+function displayResults(searchTerm) {
+    const resultsDiv = document.getElementById('results');
+    
+    if (searchResults.length === 0) {
+        resultsDiv.innerHTML = `
+            <div class="no-results">
+                <h3>No results found</h3>
+                <p>Try a different search term like "RTX 3060" or "650W PSU"</p>
+            </div>
+        `;
+        resultsDiv.classList.add('active');
+        return;
+    }
+    
+    // Calculate statistics
+    const prices = searchResults.map(p => p.price).sort((a, b) => a - b);
+    const median = prices[Math.floor(prices.length / 2)];
+    const min = Math.min(...prices);
+    const max = Math.max(...prices);
+    const avg = prices.reduce((a, b) => a + b, 0) / prices.length;
+    
+    // Group by price ranges for chart
+    const ranges = [
+        { label: '$0-50', min: 0, max: 50 },
+        { label: '$50-100', min: 50, max: 100 },
+        { label: '$100-200', min: 100, max: 200 },
+        { label: '$200-500', min: 200, max: 500 },
+        { label: '$500+', min: 500, max: Infinity }
+    ];
+    
+    const rangeCounts = ranges.map(range => ({
+        ...range,
+        count: searchResults.filter(p => p.price >= range.min && p.price < range.max).length
+    }));
+    
+    const maxCount = Math.max(...rangeCounts.map(r => r.count));
+    
+    // Build chart HTML
+    const chartBars = rangeCounts.map(range => {
+        const height = maxCount > 0 ? (range.count / maxCount) * 100 : 0;
+        return `
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center">
+                <div class="chart-bar" style="height:${height}%" title="${range.count} items"></div>
+                <div class="chart-label">${range.label}<br>${range.count}</div>
+            </div>
+        `;
+    }).join('');
+    
+    // Sort listings by price
+    const sortedListings = [...searchResults].sort((a, b) => a.price - b.price).slice(0, 12);
+    
+    // Build listings HTML
+    const listingsHTML = sortedListings.map(part => {
+        let priceClass = 'median';
+        if (part.price < median * 0.9) priceClass = 'below-median';
+        else if (part.price > median * 1.1) priceClass = 'above-median';
+        
+        return `
+            <div class="listing-card">
+                <div class="listing-title">${part.title}</div>
+                <div class="listing-meta">
+                    <span class="listing-tag">${part.partType}</span>
+                    <span class="listing-tag">${part.site}</span>
+                    <span class="listing-tag">${part.condition}</span>
+                </div>
+                <div class="listing-price ${priceClass}">$${part.price.toFixed(2)}</div>
+                <a href="${part.url}" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;font-size:.875rem">View Deal →</a>
+            </div>
+        `;
+    }).join('');
+    
+    resultsDiv.innerHTML = `
+        <div class="price-card">
+            <div class="price-header">
+                <div class="price-title">
+                    <h2>${searchTerm}</h2>
+                    <div class="price-subtitle">Found ${searchResults.length} listings</div>
+                </div>
+            </div>
+            
+            <div class="price-stats">
+                <div class="stat-box">
+                    <div class="stat-label">Market Price</div>
+                    <div class="stat-value median">$${median.toFixed(2)}</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Average Price</div>
+                    <div class="stat-value">$${avg.toFixed(2)}</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Lowest Price</div>
+                    <div class="stat-value low">$${min.toFixed(2)}</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Highest Price</div>
+                    <div class="stat-value high">$${max.toFixed(2)}</div>
+                </div>
+            </div>
+            
+            <div class="price-chart">
+                <div class="chart-title">Price Distribution</div>
+                <div class="chart-bars">
+                    ${chartBars}
+                </div>
+            </div>
+            
+            <h3 style="margin-bottom:1rem">Best Deals (Sorted by Price)</h3>
+            <div class="listings-grid">
+                ${listingsHTML}
+            </div>
+        </div>
+    `;
+    
+    resultsDiv.classList.add('active');
+}
+
+// Allow Enter key to search
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('searchInput').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') searchPrice();
+    });
+});
+</script>
+</body>
+</html>
