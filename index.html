@@ -27,7 +27,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .hero{max-width:1400px;margin:0 auto;padding:4rem 2rem;text-align:center}
 .hero h1{font-size:3.5rem;font-weight:900;margin-bottom:1rem;background:linear-gradient(135deg,#fff 0%,#94a3b8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p{font-size:1.25rem;color:var(--text-secondary);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
-.cta-button{display:inline-block;padding:1rem 2rem;background:var(--accent);color:white;text-decoration:none;border-radius:12px;font-weight:600;font-size:1.1rem;transition:all .3s;box-shadow:0 4px 20px rgba(59,130,246,.3)}
+.cta-button{display:inline-block;padding:1rem 2rem;background:var(--accent);color:white;text-decoration:none;border-radius:12px;font-weight:600;font-size:1.1rem;transition:all .3s;box-shadow:0 4px 20px rgba(59,130,246,.3);border:none;cursor:pointer}
 .cta-button:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 6px 30px rgba(59,130,246,.4)}
 .featured-section{max-width:1400px;margin:4rem auto;padding:0 2rem}
 .section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
@@ -55,6 +55,12 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .modal-content{background:var(--bg-card);border-radius:24px;max-width:800px;width:100%;max-height:90vh;overflow-y:auto;padding:2rem;position:relative;border:1px solid var(--border)}
 .modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--text-secondary);font-size:2rem;cursor:pointer;line-height:1;padding:.5rem}
 .modal-close:hover{color:var(--text-primary)}
+.choice-modal{max-width:600px}
+.choice-buttons{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.choice-button{padding:2rem;background:var(--bg-secondary);border:2px solid var(--border);border-radius:16px;cursor:pointer;transition:all .3s;text-align:left}
+.choice-button:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.3)}
+.choice-button h3{font-size:1.5rem;margin-bottom:.5rem;background:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.choice-button p{color:var(--text-secondary);font-size:.9rem;line-height:1.5}
 .builder-form{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem}
 .form-group{display:flex;flex-direction:column;gap:.5rem}
 .form-group label{font-weight:600;color:var(--text-primary)}
@@ -81,24 +87,46 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <li class="dropdown">
 <button class="dropdown-toggle" onclick="toggleDropdown()">Menu</button>
 <div class="dropdown-menu">
-<button onclick="openPCBuilder(); toggleDropdown()">✨ AI PC Builder</button>
+<button onclick="openChoiceModal(); toggleDropdown()">🛠️ PC Builder</button>
 <a href="browse.html" onclick="toggleDropdown()">Browse All Parts</a>
 </div>
 </li>
 </ul>
 </div>
 </nav>
+
 <section class="hero">
 <h1>Find the Best PC Part Deals</h1>
 <p>AI-powered deal discovery across eBay, Newegg, and more. Save money on your next build.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
 <a href="browse.html" class="cta-button">Browse All Parts</a>
-<button class="cta-button" onclick="openPCBuilder()" style="background:linear-gradient(135deg,#8b5cf6 0%,#6366f1 100%)">✨ AI PC Builder</button>
+<button class="cta-button" onclick="openChoiceModal()" style="background:linear-gradient(135deg,#8b5cf6 0%,#6366f1 100%)">✨ AI PC Builder</button>
 </div>
 </section>
-<div id="pcBuilderModal" class="modal">
+
+<!-- Choice Modal -->
+<div id="choiceModal" class="modal">
+<div class="modal-content choice-modal">
+<button class="modal-close" onclick="closeChoiceModal()">×</button>
+<h2 style="font-size:2rem;margin-bottom:.5rem;text-align:center">Choose Your Builder</h2>
+<p style="color:var(--text-secondary);text-align:center;margin-bottom:1rem">How would you like to build your PC?</p>
+<div class="choice-buttons">
+<div class="choice-button" onclick="window.location.href='builder.html'">
+<h3>🛠️ Manual Builder</h3>
+<p>Hand-pick each component yourself. Browse through our curated selection and choose exactly what you want for each part.</p>
+</div>
+<div class="choice-button" onclick="openAIBuilder()">
+<h3>✨ AI Builder</h3>
+<p>Let our smart algorithm build your PC. Just tell us your budget and what you'll use it for, and we'll select compatible parts for you.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- AI Builder Modal -->
+<div id="aiBuilderModal" class="modal">
 <div class="modal-content">
-<button class="modal-close" onclick="closePCBuilder()">×</button>
+<button class="modal-close" onclick="closeAIBuilder()">×</button>
 <h2 style="font-size:2rem;margin-bottom:.5rem">AI PC Builder</h2>
 <p style="color:var(--text-secondary);margin-bottom:1rem">Let AI find the perfect components for your budget and needs</p>
 <div class="builder-form">
@@ -148,6 +176,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 </div>
 </div>
 </div>
+
 <div class="featured-section">
 <div class="section-header">
 <h2>Featured Deals</h2>
@@ -159,18 +188,16 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 </div>
 <div id="deals" class="deals-grid" style="display:none"></div>
 </div>
-<script>
-// Cloudflare Worker URL
-const WORKER_URL = 'https://pc-builder-api.hunterallen3120922.workers.dev';
 
+<script>
 const FALLBACK_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750"><rect width="100%" height="100%" fill="#0b1220"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="42" fill="#7aa2ff">No Image</text></svg>');
 
+// Dropdown menu functions
 function toggleDropdown() {
     const dropdown = document.querySelector('.dropdown');
     dropdown.classList.toggle('active');
 }
 
-// Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
     const dropdown = document.querySelector('.dropdown');
     if (dropdown && !dropdown.contains(event.target)) {
@@ -178,8 +205,30 @@ document.addEventListener('click', function(event) {
     }
 });
 
+// Modal functions
+function openChoiceModal() {
+    document.getElementById('choiceModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeChoiceModal() {
+    document.getElementById('choiceModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function openAIBuilder() {
+    document.getElementById('choiceModal').classList.remove('active');
+    document.getElementById('aiBuilderModal').classList.add('active');
+}
+
+function closeAIBuilder() {
+    document.getElementById('aiBuilderModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Utility functions
 function upgradeEbayImg(url) {
-    if (!url) return '';
+    if (!url) return FALLBACK_IMG;
     return String(url).trim().replace(/\/s-l\d+\.(jpg|jpeg|png|webp)$/i, '/s-l1600.$1');
 }
 
@@ -198,6 +247,7 @@ function getAIReason() {
     return reasons[Math.floor(Math.random() * reasons.length)];
 }
 
+// Load featured deals
 async function loadFeaturedDeals() {
     try {
         const categories = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
@@ -281,7 +331,7 @@ function displayDeals(deals) {
         card.className = 'deal-card';
         
         const savings = calculateSavings();
-        const imgUrl = upgradeEbayImg(deal.image_url) || FALLBACK_IMG;
+        const imgUrl = upgradeEbayImg(deal.image_url);
         
         card.innerHTML = `
             <div class="deal-badge">-${savings}%</div>
@@ -306,31 +356,7 @@ function displayDeals(deals) {
     dealsContainer.style.display = 'grid';
 }
 
-function openPCBuilder() {
-    document.getElementById('pcBuilderModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closePCBuilder() {
-    document.getElementById('pcBuilderModal').classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-            const build = smartBuildPC(budget, useCase, priority, allParts, conditionPref);
-            if (build) {
-                displayBuild(build);
-            } else {
-                alert('Could not find compatible parts within budget.');
-            }
-        } catch (fallbackError) {
-            alert('Both AI and fallback failed. Please try again.');
-        }
-    } finally {
-        generateBtn.disabled = false;
-        generateBtn.textContent = '✨ Generate My Build';
-    }
-}
-
+// AI PC Builder
 async function generateBuild() {
     const budget = parseFloat(document.getElementById('budget').value);
     const useCase = document.getElementById('useCase').value;
@@ -347,7 +373,6 @@ async function generateBuild() {
     generateBtn.textContent = '🤖 Building your PC...';
     
     try {
-        // Load all parts data
         const categories = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
         const allParts = {};
         
@@ -358,7 +383,6 @@ async function generateBuild() {
             }
         }
         
-        // Use smart local algorithm (no API needed!)
         const build = smartBuildPC(budget, useCase, priority, allParts, conditionPref);
         
         if (build) {
@@ -493,7 +517,7 @@ function displayBuild(build) {
     resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-// Load deals on page load
+// Initialize
 loadFeaturedDeals();
 </script>
 </body>
