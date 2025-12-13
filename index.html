@@ -284,6 +284,164 @@
       .nav-links { gap: 1rem; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
     }
+
+    /* PC Builder Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    
+    .modal.active {
+      display: flex;
+    }
+    
+    .modal-content {
+      background: var(--bg-card);
+      border-radius: 24px;
+      max-width: 800px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2rem;
+      position: relative;
+      border: 1px solid var(--border);
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.5rem;
+    }
+    
+    .modal-close:hover {
+      color: var(--text-primary);
+    }
+    
+    .builder-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .form-group label {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    
+    .form-group select,
+    .form-group input {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+    
+    .builder-button {
+      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 1rem;
+    }
+    
+    .builder-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(139, 92, 246, 0.4);
+    }
+    
+    .builder-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .build-result {
+      margin-top: 2rem;
+      display: none;
+    }
+    
+    .build-result.active {
+      display: block;
+    }
+    
+    .build-part {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .build-part-info h4 {
+      margin: 0 0 0.25rem 0;
+      color: var(--text-primary);
+    }
+    
+    .build-part-info p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+    
+    .build-part-price {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #10b981;
+    }
+    
+    .build-total {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+      border: 2px solid rgba(139, 92, 246, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    
+    .build-total h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.25rem;
+    }
+    
+    .build-total .total-price {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #10b981;
+    }
   </style>
 </head>
 <body>
@@ -300,7 +458,74 @@
   <div class="hero">
     <h1>Find the Best PC Part Deals</h1>
     <p>AI-powered deal discovery across eBay, Newegg, and more. Save money on your next build.</p>
-    <a href="browse.html" class="cta-button">Browse All Parts</a>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="browse.html" class="cta-button">Browse All Parts</a>
+      <button onclick="openPCBuilder()" class="cta-button" style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%); border: none; cursor: pointer;">
+        ✨ AI PC Builder
+      </button>
+    </div>
+  </div>
+
+  <!-- PC Builder Modal -->
+  <div id="pcBuilderModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closePCBuilder()">×</button>
+      <h2 style="margin: 0 0 0.5rem 0; font-size: 2rem;">AI PC Builder</h2>
+      <p style="color: var(--text-secondary); margin: 0;">Answer a few questions and let AI build your perfect PC from available deals</p>
+      
+      <div class="builder-form">
+        <div class="form-group">
+          <label>What's your budget?</label>
+          <input type="number" id="budget" placeholder="e.g., 1000" min="300" max="5000" />
+        </div>
+        
+        <div class="form-group">
+          <label>What will you use it for?</label>
+          <select id="useCase">
+            <option value="">Select use case...</option>
+            <option value="gaming">Gaming</option>
+            <option value="productivity">Productivity / Work</option>
+            <option value="content-creation">Content Creation / Video Editing</option>
+            <option value="budget">Basic Use / Budget Build</option>
+            <option value="enthusiast">High-End / Enthusiast</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Performance priority?</label>
+          <select id="priority">
+            <option value="">Select priority...</option>
+            <option value="balanced">Balanced (best value)</option>
+            <option value="gpu">GPU focused (gaming/rendering)</option>
+            <option value="cpu">CPU focused (productivity)</option>
+            <option value="storage">Storage focused (large files)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Condition preference?</label>
+          <select id="conditionPref">
+            <option value="any">Any condition (best deals)</option>
+            <option value="new">New only</option>
+            <option value="new-openbox">New or Open Box</option>
+          </select>
+        </div>
+        
+        <button class="builder-button" onclick="generateBuild()" id="generateBtn">
+          ✨ Generate My Build
+        </button>
+      </div>
+      
+      <div id="buildResult" class="build-result">
+        <h3 style="margin: 2rem 0 1rem 0;">Your Custom Build</h3>
+        <div id="buildParts"></div>
+        <div class="build-total">
+          <h3>Total Build Cost</h3>
+          <div class="total-price" id="totalPrice">$0.00</div>
+          <p style="margin: 0.5rem 0 0 0; color: var(--text-secondary);">Based on current available deals</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="featured-section">
@@ -587,6 +812,194 @@ Respond with ONLY a JSON array of 6 numbers representing the indices of the best
 
     // Load deals on page load
     loadFeaturedDeals();
+
+    // PC Builder Functions
+    function openPCBuilder() {
+      document.getElementById('pcBuilderModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePCBuilder() {
+      document.getElementById('pcBuilderModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    async function generateBuild() {
+      const budget = document.getElementById('budget').value;
+      const useCase = document.getElementById('useCase').value;
+      const priority = document.getElementById('priority').value;
+      const conditionPref = document.getElementById('conditionPref').value;
+
+      if (!budget || !useCase || !priority) {
+        alert('Please fill in all required fields');
+        return;
+      }
+
+      const btn = document.getElementById('generateBtn');
+      btn.disabled = true;
+      btn.textContent = '🤖 AI is building your PC...';
+
+      try {
+        // Load all available parts
+        const partTypes = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
+        const allParts = {};
+
+        for (const part of partTypes) {
+          try {
+            const res = await fetch(`data/${part}.json`, { cache: 'no-store' });
+            if (res.ok) {
+              const data = await res.json();
+              // Filter by condition preference
+              let filtered = data.filter(item => item.price && item.price > 0);
+              
+              if (conditionPref === 'new') {
+                filtered = filtered.filter(item => item.condition === 'New');
+              } else if (conditionPref === 'new-openbox') {
+                filtered = filtered.filter(item => item.condition === 'New' || item.condition === 'Open Box');
+              }
+              
+              allParts[part] = filtered.sort((a, b) => a.price - b.price).slice(0, 20);
+            }
+          } catch (e) {
+            console.warn(`Failed to load ${part}:`, e);
+            allParts[part] = [];
+          }
+        }
+
+        // Prepare data for AI
+        const prompt = `You are a PC building expert. Build a complete gaming PC within a ${budget} budget.
+
+Use case: ${useCase}
+Priority: ${priority}
+Condition preference: ${conditionPref}
+
+Available parts (top 20 cheapest in each category):
+${JSON.stringify({
+  gpus: allParts.gpu.map(p => ({ title: p.title, price: p.price, condition: p.condition })),
+  cpus: allParts.cpu.map(p => ({ title: p.title, price: p.price, condition: p.condition })),
+  motherboards: allParts.motherboard.map(p => ({ title: p.title, price: p.price, condition: p.condition })),
+  psus: allParts.psu.map(p => ({ title: p.title, price: p.price, condition: p.condition })),
+  cases: allParts.case.map(p => ({ title: p.title, price: p.price, condition: p.condition })),
+  ssds: allParts.ssd.map(p => ({ title: p.title, price: p.price, condition: p.condition }))
+}, null, 2)}
+
+Build a complete PC with: GPU, CPU, Motherboard, PSU, Case, and SSD.
+
+CRITICAL RULES:
+1. Total cost must be under ${budget}
+2. Ensure compatibility (AMD CPU needs AMD motherboard, Intel needs Intel)
+3. PSU must be sufficient for the GPU/CPU
+4. Prioritize ${priority}
+5. Pick parts that match the ${useCase} use case
+
+Respond with ONLY a JSON object in this exact format:
+{
+  "gpu": 0,
+  "cpu": 5,
+  "motherboard": 2,
+  "psu": 1,
+  "case": 0,
+  "ssd": 3,
+  "reasoning": "Brief explanation of choices"
+}
+
+The numbers are the array indices of the parts you selected. DO NOT include any other text.`;
+
+        const response = await fetch("https://api.anthropic.com/v1/messages", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "claude-sonnet-4-20250514",
+            max_tokens: 2000,
+            messages: [
+              { role: "user", content: prompt }
+            ],
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error('AI service unavailable');
+        }
+
+        const data = await response.json();
+        const textContent = data.content.find(c => c.type === "text");
+        
+        if (!textContent) {
+          throw new Error('No response from AI');
+        }
+
+        // Parse AI response
+        const aiText = textContent.text.trim();
+        const jsonMatch = aiText.match(/\{[\s\S]*\}/);
+        
+        if (!jsonMatch) {
+          throw new Error('Invalid AI response format');
+        }
+
+        const buildPlan = JSON.parse(jsonMatch[0]);
+
+        // Display the build
+        displayBuild(buildPlan, allParts);
+
+      } catch (error) {
+        console.error('Build generation error:', error);
+        alert('Failed to generate build. Please try again.');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '✨ Generate My Build';
+      }
+    }
+
+    function displayBuild(buildPlan, allParts) {
+      const buildPartsDiv = document.getElementById('buildParts');
+      const buildResultDiv = document.getElementById('buildResult');
+      
+      buildPartsDiv.innerHTML = '';
+      let total = 0;
+
+      const partLabels = {
+        gpu: 'Graphics Card',
+        cpu: 'Processor',
+        motherboard: 'Motherboard',
+        psu: 'Power Supply',
+        case: 'Case',
+        ssd: 'Storage'
+      };
+
+      for (const [partType, index] of Object.entries(buildPlan)) {
+        if (partType === 'reasoning') continue;
+        
+        const part = allParts[partType][index];
+        if (!part) continue;
+
+        total += part.price;
+
+        const partDiv = document.createElement('div');
+        partDiv.className = 'build-part';
+        partDiv.innerHTML = `
+          <div class="build-part-info">
+            <h4>${partLabels[partType]}</h4>
+            <p>${part.title}</p>
+            <p style="margin-top: 0.25rem;"><strong>${part.condition}</strong> • ${part.site}</p>
+          </div>
+          <div>
+            <div class="build-part-price">${part.price.toFixed(2)}</div>
+            <a href="${part.url}" target="_blank" rel="noopener" 
+               style="font-size: 0.75rem; color: var(--accent); text-decoration: none;">
+              View Deal →
+            </a>
+          </div>
+        `;
+        buildPartsDiv.appendChild(partDiv);
+      }
+
+      document.getElementById('totalPrice').textContent = `${total.toFixed(2)}`;
+      
+      buildResultDiv.classList.add('active');
+      buildResultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   </script>
 </body>
 </html>
