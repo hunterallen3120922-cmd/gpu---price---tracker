@@ -300,24 +300,7 @@ function loadTheme() {
 function searchParts() {
     const searchTerm = document.getElementById('searchBar').value.toLowerCase();
     
-    if (searchTerm === '') {
-        // If search is empty, just apply regular filters
-        applyFilters();
-        return;
-    }
-    
-    // Start with all parts or currently filtered parts
-    const partsToSearch = currentFilter === 'all' ? allParts : allParts.filter(p => p.partType === currentFilter);
-    
-    // Search in title, brand, and part type
-    filteredParts = partsToSearch.filter(part => {
-        const title = (part.title || '').toLowerCase();
-        const partType = (part.partType || '').toLowerCase();
-        
-        return title.includes(searchTerm) || partType.includes(searchTerm);
-    });
-    
-    // Apply other filters on top of search results
+    // Always start fresh and apply filters with search
     applyFilters();
 }
 
@@ -399,9 +382,18 @@ function applyFilters() {
     const brand = document.getElementById('brandFilter').value;
     const condition = document.getElementById('conditionFilter').value;
     const sort = document.getElementById('sortFilter').value;
+    const searchTerm = document.getElementById('searchBar').value.toLowerCase();
     
     // Filter parts
     filteredParts = allParts.filter(part => {
+        // Search filter (if search term exists)
+        if (searchTerm) {
+            const title = (part.title || '').toLowerCase();
+            const partTypeLower = (part.partType || '').toLowerCase();
+            const searchMatch = title.includes(searchTerm) || partTypeLower.includes(searchTerm);
+            if (!searchMatch) return false;
+        }
+        
         // Part type filter
         if (partType !== 'all' && part.partType !== partType) return false;
         
