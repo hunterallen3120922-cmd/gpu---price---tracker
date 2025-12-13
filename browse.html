@@ -17,17 +17,28 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .browse-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
 .browse-header h1{font-size:2.5rem;font-weight:900;animation:fadeInUp 0.8s ease-out}
 .controls{display:flex;gap:1rem;align-items:center;animation:fadeInUp 0.8s ease-out 0.2s;animation-fill-mode:backwards}
-.size-control{display:flex;gap:.5rem;align-items:center;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:.5rem}
+.size-control{display:flex;gap:.5rem;align-items:center;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:.5rem;position:relative}
 .size-button{background:var(--accent);color:white;border:none;width:36px;height:36px;border-radius:8px;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:all .2s}
 .size-button:hover{background:var(--accent-hover);transform:scale(1.1)}
-.size-button:active{transform:scale(0.95)}
+.size-button:active{transform:scale(0.98)}
+.size-button:disabled{opacity:.5;cursor:not-allowed;transform:none}
 .size-label{color:var(--text-secondary);font-size:.875rem;padding:0 .5rem}
 .size-label-mobile{display:none;font-size:1.2rem}
+.zoom-indicator{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(-10px);margin-top:.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:.5rem 1rem;font-size:.75rem;color:var(--text-secondary);white-space:nowrap;z-index:10;box-shadow:0 4px 12px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity 0.3s ease-out,transform 0.3s ease-out}
+.zoom-indicator.visible{opacity:1;transform:translateX(-50%) translateY(0)}
+.zoom-indicator.maxed{color:#ef4444;font-weight:600}
+.zoom-indicator.minned{color:#ef4444;font-weight:600}
+.zoom-value{color:var(--text-primary);font-weight:700;margin:0 .25rem}
 .filter-tabs{display:flex;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap;animation:fadeInUp 0.8s ease-out 0.3s;animation-fill-mode:backwards}
 .filter-tab{padding:.75rem 1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;color:var(--text-secondary);cursor:pointer;transition:all .3s;font-weight:500}
 .filter-tab:hover{border-color:var(--accent);color:var(--text-primary)}
 .filter-tab.active{background:var(--accent);color:white;border-color:var(--accent)}
 .filters-section{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-bottom:2rem;animation:fadeInUp 0.8s ease-out 0.4s;animation-fill-mode:backwards}
+.filters-toggle{display:none;background:var(--accent);color:white;border:none;padding:1rem;border-radius:12px;font-weight:600;cursor:pointer;transition:all .3s;width:100%;margin-bottom:1rem;font-size:1rem}
+.filters-toggle:active{transform:scale(0.98)}
+.filters-toggle-icon{margin-left:.5rem;transition:transform .3s}
+.filters-toggle.active .filters-toggle-icon{transform:rotate(180deg)}
+.filters-content{transition:max-height 0.3s ease-out,opacity 0.3s ease-out;overflow:hidden}
 .filters-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-bottom:1rem}
 .filter-group{display:flex;flex-direction:column;gap:.5rem}
 .filter-label{font-weight:600;font-size:.875rem;color:var(--text-primary);margin-bottom:.25rem}
@@ -83,6 +94,9 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .filter-tabs{gap:.25rem}
 .filter-tab{padding:.5rem 1rem;font-size:.875rem}
 .filters-section{padding:1rem}
+.filters-toggle{display:flex;align-items:center;justify-content:center}
+.filters-content{max-height:0;opacity:0;pointer-events:none}
+.filters-content.active{max-height:2000px;opacity:1;pointer-events:all}
 .filters-grid{grid-template-columns:1fr;gap:.75rem}
 .parts-grid{grid-template-columns:repeat(auto-fill,minmax(var(--card-size),1fr));gap:1rem}
 .part-image{aspect-ratio:4/5;object-fit:contain}
@@ -111,10 +125,13 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <h1>Browse All Parts</h1>
 <div class="controls">
 <div class="size-control">
-<button class="size-button" onclick="decreaseCardSize()">−</button>
+<button class="size-button" id="decreaseBtn" onclick="decreaseCardSize()">−</button>
 <span class="size-label">Card Size</span>
 <span class="size-label-mobile">🔍</span>
-<button class="size-button" onclick="increaseCardSize()">+</button>
+<button class="size-button" id="increaseBtn" onclick="increaseCardSize()">+</button>
+<div class="zoom-indicator" id="zoomIndicator">
+<span class="zoom-value" id="zoomValue">Medium</span>
+</div>
 </div>
 </div>
 </div>
@@ -130,6 +147,11 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 </div>
 
 <div class="filters-section">
+<button class="filters-toggle" onclick="toggleFilters()">
+🔍 Show Filters
+<span class="filters-toggle-icon">▼</span>
+</button>
+<div class="filters-content" id="filtersContent">
 <div class="filters-grid">
 <div class="filter-group">
 <label class="filter-label">Part Type</label>
@@ -236,6 +258,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <button class="filter-button secondary" onclick="resetFilters()">Reset All</button>
 </div>
 </div>
+</div>
 
 <div class="results-count" id="resultsCount">Showing all parts</div>
 
@@ -254,6 +277,17 @@ let allParts = [];
 let filteredParts = [];
 let currentFilter = 'all';
 let cardSize = 300; // Default size in pixels
+let hideTimeout = null; // For auto-hiding the zoom indicator
+
+function getSizeName(size) {
+    if (size <= 150) return 'Smallest';
+    if (size <= 200) return 'Smaller';
+    if (size <= 250) return 'Small';
+    if (size <= 300) return 'Medium';
+    if (size <= 350) return 'Large';
+    if (size <= 400) return 'Larger';
+    return 'Largest';
+}
 
 function upgradeEbayImg(url) {
     if (!url) return FALLBACK_IMG;
@@ -269,6 +303,18 @@ function toggleAdvanced() {
     const toggle = document.querySelector('.advanced-toggle');
     advancedOptions.classList.toggle('active');
     toggle.classList.toggle('active');
+}
+
+function toggleFilters() {
+    const filtersContent = document.getElementById('filtersContent');
+    const toggle = document.querySelector('.filters-toggle');
+    const isActive = filtersContent.classList.toggle('active');
+    toggle.classList.toggle('active');
+    
+    // Update button text
+    toggle.innerHTML = isActive 
+        ? '🔍 Hide Filters <span class="filters-toggle-icon">▼</span>'
+        : '🔍 Show Filters <span class="filters-toggle-icon">▼</span>';
 }
 
 async function loadAllParts() {
@@ -434,11 +480,65 @@ function filterParts(category) {
 function increaseCardSize() {
     cardSize = Math.min(cardSize + 50, 500); // Max 500px
     updateCardSize();
+    updateZoomIndicator();
 }
 
 function decreaseCardSize() {
     cardSize = Math.max(cardSize - 50, 150); // Min 150px (better for mobile zoom)
     updateCardSize();
+    updateZoomIndicator();
+}
+
+function updateZoomIndicator() {
+    const indicator = document.getElementById('zoomIndicator');
+    const decreaseBtn = document.getElementById('decreaseBtn');
+    const increaseBtn = document.getElementById('increaseBtn');
+    
+    // Safety check - make sure elements exist
+    if (!indicator || !decreaseBtn || !increaseBtn) {
+        console.warn('Zoom indicator elements not found');
+        return;
+    }
+    
+    // Get size name
+    const sizeName = getSizeName(cardSize);
+    
+    // Clear any existing timeout
+    if (hideTimeout) {
+        clearTimeout(hideTimeout);
+    }
+    
+    // Show indicator
+    indicator.classList.add('visible');
+    
+    // Check if at max
+    if (cardSize >= 500) {
+        indicator.classList.add('maxed');
+        indicator.classList.remove('minned');
+        indicator.innerHTML = '<span class="zoom-value">' + sizeName + '</span> (Maximum)';
+        increaseBtn.disabled = true;
+        decreaseBtn.disabled = false;
+    }
+    // Check if at min
+    else if (cardSize <= 150) {
+        indicator.classList.add('minned');
+        indicator.classList.remove('maxed');
+        indicator.innerHTML = '<span class="zoom-value">' + sizeName + '</span> (Minimum)';
+        decreaseBtn.disabled = true;
+        increaseBtn.disabled = false;
+    }
+    // Normal range
+    else {
+        indicator.classList.remove('maxed', 'minned');
+        indicator.innerHTML = '<span class="zoom-value">' + sizeName + '</span>';
+        decreaseBtn.disabled = false;
+        increaseBtn.disabled = false;
+    }
+    
+    // Auto-hide after 2 seconds
+    hideTimeout = setTimeout(() => {
+        indicator.classList.remove('visible');
+    }, 2000);
 }
 
 function updateCardSize() {
