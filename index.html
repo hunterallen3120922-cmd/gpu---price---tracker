@@ -27,7 +27,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .hero{max-width:1400px;margin:0 auto;padding:4rem 2rem;text-align:center}
 .hero h1{font-size:3.5rem;font-weight:900;margin-bottom:1rem;background:linear-gradient(135deg,#fff 0%,#94a3b8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p{font-size:1.25rem;color:var(--text-secondary);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
-.cta-button{display:inline-block;padding:1rem 2rem;background:var(--accent);color:white;text-decoration:none;border-radius:12px;font-weight:600;font-size:1.1rem;transition:all .3s;box-shadow:0 4px 20px rgba(59,130,246,.3)}
+.cta-button{display:inline-block;padding:1rem 2rem;background:var(--accent);color:white;text-decoration:none;border-radius:12px;font-weight:600;font-size:1.1rem;transition:all .3s;box-shadow:0 4px 20px rgba(59,130,246,.3);border:none;cursor:pointer}
 .cta-button:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 6px 30px rgba(59,130,246,.4)}
 .featured-section{max-width:1400px;margin:4rem auto;padding:0 2rem}
 .section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
@@ -160,9 +160,6 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <div id="deals" class="deals-grid" style="display:none"></div>
 </div>
 <script>
-// Cloudflare Worker URL
-const WORKER_URL = 'https://pc-builder-api.hunterallen3120922.workers.dev';
-
 const FALLBACK_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750"><rect width="100%" height="100%" fill="#0b1220"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="42" fill="#7aa2ff">No Image</text></svg>');
 
 function toggleDropdown() {
@@ -170,7 +167,6 @@ function toggleDropdown() {
     dropdown.classList.toggle('active');
 }
 
-// Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
     const dropdown = document.querySelector('.dropdown');
     if (dropdown && !dropdown.contains(event.target)) {
@@ -329,106 +325,30 @@ async function generateBuild() {
     
     const generateBtn = document.getElementById('generateBtn');
     generateBtn.disabled = true;
-    generateBtn.textContent = '🤖 AI is building your PC...';
+    generateBtn.textContent = '🤖 Building your PC...';
     
     try {
-        // Load all parts data
         const categories = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
-        const partsForAI = {};
         const allParts = {};
         
         for (const category of categories) {
-            try {
-                const response = await fetch(`data/${category}.json`, { cache: 'no-store' });
-                if (response.ok) {
-                    const parts = await response.json();
-                    let validParts = parts.filter(p => p.price && p.price > 0);
-                    
-                    // Filter by condition preference
-                    if (conditionPref === 'new') {
-                        validParts = validParts.filter(p => p.condition === 'New');
-                    } else if (conditionPref === 'new-openbox') {
-                        validParts = validParts.filter(p => p.condition === 'New' || p.condition === 'Open Box');
-                    }
-                    
-                    allParts[category] = validParts.sort((a, b) => a.price - b.price);
-                    partsForAI[category] = allParts[category].slice(0, 30).map(p => ({
-                        title: p.title,
-                        price: p.price,
-                        condition: p.condition,
-                        site: p.site
-                    }));
-                }
-            } catch (error) {
-                console.warn(`Failed to load ${category}:`, error);
-                partsForAI[category] = [];
-                allParts[category] = [];
+            const response = await fetch(`data/${category}.json`, { cache: 'no-store' });
+            if (response.ok) {
+                allParts[category] = await response.json();
             }
         }
         
-        // Call Cloudflare Worker
-        const response = await fetch(WORKER_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                budget: budget,
-                useCase: useCase,
-                priority: priority,
-                conditionPref: conditionPref,
-                parts: partsForAI
-            })
-        });
+        const build = smartBuildPC(budget, useCase, priority, allParts, conditionPref);
         
-        if (!response.ok) {
-            const errorData = await response.json();
-            console.error('Worker error details:', errorData);
-            alert('Worker Error: ' + (errorData.error || 'Unknown error') + '\n\nDetails: ' + JSON.stringify(errorData.details || ''));
-            throw new Error('Worker request failed: ' + (errorData.error || 'Unknown'));
+        if (build) {
+            displayBuild(build);
+        } else {
+            alert('Could not find compatible parts within budget. Try increasing your budget or changing preferences.');
         }
-        
-        const result = await response.json();
-        
-        if (!result.success || !result.build) {
-            throw new Error(result.error || 'Invalid response');
-        }
-        
-        // Map indices to actual parts
-        const finalBuild = {};
-        for (const [partType, index] of Object.entries(result.build)) {
-            if (partType !== 'reasoning') {
-                finalBuild[partType] = allParts[partType][index];
-            }
-        }
-        
-        displayBuild(finalBuild);
         
     } catch (error) {
         console.error('Build error:', error);
-        alert('AI builder unavailable. Using smart fallback...');
-        
-        // Fallback to local algorithm
-        try {
-            const categories = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
-            const allParts = {};
-            
-            for (const category of categories) {
-                const response = await fetch(`data/${category}.json`, { cache: 'no-store' });
-                if (response.ok) {
-                    allParts[category] = await response.json();
-                }
-            }
-            
-            const build = smartBuildPC(budget, useCase, priority, allParts, conditionPref);
-            if (build) {
-                displayBuild(build);
-            } else {
-                alert('Could not find compatible parts within budget.');
-            }
-        } catch (fallbackError) {
-            alert('Both AI and fallback failed. Please try again.');
-        }
+        alert('Error building PC. Please try again.');
     } finally {
         generateBtn.disabled = false;
         generateBtn.textContent = '✨ Generate My Build';
@@ -552,7 +472,6 @@ function displayBuild(build) {
     resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-// Load deals on page load
 loadFeaturedDeals();
 </script>
 </body>
