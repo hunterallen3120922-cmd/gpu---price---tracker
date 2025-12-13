@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PC Builder - Build Your Custom PC</title>
+<style>
+:root{color-scheme:dark;--bg-primary:#0a0e17;--bg-secondary:#0f172a;--bg-card:#1e293b;--accent:#3b82f6;--accent-hover:#2563eb;--text-primary:#f1f5f9;--text-secondary:#cbd5e1;--border:rgba(255,255,255,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}
+nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.nav-container{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.back-link{color:var(--text-secondary);text-decoration:none;font-weight:500;transition:color .2s}
+.back-link:hover{color:var(--text-primary)}
+
+.parts-overview{max-width:1400px;margin:2rem auto;padding:0 2rem}
+.parts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:2rem}
+.part-slot{background:var(--bg-card);border:2px dashed var(--border);border-radius:12px;padding:1.5rem 1rem;text-align:center;transition:all .3s;min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.part-slot.filled{border-style:solid;border-color:var(--accent);background:linear-gradient(135deg,rgba(59,130,246,.1) 0%,rgba(139,92,246,.1) 100%)}
+.part-slot.active{border-color:#10b981;border-style:solid;box-shadow:0 0 20px rgba(16,185,129,.3)}
+.part-slot h3{font-size:.875rem;color:var(--text-secondary);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.05em}
+.part-slot .part-name{font-size:.75rem;color:var(--text-primary);font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.part-slot .part-price{font-size:1rem;color:#10b981;font-weight:800;margin-top:.25rem}
+.part-slot .empty-text{color:var(--text-secondary);font-size:.75rem;font-style:italic}
+
+.builder-section{max-width:1400px;margin:2rem auto;padding:0 2rem}
+.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
+.section-header h2{font-size:2rem;font-weight:800}
+.progress{font-size:.875rem;color:var(--text-secondary)}
+
+.parts-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-bottom:2rem}
+.part-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;cursor:pointer;position:relative}
+.part-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:rgba(59,130,246,.3)}
+.part-card.selected{border-color:#10b981;border-width:2px;box-shadow:0 8px 30px rgba(16,185,129,.3)}
+.part-image{width:100%;aspect-ratio:16/10;background:var(--bg-secondary);object-fit:cover}
+.part-content{padding:1.25rem}
+.part-title{font-size:1rem;font-weight:600;margin-bottom:.5rem;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.part-meta{display:flex;gap:.75rem;margin-bottom:.75rem;flex-wrap:wrap}
+.part-tag{font-size:.75rem;padding:.25rem .5rem;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);border-radius:6px;color:#93c5fd}
+.part-price-big{font-size:1.75rem;font-weight:900;color:#10b981}
+.select-badge{position:absolute;top:12px;right:12px;background:#10b981;color:white;padding:.5rem 1rem;border-radius:999px;font-size:.75rem;font-weight:700;display:none}
+.part-card.selected .select-badge{display:block}
+
+.navigation-buttons{display:flex;gap:1rem;justify-content:center;margin-top:2rem}
+.nav-button{padding:1rem 2rem;background:var(--accent);color:white;border:none;border-radius:12px;font-weight:600;font-size:1.1rem;cursor:pointer;transition:all .3s}
+.nav-button:hover{background:var(--accent-hover);transform:translateY(-2px)}
+.nav-button:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.nav-button.secondary{background:var(--bg-card);border:2px solid var(--border)}
+
+.summary-section{max-width:800px;margin:2rem auto;padding:2rem;background:var(--bg-card);border-radius:24px;border:1px solid var(--border)}
+.summary-part{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.summary-total{background:linear-gradient(135deg,rgba(139,92,246,.2) 0%,rgba(59,130,246,.2) 100%);border:2px solid rgba(139,92,246,.3);border-radius:12px;padding:1.5rem;margin-top:1.5rem;text-align:center}
+.total-price{font-size:2.5rem;font-weight:900;color:#10b981}
+
+.loading{text-align:center;padding:2rem;color:var(--text-secondary)}
+.spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 1rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.hidden{display:none}
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-container">
+<a href="index.html" class="logo">PC Parts Tracker</a>
+<a href="index.html" class="back-link">← Back to Home</a>
+</div>
+</nav>
+
+<div class="parts-overview">
+<h2 style="text-align:center;margin-bottom:1.5rem">Your Build Progress</h2>
+<div class="parts-grid">
+<div class="part-slot" id="slot-gpu">
+<h3>GPU</h3>
+<div class="empty-text">Not selected</div>
+</div>
+<div class="part-slot" id="slot-cpu">
+<h3>CPU</h3>
+<div class="empty-text">Not selected</div>
+</div>
+<div class="part-slot" id="slot-motherboard">
+<h3>Motherboard</h3>
+<div class="empty-text">Not selected</div>
+</div>
+<div class="part-slot" id="slot-psu">
+<h3>PSU</h3>
+<div class="empty-text">Not selected</div>
+</div>
+<div class="part-slot" id="slot-case">
+<h3>Case</h3>
+<div class="empty-text">Not selected</div>
+</div>
+<div class="part-slot" id="slot-ssd">
+<h3>Storage</h3>
+<div class="empty-text">Not selected</div>
+</div>
+</div>
+</div>
+
+<div id="selectionSection" class="builder-section">
+<div class="section-header">
+<h2 id="currentPartTitle">Select Your GPU</h2>
+<span class="progress" id="progressText">Step 1 of 6</span>
+</div>
+<div id="loading" class="loading">
+<div class="spinner"></div>
+<p>Loading parts...</p>
+</div>
+<div id="partsList" class="parts-list"></div>
+<div class="navigation-buttons">
+<button class="nav-button secondary" onclick="previousStep()" id="prevBtn" disabled>← Previous</button>
+<button class="nav-button" onclick="nextStep()" id="nextBtn">Next →</button>
+</div>
+</div>
+
+<div id="summarySection" class="summary-section hidden">
+<h2 style="text-align:center;margin-bottom:2rem">Your Complete Build</h2>
+<div id="summaryParts"></div>
+<div class="summary-total">
+<h3>Total Build Cost</h3>
+<div class="total-price" id="summaryTotal">$0.00</div>
+</div>
+<div class="navigation-buttons">
+<button class="nav-button secondary" onclick="startOver()">Start Over</button>
+<button class="nav-button" onclick="saveBuild()">Save Build</button>
+</div>
+</div>
+
+<script>
+const FALLBACK_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750"><rect width="100%" height="100%" fill="#0b1220"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="42" fill="#7aa2ff">No Image</text></svg>');
+
+const steps = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
+const stepTitles = {
+    gpu: 'Graphics Card',
+    cpu: 'Processor',
+    motherboard: 'Motherboard',
+    psu: 'Power Supply',
+    case: 'Case',
+    ssd: 'Storage'
+};
+
+let currentStep = 0;
+let selectedParts = {};
+let allParts = {};
+
+function upgradeEbayImg(url) {
+    if (!url) return FALLBACK_IMG;
+    return String(url).trim().replace(/\/s-l\d+\.(jpg|jpeg|png|webp)$/i, '/s-l1600.$1');
+}
+
+async function loadParts() {
+    try {
+        for (const category of steps) {
+            const response = await fetch(`data/${category}.json`, { cache: 'no-store' });
+            if (response.ok) {
+                const parts = await response.json();
+                allParts[category] = parts.filter(p => p.price && p.price > 0);
+            }
+        }
+        displayCurrentStep();
+    } catch (error) {
+        console.error('Error loading parts:', error);
+        document.getElementById('loading').innerHTML = '<p>Error loading parts. Please refresh the page.</p>';
+    }
+}
+
+function displayCurrentStep() {
+    const category = steps[currentStep];
+    const parts = allParts[category] || [];
+    
+    // Update header
+    document.getElementById('currentPartTitle').textContent = `Select Your ${stepTitles[category]}`;
+    document.getElementById('progressText').textContent = `Step ${currentStep + 1} of ${steps.length}`;
+    
+    // Update active slot
+    document.querySelectorAll('.part-slot').forEach(slot => slot.classList.remove('active'));
+    document.getElementById(`slot-${category}`).classList.add('active');
+    
+    // Display parts
+    const partsList = document.getElementById('partsList');
+    const loading = document.getElementById('loading');
+    
+    loading.style.display = 'none';
+    partsList.innerHTML = '';
+    
+    // Sort by price
+    const sortedParts = [...parts].sort((a, b) => a.price - b.price).slice(0, 20);
+    
+    sortedParts.forEach(part => {
+        const card = document.createElement('div');
+        card.className = 'part-card';
+        if (selectedParts[category]?.url === part.url) {
+            card.classList.add('selected');
+        }
+        
+        const imgUrl = upgradeEbayImg(part.image_url);
+        
+        card.innerHTML = `
+            <div class="select-badge">✓ Selected</div>
+            <img src="${imgUrl}" alt="${part.title}" class="part-image" onerror="this.src='${FALLBACK_IMG}'" loading="lazy">
+            <div class="part-content">
+                <h3 class="part-title">${part.title}</h3>
+                <div class="part-meta">
+                    <span class="part-tag">${part.site}</span>
+                    <span class="part-tag">${part.condition}</span>
+                </div>
+                <div class="part-price-big">$${part.price.toFixed(2)}</div>
+            </div>
+        `;
+        
+        card.onclick = () => selectPart(category, part);
+        partsList.appendChild(card);
+    });
+    
+    // Update navigation buttons
+    document.getElementById('prevBtn').disabled = currentStep === 0;
+    document.getElementById('nextBtn').textContent = currentStep === steps.length - 1 ? 'Finish →' : 'Next →';
+}
+
+function selectPart(category, part) {
+    selectedParts[category] = part;
+    
+    // Update slot
+    const slot = document.getElementById(`slot-${category}`);
+    slot.classList.add('filled');
+    slot.innerHTML = `
+        <h3>${stepTitles[category]}</h3>
+        <div class="part-name">${part.title.substring(0, 40)}${part.title.length > 40 ? '...' : ''}</div>
+        <div class="part-price">$${part.price.toFixed(2)}</div>
+    `;
+    
+    // Update UI
+    document.querySelectorAll('.part-card').forEach(card => card.classList.remove('selected'));
+    event.currentTarget.classList.add('selected');
+}
+
+function nextStep() {
+    const category = steps[currentStep];
+    
+    if (!selectedParts[category]) {
+        alert(`Please select a ${stepTitles[category]} before continuing`);
+        return;
+    }
+    
+    if (currentStep === steps.length - 1) {
+        showSummary();
+    } else {
+        currentStep++;
+        displayCurrentStep();
+    }
+}
+
+function previousStep() {
+    if (currentStep > 0) {
+        currentStep--;
+        displayCurrentStep();
+    }
+}
+
+function showSummary() {
+    document.getElementById('selectionSection').classList.add('hidden');
+    document.getElementById('summarySection').classList.remove('hidden');
+    
+    const summaryParts = document.getElementById('summaryParts');
+    summaryParts.innerHTML = '';
+    
+    let total = 0;
+    
+    steps.forEach(category => {
+        const part = selectedParts[category];
+        if (!part) return;
+        
+        total += part.price;
+        
+        const partDiv = document.createElement('div');
+        partDiv.className = 'summary-part';
+        partDiv.innerHTML = `
+            <div>
+                <h4 style="margin:0 0 .25rem 0">${stepTitles[category]}</h4>
+                <p style="margin:0;color:var(--text-secondary);font-size:.875rem">${part.title}</p>
+                <p style="margin-top:.25rem;font-size:.75rem"><strong>${part.condition}</strong> • ${part.site}</p>
+            </div>
+            <div>
+                <div style="font-size:1.25rem;font-weight:800;color:#10b981">$${part.price.toFixed(2)}</div>
+                <a href="${part.url}" target="_blank" rel="noopener" style="font-size:.75rem;color:var(--accent);text-decoration:none">View Deal →</a>
+            </div>
+        `;
+        summaryParts.appendChild(partDiv);
+    });
+    
+    document.getElementById('summaryTotal').textContent = `$${total.toFixed(2)}`;
+    
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function startOver() {
+    currentStep = 0;
+    selectedParts = {};
+    
+    // Reset slots
+    steps.forEach(category => {
+        const slot = document.getElementById(`slot-${category}`);
+        slot.classList.remove('filled', 'active');
+        slot.innerHTML = `
+            <h3>${stepTitles[category]}</h3>
+            <div class="empty-text">Not selected</div>
+        `;
+    });
+    
+    document.getElementById('summarySection').classList.add('hidden');
+    document.getElementById('selectionSection').classList.remove('hidden');
+    
+    displayCurrentStep();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function saveBuild() {
+    const buildData = {
+        parts: selectedParts,
+        total: Object.values(selectedParts).reduce((sum, part) => sum + part.price, 0),
+        date: new Date().toISOString()
+    };
+    
+    // Save to localStorage
+    const builds = JSON.parse(localStorage.getItem('pcBuilds') || '[]');
+    builds.push(buildData);
+    localStorage.setItem('pcBuilds', JSON.stringify(builds));
+    
+    alert('Build saved! You can find it in your browser\'s local storage.');
+}
+
+// Initialize
+loadParts();
+</script>
+</body>
+</html>
