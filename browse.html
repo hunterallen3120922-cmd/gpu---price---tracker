@@ -7,8 +7,9 @@
 <title>Browse All Parts - PC Parts Tracker</title>
 <style>
 :root{color-scheme:dark;--bg-primary:#0a0e17;--bg-secondary:#0f172a;--bg-card:#1e293b;--accent:#3b82f6;--accent-hover:#2563eb;--text-primary:#f1f5f9;--text-secondary:#cbd5e1;--border:rgba(255,255,255,.08);--card-size:300px}
+:root.light-mode{color-scheme:light;--bg-primary:#f8fafc;--bg-secondary:#ffffff;--bg-card:#ffffff;--accent:#3b82f6;--accent-hover:#2563eb;--text-primary:#0f172a;--text-secondary:#64748b;--border:rgba(0,0,0,.1)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;transition:background-color 0.3s ease,color 0.3s ease}
 nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);animation:fadeIn 0.6s ease-out}
 .nav-container{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
 .logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
@@ -17,6 +18,10 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .browse-container{max-width:1400px;margin:2rem auto;padding:0 2rem}
 .browse-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1rem}
 .browse-header h1{font-size:2.5rem;font-weight:900;animation:fadeInUp 0.8s ease-out}
+.search-container{width:100%;max-width:600px;margin-bottom:1.5rem;animation:fadeInUp 0.8s ease-out 0.1s;animation-fill-mode:backwards}
+.search-bar{width:100%;padding:1rem 1.5rem;background:var(--bg-card);border:2px solid var(--border);border-radius:12px;color:var(--text-primary);font-size:1rem;transition:all .3s}
+.search-bar:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+.search-bar::placeholder{color:var(--text-secondary)}
 .controls{display:flex;gap:1rem;align-items:center;animation:fadeInUp 0.8s ease-out 0.2s;animation-fill-mode:backwards}
 .size-control{display:flex;gap:.5rem;align-items:center;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:.5rem;position:relative}
 .size-button{background:var(--accent);color:white;border:none;width:36px;height:36px;border-radius:8px;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:all .2s}
@@ -89,6 +94,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .browse-container{padding:0 1rem}
 .browse-header{flex-direction:column;align-items:flex-start}
 .browse-header h1{font-size:1.75rem}
+.search-container{max-width:100%}
 .controls{width:100%;justify-content:flex-end}
 .size-label{display:none}
 .size-label-mobile{display:block}
@@ -124,6 +130,9 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <div class="browse-container">
 <div class="browse-header">
 <h1>Browse All Parts</h1>
+<div class="search-container">
+<input type="text" class="search-bar" id="searchBar" placeholder="🔍 Search for parts..." oninput="searchParts()">
+</div>
 <div class="controls">
 <div class="size-control">
 <button class="size-button" id="decreaseBtn" onclick="decreaseCardSize()">−</button>
@@ -279,6 +288,38 @@ let filteredParts = [];
 let currentFilter = 'all';
 let cardSize = 300; // Default size in pixels
 let hideTimeout = null; // For auto-hiding the zoom indicator
+
+// Load saved theme on page load
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-mode');
+    }
+}
+
+function searchParts() {
+    const searchTerm = document.getElementById('searchBar').value.toLowerCase();
+    
+    if (searchTerm === '') {
+        // If search is empty, just apply regular filters
+        applyFilters();
+        return;
+    }
+    
+    // Start with all parts or currently filtered parts
+    const partsToSearch = currentFilter === 'all' ? allParts : allParts.filter(p => p.partType === currentFilter);
+    
+    // Search in title, brand, and part type
+    filteredParts = partsToSearch.filter(part => {
+        const title = (part.title || '').toLowerCase();
+        const partType = (part.partType || '').toLowerCase();
+        
+        return title.includes(searchTerm) || partType.includes(searchTerm);
+    });
+    
+    // Apply other filters on top of search results
+    applyFilters();
+}
 
 function getSizeName(size) {
     if (size <= 150) return 'Smallest';
@@ -561,6 +602,7 @@ function updateCardSize() {
 }
 
 // Load parts on page load
+loadTheme();
 loadAllParts();
 </script>
 </body>
