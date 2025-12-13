@@ -1,4 +1,10 @@
-<!doctype html>
+"""
+Generates a complete, properly formatted browse.html file
+Run this in E:\GPU_PRICE_TRACKER\website\
+"""
+from pathlib import Path
+
+html_content = '''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -113,7 +119,7 @@
     
     function upgradeEbayImg(url) {
       if (!url) return "";
-      return String(url).trim().replace(/\/s-l\d+\.(jpg|jpeg|png|webp)$/i, "/s-l1600.$1");
+      return String(url).trim().replace(/\\/s-l\\d+\\.(jpg|jpeg|png|webp)$/i, "/s-l1600.$1");
     }
     
     const BRAND_MAP = [["msi","MSI"],["asus","ASUS"],["gigabyte","Gigabyte"],["evga","EVGA"],["zotac","Zotac"],["pny","PNY"],["corsair","Corsair"],["crucial","Crucial"],["samsung","Samsung"]];
@@ -134,21 +140,21 @@
       const rawTitle = String(part.title || part.name || "").trim();
       if (!rawTitle) return "Unknown Item";
       let t = rawTitle.toLowerCase();
-      const junk = [/opens in a new window or tab/gi, /\bfree shipping\b/gi, /\bnew listing\b/gi];
+      const junk = [/opens in a new window or tab/gi, /\\bfree shipping\\b/gi, /\\bnew listing\\b/gi];
       junk.forEach(rx => t = t.replace(rx, " "));
-      t = t.replace(/\s+/g, " ").trim();
+      t = t.replace(/\\s+/g, " ").trim();
       const pt = (part.partType || "").trim();
       const brand = getBrand(t);
       if (pt === "gpu") {
-        const modelRaw = pickMatch(t, /\b(rtx|gtx|rx)\s?-?\s?\d{3,4}\s?(ti|super|xtx|xt)?\b/i);
-        const model = modelRaw ? modelRaw.toUpperCase().replace(/\s+/g, " ").trim() : "";
-        const vramRaw = pickMatch(t, /\b(\d+)\s?gb\b/i);
+        const modelRaw = pickMatch(t, /\\b(rtx|gtx|rx)\\s?-?\\s?\\d{3,4}\\s?(ti|super|xtx|xt)?\\b/i);
+        const model = modelRaw ? modelRaw.toUpperCase().replace(/\\s+/g, " ").trim() : "";
+        const vramRaw = pickMatch(t, /\\b(\\d+)\\s?gb\\b/i);
         const vram = vramRaw ? vramRaw.toUpperCase().replace(" ", "") : "";
         return [model, brand, vram].filter(Boolean).join(" · ") || rawTitle;
       }
       if (pt === "cpu") {
-        const ryzen = pickMatch(t, /\bryzen\s[3579]\s?\d{4,5}\b|\bi[3579]\s?-?\s?\d{4,5}[a-z]*\b/i);
-        const cpuName = ryzen ? ryzen.toUpperCase().replace(/\s+/g, " ").trim() : "";
+        const ryzen = pickMatch(t, /\\bryzen\\s[3579]\\s?\\d{4,5}\\b|\\bi[3579]\\s?-?\\s?\\d{4,5}[a-z]*\\b/i);
+        const cpuName = ryzen ? ryzen.toUpperCase().replace(/\\s+/g, " ").trim() : "";
         return [cpuName || rawTitle].filter(Boolean).join(" · ");
       }
       return rawTitle;
@@ -321,4 +327,18 @@
     })();
   </script>
 </body>
-</html>
+</html>'''
+
+def main():
+    output_file = Path("browse.html")
+    
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    
+    print(f"✓ Created {output_file}")
+    print(f"  File size: {output_file.stat().st_size:,} bytes")
+    print("\nComplete browse.html has been generated!")
+    print("Ready to push to GitHub!")
+
+if __name__ == "__main__":
+    main()
