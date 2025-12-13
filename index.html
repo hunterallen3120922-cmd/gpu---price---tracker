@@ -34,7 +34,9 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .section-header h2{font-size:2rem;font-weight:800}
 .ai-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;background:linear-gradient(135deg,rgba(139,92,246,.2) 0%,rgba(59,130,246,.2) 100%);border:1px solid rgba(139,92,246,.3);border-radius:999px;font-size:.875rem;font-weight:600}
 .ai-badge::before{content:"✨";font-size:1rem}
-.deals-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+.deals-container{background:var(--bg-card);border:1px solid var(--border);border-radius:24px;padding:2rem;position:relative;overflow:hidden}
+.deals-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;transition:opacity 0.5s ease-in-out}
+.deals-grid.transitioning{opacity:0}
 .deal-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;position:relative}
 .deal-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:rgba(59,130,246,.3)}
 .deal-badge{position:absolute;top:12px;right:12px;background:rgba(239,68,68,.9);color:white;padding:.25rem .75rem;border-radius:999px;font-size:.75rem;font-weight:700;z-index:10}
@@ -216,11 +218,13 @@ nav{animation:fadeIn 0.6s ease-out}
 <h2>Featured Deals</h2>
 <span class="ai-badge">AI Recommended</span>
 </div>
+<div class="deals-container">
 <div id="loading" class="loading">
 <div class="spinner"></div>
 <p>Finding the best deals...</p>
 </div>
 <div id="deals" class="deals-grid" style="display:none"></div>
+</div>
 </div>
 
 <script>
@@ -337,6 +341,7 @@ function heuristicSelection(parts) {
     const selected = [];
     const categoriesUsed = new Set();
     
+    // First, get at least one of each category
     for (const part of scored) {
         if (!categoriesUsed.has(part.partType) && selected.length < 6) {
             selected.push(part);
@@ -344,50 +349,84 @@ function heuristicSelection(parts) {
         }
     }
     
+    // Then fill up to 18 with the best scored items
     for (const part of scored) {
-        if (selected.length >= 6) break;
+        if (selected.length >= 18) break;
         if (!selected.includes(part)) {
             selected.push(part);
         }
     }
     
-    return selected.slice(0, 6);
+    return selected.slice(0, 18);
 }
 
 function displayDeals(deals) {
     const dealsContainer = document.getElementById('deals');
     const loadingContainer = document.getElementById('loading');
     
-    dealsContainer.innerHTML = '';
+    let allDeals = [...deals];
+    let currentIndex = 0;
     
-    deals.forEach(deal => {
-        const card = document.createElement('div');
-        card.className = 'deal-card';
+    function showDealsSet() {
+        // Calculate how many cards fit in one row
+        const containerWidth = dealsContainer.parentElement.offsetWidth - 64; // minus padding
+        const cardWidth = 300; // min width from grid
+        const gap = 24; // 1.5rem gap
+        const cardsPerRow = Math.floor((containerWidth + gap) / (cardWidth + gap));
         
-        const savings = calculateSavings();
-        const imgUrl = upgradeEbayImg(deal.image_url);
+        // Get current set of deals
+        const currentDeals = [];
+        for (let i = 0; i < cardsPerRow; i++) {
+            currentDeals.push(allDeals[(currentIndex + i) % allDeals.length]);
+        }
         
-        card.innerHTML = `
-            <div class="deal-badge">-${savings}%</div>
-            <img src="${imgUrl}" alt="${deal.title}" class="deal-image" onerror="this.src='${FALLBACK_IMG}'" loading="lazy">
-            <div class="deal-content">
-                <h3 class="deal-title">${deal.title || deal.name}</h3>
-                <div class="deal-meta">
-                    <span class="deal-tag">${deal.partType}</span>
-                    <span class="deal-tag">${deal.site}</span>
-                    <span class="deal-tag">${deal.condition}</span>
-                </div>
-                <div class="deal-price">$${deal.price.toFixed(2)}</div>
-                <p class="deal-reason">${getAIReason()}</p>
-                <a href="${deal.url}" target="_blank" rel="noopener noreferrer" class="deal-button">View Deal →</a>
-            </div>
-        `;
+        // Fade out
+        dealsContainer.classList.add('transitioning');
         
-        dealsContainer.appendChild(card);
-    });
+        setTimeout(() => {
+            dealsContainer.innerHTML = '';
+            
+            currentDeals.forEach(deal => {
+                const card = document.createElement('div');
+                card.className = 'deal-card';
+                
+                const savings = calculateSavings();
+                const imgUrl = upgradeEbayImg(deal.image_url);
+                
+                card.innerHTML = `
+                    <div class="deal-badge">-${savings}%</div>
+                    <img src="${imgUrl}" alt="${deal.title}" class="deal-image" onerror="this.src='${FALLBACK_IMG}'" loading="lazy">
+                    <div class="deal-content">
+                        <h3 class="deal-title">${deal.title || deal.name}</h3>
+                        <div class="deal-meta">
+                            <span class="deal-tag">${deal.partType}</span>
+                            <span class="deal-tag">${deal.site}</span>
+                            <span class="deal-tag">${deal.condition}</span>
+                        </div>
+                        <div class="deal-price">$${deal.price.toFixed(2)}</div>
+                        <p class="deal-reason">${getAIReason()}</p>
+                        <a href="${deal.url}" target="_blank" rel="noopener noreferrer" class="deal-button">View Deal →</a>
+                    </div>
+                `;
+                
+                dealsContainer.appendChild(card);
+            });
+            
+            // Fade in
+            dealsContainer.classList.remove('transitioning');
+            
+            // Move to next set
+            currentIndex = (currentIndex + cardsPerRow) % allDeals.length;
+        }, 500);
+    }
     
+    // Initial display
+    showDealsSet();
     loadingContainer.style.display = 'none';
     dealsContainer.style.display = 'grid';
+    
+    // Auto-rotate every 5 seconds
+    setInterval(showDealsSet, 5000);
 }
 
 // AI PC Builder

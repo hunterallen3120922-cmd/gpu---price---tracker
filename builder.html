@@ -60,25 +60,41 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 @keyframes spin{to{transform:rotate(360deg)}}
 
 @keyframes spin{to{transform:rotate(360deg)}}
-@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideIn{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
 @keyframes scaleIn{from{opacity:0;transform:scale(0.95)}to{opacity:1;transform:scale(1)}}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(59,130,246,.3)}50%{box-shadow:0 0 30px rgba(59,130,246,.6)}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes rotateIn{from{opacity:0;transform:rotate(-5deg) scale(0.9)}to{opacity:1;transform:rotate(0) scale(1)}}
+nav{animation:fadeIn 0.6s ease-out}
+.logo{animation:slideInRight 0.8s ease-out}
+.back-link{animation:slideIn 0.8s ease-out}
+.parts-overview h2{animation:fadeInUp 0.6s ease-out}
 .parts-grid{animation:fadeIn 0.6s ease-out}
-.part-slot{animation:scaleIn 0.4s ease-out;animation-fill-mode:backwards}
+.part-slot{animation:scaleIn 0.4s ease-out;animation-fill-mode:backwards;transition:all .4s cubic-bezier(0.34, 1.56, 0.64, 1)}
 .part-slot:nth-child(1){animation-delay:0.1s}
 .part-slot:nth-child(2){animation-delay:0.15s}
 .part-slot:nth-child(3){animation-delay:0.2s}
 .part-slot:nth-child(4){animation-delay:0.25s}
 .part-slot:nth-child(5){animation-delay:0.3s}
 .part-slot:nth-child(6){animation-delay:0.35s}
-.part-card{animation:fadeIn 0.5s ease-out;animation-fill-mode:backwards}
+.part-slot:hover{transform:translateY(-5px) scale(1.02)}
+.part-card{animation:fadeInUp 0.5s ease-out;animation-fill-mode:backwards;position:relative;overflow:hidden}
+.part-card::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);transition:left 0.5s}
+.part-card:hover::before{left:100%}
 .part-card:nth-child(1){animation-delay:0.05s}
 .part-card:nth-child(2){animation-delay:0.1s}
 .part-card:nth-child(3){animation-delay:0.15s}
 .part-card:nth-child(4){animation-delay:0.2s}
 .part-card:nth-child(5){animation-delay:0.25s}
 .part-card:nth-child(6){animation-delay:0.3s}
+.part-card:nth-child(7){animation-delay:0.35s}
+.part-card:nth-child(8){animation-delay:0.4s}
+.part-card.selected{animation:glow 2s ease-in-out infinite}
 .summary-part{animation:slideIn 0.5s ease-out;animation-fill-mode:backwards}
 .summary-part:nth-child(1){animation-delay:0.1s}
 .summary-part:nth-child(2){animation-delay:0.15s}
@@ -87,9 +103,18 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .summary-part:nth-child(5){animation-delay:0.3s}
 .summary-part:nth-child(6){animation-delay:0.35s}
 .summary-total{animation:scaleIn 0.6s ease-out 0.4s;animation-fill-mode:backwards}
-.part-slot.active{animation:pulse 0.6s ease-in-out}
+.summary-total .total-price{animation:bounce 1s ease-in-out 1s}
+.part-slot.active{animation:pulse 0.6s ease-in-out,glow 2s ease-in-out infinite;border-color:#10b981}
 .builder-section{animation:fadeIn 0.5s ease-out}
 .summary-section{animation:fadeIn 0.6s ease-out}
+.section-header h2{animation:slideIn 0.6s ease-out;background:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 50%,#3b82f6 100%);background-size:200% auto;animation:shimmer 3s linear infinite,slideIn 0.6s ease-out;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-button{transition:all .3s cubic-bezier(0.34, 1.56, 0.64, 1)}
+.nav-button:hover{transform:translateY(-3px) scale(1.05)}
+.nav-button:active{transform:translateY(0) scale(0.98)}
+.select-badge{animation:rotateIn 0.4s ease-out}
+.part-image{transition:transform 0.3s ease-out}
+.part-card:hover .part-image{transform:scale(1.05)}
+.navigation-buttons{animation:fadeInUp 0.6s ease-out 0.5s;animation-fill-mode:backwards}
 
 .hidden{display:none}
 </style>
@@ -159,6 +184,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 </div>
 <div class="navigation-buttons">
 <button class="nav-button secondary" onclick="startOver()">Start Over</button>
+<button class="nav-button secondary" onclick="window.location.href='index.html'">← Back to Home</button>
 <button class="nav-button" onclick="saveBuild()">Save Build</button>
 </div>
 </div>
