@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=5, user-scalable=yes"/>
 <title>Browse All Parts - PC Parts Tracker</title>
 <style>
 :root{color-scheme:dark;--bg-primary:#0a0e17;--bg-secondary:#0f172a;--bg-card:#1e293b;--accent:#3b82f6;--accent-hover:#2563eb;--text-primary:#f1f5f9;--text-secondary:#cbd5e1;--border:rgba(255,255,255,.08);--card-size:300px}
@@ -84,7 +84,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .filter-tab{padding:.5rem 1rem;font-size:.875rem}
 .filters-section{padding:1rem}
 .filters-grid{grid-template-columns:1fr;gap:.75rem}
-.parts-grid{gap:1rem}
+.parts-grid{grid-template-columns:repeat(auto-fill,minmax(var(--card-size),1fr));gap:1rem}
 .part-image{aspect-ratio:4/5;object-fit:contain}
 .filter-actions{flex-direction:column}
 .filter-button{width:100%}
@@ -94,6 +94,7 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .browse-header h1{font-size:1.5rem}
 .part-image{aspect-ratio:3/4}
 .filters-section{padding:.75rem}
+.parts-grid{grid-template-columns:repeat(auto-fill,minmax(max(var(--card-size),150px),1fr))}
 }
 </style>
 </head>
@@ -436,7 +437,7 @@ function increaseCardSize() {
 }
 
 function decreaseCardSize() {
-    cardSize = Math.max(cardSize - 50, 200); // Min 200px
+    cardSize = Math.max(cardSize - 50, 150); // Min 150px (better for mobile zoom)
     updateCardSize();
 }
 
