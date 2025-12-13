@@ -61,7 +61,6 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 .build-total{background:linear-gradient(135deg,rgba(139,92,246,.2) 0%,rgba(59,130,246,.2) 100%);border:2px solid rgba(139,92,246,.3);border-radius:12px;padding:1.5rem;margin-top:1.5rem;text-align:center}
 .build-total h3{margin:0 0 .5rem 0;font-size:1.25rem}
 .build-total .total-price{font-size:2.5rem;font-weight:900;color:#10b981}
-@media (max-width:768px){.hero h1{font-size:2.5rem}.nav-links{gap:1rem}.section-header{flex-direction:column;align-items:flex-start;gap:1rem}}
 </style>
 </head>
 <body>
@@ -69,24 +68,24 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <div class="nav-container">
 <div class="logo">PC Parts Tracker</div>
 <ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="browse.html">Browse All</a></li>
+<li><a href="#deals">Deals</a></li>
+<li><a href="#builder">PC Builder</a></li>
 </ul>
 </div>
 </nav>
-<div class="hero">
-<h1>Find the Best PC Part Deals</h1>
-<p>AI-powered deal discovery across eBay, Newegg, and more. Save money on your next build.</p>
+<section class="hero">
+<h1>Find The Best PC Component Deals</h1>
+<p>AI-powered recommendations for GPUs, CPUs, and more. Save big on your next build.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-<a href="browse.html" class="cta-button">Browse All Parts</a>
-<button onclick="openPCBuilder()" class="cta-button" style="background:linear-gradient(135deg,#8b5cf6 0%,#6366f1 100%);border:none;cursor:pointer">✨ AI PC Builder</button>
+<button class="cta-button" onclick="openPCBuilder()">🤖 Build My PC with AI</button>
+<a href="#deals" class="cta-button" style="background:var(--bg-card);border:2px solid var(--accent)">Browse All Parts</a>
 </div>
-</div>
+</section>
 <div id="pcBuilderModal" class="modal">
 <div class="modal-content">
 <button class="modal-close" onclick="closePCBuilder()">×</button>
-<h2 style="margin:0 0 .5rem 0;font-size:2rem">AI PC Builder</h2>
-<p style="color:var(--text-secondary);margin:0">Answer a few questions and let AI build your perfect PC from available deals</p>
+<h2 style="font-size:2rem;margin-bottom:.5rem">AI PC Builder</h2>
+<p style="color:var(--text-secondary);margin-bottom:1rem">Let AI find the perfect components for your budget and needs</p>
 <div class="builder-form">
 <div class="form-group">
 <label>What's your budget?</label>
@@ -146,7 +145,384 @@ nav{background:var(--bg-secondary);border-bottom:1px solid var(--border);positio
 <div id="deals" class="deals-grid" style="display:none"></div>
 </div>
 <script>
-const WORKER_URL='https://pc-builder-api.hunterallen3120922.workers.dev';const FALLBACK_IMG="data:image/svg+xml;charset=utf-8,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750"><rect width="100%" height="100%" fill="#0b1220"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="42" fill="#7aa2ff">No Image</text></svg>');function upgradeEbayImg(e){return e?String(e).trim().replace(/\/s-l\d+\.(jpg|jpeg|png|webp)$/i,"/s-l1600.$1"):""}function calculateSavings(){return Math.round(30*Math.random())+10}function getAIReason(){return["Best price-to-performance ratio in category","Trending deal - price dropped recently","High-value component for budget builds","Popular choice with excellent reviews","Great deal compared to market average"][Math.floor(5*Math.random())]}async function loadFeaturedDeals(){try{const e=["gpu","cpu","motherboard","psu","case","ssd"],t=[];for(const a of e)try{const e=await fetch(`data/${a}.json`,{cache:"no-store"});if(e.ok){const a=await e.json();t.push(...a)}}catch(e){console.warn(`Failed to load ${a}:`,e)}if(0===t.length)return void(document.getElementById("loading").innerHTML="<p>No deals found. Check back soon!</p>");const a=t.filter(e=>{if(!e.price||e.price<=0)return!1;const t=(e.title||"").toLowerCase();return!t.includes("bid")&&!t.includes("auction")&&(!t.includes("for parts")&&!t.includes("broken"))});displayDeals(heuristicSelection(a))}catch(e){console.error("Error loading deals:",e),document.getElementById("loading").innerHTML="<p>Error loading deals. Please try again later.</p>"}}function heuristicSelection(e){const t=e.map(e=>{let t=0;"New"===e.condition?t+=20:"Open Box"===e.condition&&(t+=10),"newegg"===e.site&&(t+=15);const a=e.title.toLowerCase();return["msi","asus","corsair","samsung"].some(e=>a.includes(e))&&(t+=10),{...e,score:t}});t.sort((e,t)=>t.score-e.score);const a=[],n=new Set;for(const e of t)!n.has(e.partType)&&a.length<6&&(a.push(e),n.add(e.partType));for(const e of t){if(a.length>=6)break;a.includes(e)||a.push(e)}return a.slice(0,6)}function displayDeals(e){const t=document.getElementById("deals"),a=document.getElementById("loading");t.innerHTML="",e.forEach(e=>{const a=document.createElement("div");a.className="deal-card";const n=calculateSavings(),l=upgradeEbayImg(e.image_url)||FALLBACK_IMG;a.innerHTML=`<div class="deal-badge">-${n}%</div><img src="${l}" alt="${e.title}" class="deal-image" onerror="this.src='${FALLBACK_IMG}'" loading="lazy"><div class="deal-content"><h3 class="deal-title">${e.title||e.name}</h3><div class="deal-meta"><span class="deal-tag">${e.partType}</span><span class="deal-tag">${e.site}</span><span class="deal-tag">${e.condition}</span></div><div class="deal-price">$${e.price.toFixed(2)}</div><p class="deal-reason">${getAIReason()}</p><a href="${e.url}" target="_blank" rel="noopener noreferrer" class="deal-button">View Deal →</a></div>`,t.appendChild(a)}),a.style.display="none",t.style.display="grid"}function openPCBuilder(){document.getElementById("pcBuilderModal").classList.add("active"),document.body.style.overflow="hidden"}function closePCBuilder(){document.getElementById("pcBuilderModal").classList.remove("active"),document.body.style.overflow="auto"}async function generateBuild(){const e=parseFloat(document.getElementById("budget").value),t=document.getElementById("useCase").value,a=document.getElementById("priority").value,n=document.getElementById("conditionPref").value;if(!e||!t||!a)return void alert("Please fill in all required fields");const l=document.getElementById("generateBtn");l.disabled=!0,l.textContent="🤖 AI is building your PC...";try{const r=["gpu","cpu","motherboard","psu","case","ssd"],i={},o={};for(const e of r)try{const t=await fetch(`data/${e}.json`,{cache:"no-store"});if(t.ok){const a=await t.json();let l=a.filter(e=>e.price&&e.price>0);"new"===n?l=l.filter(e=>"New"===e.condition):"new-openbox"===n&&(l=l.filter(e=>"New"===e.condition||"Open Box"===e.condition)),o[e]=l.sort((e,t)=>e.price-t.price),i[e]=o[e].slice(0,30).map(e=>({title:e.title,price:e.price,condition:e.condition,site:e.site}))}}catch(t){console.warn(`Failed to load ${e}:`,t),i[e]=[],o[e]=[]}const s=await fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({budget:e,useCase:t,priority:a,conditionPref:n,parts:i})});if(!s.ok)throw new Error("Worker request failed");const d=await s.json();if(!d.success||!d.build)throw new Error(d.error||"Invalid response");const c={};for(const[e,t]of Object.entries(d.build))"reasoning"!==e&&(c[e]=o[e][t]);displayBuild(c)}catch(r){console.error("Build error:",r),alert("AI builder unavailable. Using smart fallback...");try{const l=["gpu","cpu","motherboard","psu","case","ssd"],i={};for(const e of l){const t=await fetch(`data/${e}.json`,{cache:"no-store"});t.ok&&(i[e]=await t.json())}const o=smartBuildPC(e,t,a,i,n);o?displayBuild(o):alert("Could not find compatible parts within budget.")}catch(e){alert("Both AI and fallback failed. Please try again.")}}finally{l.disabled=!1,l.textContent="✨ Generate My Build"}}function smartBuildPC(e,t,a,n,l){const r={gaming:{gpu:.35,cpu:.2,motherboard:.15,psu:.1,case:.08,ssd:.12},productivity:{gpu:.15,cpu:.3,motherboard:.18,psu:.12,case:.1,ssd:.15},"content-creation":{gpu:.3,cpu:.25,motherboard:.15,psu:.12,case:.08,ssd:.1},budget:{gpu:.25,cpu:.2,motherboard:.15,psu:.12,case:.1,ssd:.18},enthusiast:{gpu:.4,cpu:.25,motherboard:.12,psu:.1,case:.06,ssd:.07}};let i={...r[t]};"gpu"===a?(i.gpu+=.1,i.cpu-=.05,i.motherboard-=.05):"cpu"===a&&(i.cpu+=.1,i.gpu-=.05,i.ssd-=.05);const o=Object.fromEntries(Object.keys(i).map(t=>[t,e*i[t]])),s=(e,t,a)=>{if(!e?.length)return null;let r=e.filter(e=>e.price>0);"new"===l?r=r.filter(e=>"New"===e.condition):"new-openbox"===l&&(r=r.filter(e=>"New"===e.condition||"Open Box"===e.condition));const i=r.sort((e,t)=>e.price-t.price),o=i.filter(e=>e.price>=t*(1-a)&&e.price<=t*(1+a));return o.length>0?o[Math.floor(o.length/2)]:i[0]},d=s(n.gpu,o.gpu,.3),c=s(n.cpu,o.cpu,.3);if(!d||!c)return null;const p=c.title.toLowerCase(),u=(n.motherboard?.filter(e=>{const t=e.title.toLowerCase();return p.includes("ryzen")||p.includes("amd")?t.includes("am4")||t.includes("am5")||t.includes("amd"):t.includes("lga")||t.includes("intel")})||[],m=s(u,o.motherboard,.4),b=s(n.psu,o.psu,.3),g=s(n.case,o.case,.4),f=s(n.ssd,o.ssd,.3);return m&&b&&g&&f?{gpu:d,cpu:c,motherboard:m,psu:b,case:g,ssd:f}:null}function displayBuild(e){const t=document.getElementById("buildParts"),a=document.getElementById("buildResult");t.innerHTML="";let n=0;const l={gpu:"Graphics Card",cpu:"Processor",motherboard:"Motherboard",psu:"Power Supply",case:"Case",ssd:"Storage"};for(const[a,r]of Object.entries(e)){if(!r)continue;n+=r.price;const e=document.createElement("div");e.className="build-part",e.innerHTML=`<div class="build-part-info"><h4>${l[a]}</h4><p>${r.title}</p><p style="margin-top:.25rem"><strong>${r.condition}</strong> • ${r.site}</p></div><div><div class="build-part-price">$${r.price.toFixed(2)}</div><a href="${r.url}" target="_blank" rel="noopener" style="font-size:.75rem;color:var(--accent);text-decoration:none">View Deal →</a></div>`,t.appendChild(e)}document.getElementById("totalPrice").textContent=`$${n.toFixed(2)}`,a.classList.add("active"),a.scrollIntoView({behavior:"smooth",block:"nearest"})}loadFeaturedDeals();
+// Cloudflare Worker URL
+const WORKER_URL = 'https://pc-builder-api.hunterallen3120922.workers.dev';
+
+const FALLBACK_IMG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750"><rect width="100%" height="100%" fill="#0b1220"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="42" fill="#7aa2ff">No Image</text></svg>');
+
+function upgradeEbayImg(url) {
+    if (!url) return '';
+    return String(url).trim().replace(/\/s-l\d+\.(jpg|jpeg|png|webp)$/i, '/s-l1600.$1');
+}
+
+function calculateSavings() {
+    return Math.round(Math.random() * 30) + 10;
+}
+
+function getAIReason() {
+    const reasons = [
+        'Best price-to-performance ratio in category',
+        'Trending deal - price dropped recently',
+        'High-value component for budget builds',
+        'Popular choice with excellent reviews',
+        'Great deal compared to market average'
+    ];
+    return reasons[Math.floor(Math.random() * reasons.length)];
+}
+
+async function loadFeaturedDeals() {
+    try {
+        const categories = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
+        const allParts = [];
+        
+        for (const category of categories) {
+            try {
+                const response = await fetch(`data/${category}.json`, { cache: 'no-store' });
+                if (response.ok) {
+                    const parts = await response.json();
+                    allParts.push(...parts);
+                }
+            } catch (error) {
+                console.warn(`Failed to load ${category}:`, error);
+            }
+        }
+        
+        if (allParts.length === 0) {
+            document.getElementById('loading').innerHTML = '<p>No deals found. Check back soon!</p>';
+            return;
+        }
+        
+        const validParts = allParts.filter(part => {
+            if (!part.price || part.price <= 0) return false;
+            const title = (part.title || '').toLowerCase();
+            if (title.includes('bid') || title.includes('auction')) return false;
+            if (title.includes('for parts') || title.includes('broken')) return false;
+            return true;
+        });
+        
+        const selectedDeals = heuristicSelection(validParts);
+        displayDeals(selectedDeals);
+    } catch (error) {
+        console.error('Error loading deals:', error);
+        document.getElementById('loading').innerHTML = '<p>Error loading deals. Please try again later.</p>';
+    }
+}
+
+function heuristicSelection(parts) {
+    const scored = parts.map(part => {
+        let score = 0;
+        if (part.condition === 'New') score += 20;
+        else if (part.condition === 'Open Box') score += 10;
+        if (part.site === 'newegg') score += 15;
+        const title = part.title.toLowerCase();
+        const brands = ['msi', 'asus', 'corsair', 'samsung'];
+        if (brands.some(brand => title.includes(brand))) score += 10;
+        return { ...part, score };
+    });
+    
+    scored.sort((a, b) => b.score - a.score);
+    
+    const selected = [];
+    const categoriesUsed = new Set();
+    
+    for (const part of scored) {
+        if (!categoriesUsed.has(part.partType) && selected.length < 6) {
+            selected.push(part);
+            categoriesUsed.add(part.partType);
+        }
+    }
+    
+    for (const part of scored) {
+        if (selected.length >= 6) break;
+        if (!selected.includes(part)) {
+            selected.push(part);
+        }
+    }
+    
+    return selected.slice(0, 6);
+}
+
+function displayDeals(deals) {
+    const dealsContainer = document.getElementById('deals');
+    const loadingContainer = document.getElementById('loading');
+    
+    dealsContainer.innerHTML = '';
+    
+    deals.forEach(deal => {
+        const card = document.createElement('div');
+        card.className = 'deal-card';
+        
+        const savings = calculateSavings();
+        const imgUrl = upgradeEbayImg(deal.image_url) || FALLBACK_IMG;
+        
+        card.innerHTML = `
+            <div class="deal-badge">-${savings}%</div>
+            <img src="${imgUrl}" alt="${deal.title}" class="deal-image" onerror="this.src='${FALLBACK_IMG}'" loading="lazy">
+            <div class="deal-content">
+                <h3 class="deal-title">${deal.title || deal.name}</h3>
+                <div class="deal-meta">
+                    <span class="deal-tag">${deal.partType}</span>
+                    <span class="deal-tag">${deal.site}</span>
+                    <span class="deal-tag">${deal.condition}</span>
+                </div>
+                <div class="deal-price">$${deal.price.toFixed(2)}</div>
+                <p class="deal-reason">${getAIReason()}</p>
+                <a href="${deal.url}" target="_blank" rel="noopener noreferrer" class="deal-button">View Deal →</a>
+            </div>
+        `;
+        
+        dealsContainer.appendChild(card);
+    });
+    
+    loadingContainer.style.display = 'none';
+    dealsContainer.style.display = 'grid';
+}
+
+function openPCBuilder() {
+    document.getElementById('pcBuilderModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closePCBuilder() {
+    document.getElementById('pcBuilderModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+async function generateBuild() {
+    const budget = parseFloat(document.getElementById('budget').value);
+    const useCase = document.getElementById('useCase').value;
+    const priority = document.getElementById('priority').value;
+    const conditionPref = document.getElementById('conditionPref').value;
+    
+    if (!budget || !useCase || !priority) {
+        alert('Please fill in all required fields');
+        return;
+    }
+    
+    const generateBtn = document.getElementById('generateBtn');
+    generateBtn.disabled = true;
+    generateBtn.textContent = '🤖 AI is building your PC...';
+    
+    try {
+        // Load all parts data
+        const categories = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
+        const partsForAI = {};
+        const allParts = {};
+        
+        for (const category of categories) {
+            try {
+                const response = await fetch(`data/${category}.json`, { cache: 'no-store' });
+                if (response.ok) {
+                    const parts = await response.json();
+                    let validParts = parts.filter(p => p.price && p.price > 0);
+                    
+                    // Filter by condition preference
+                    if (conditionPref === 'new') {
+                        validParts = validParts.filter(p => p.condition === 'New');
+                    } else if (conditionPref === 'new-openbox') {
+                        validParts = validParts.filter(p => p.condition === 'New' || p.condition === 'Open Box');
+                    }
+                    
+                    allParts[category] = validParts.sort((a, b) => a.price - b.price);
+                    partsForAI[category] = allParts[category].slice(0, 30).map(p => ({
+                        title: p.title,
+                        price: p.price,
+                        condition: p.condition,
+                        site: p.site
+                    }));
+                }
+            } catch (error) {
+                console.warn(`Failed to load ${category}:`, error);
+                partsForAI[category] = [];
+                allParts[category] = [];
+            }
+        }
+        
+        // Call Cloudflare Worker
+        const response = await fetch(WORKER_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                budget: budget,
+                useCase: useCase,
+                priority: priority,
+                conditionPref: conditionPref,
+                parts: partsForAI
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error('Worker request failed');
+        }
+        
+        const result = await response.json();
+        
+        if (!result.success || !result.build) {
+            throw new Error(result.error || 'Invalid response');
+        }
+        
+        // Map indices to actual parts
+        const finalBuild = {};
+        for (const [partType, index] of Object.entries(result.build)) {
+            if (partType !== 'reasoning') {
+                finalBuild[partType] = allParts[partType][index];
+            }
+        }
+        
+        displayBuild(finalBuild);
+        
+    } catch (error) {
+        console.error('Build error:', error);
+        alert('AI builder unavailable. Using smart fallback...');
+        
+        // Fallback to local algorithm
+        try {
+            const categories = ['gpu', 'cpu', 'motherboard', 'psu', 'case', 'ssd'];
+            const allParts = {};
+            
+            for (const category of categories) {
+                const response = await fetch(`data/${category}.json`, { cache: 'no-store' });
+                if (response.ok) {
+                    allParts[category] = await response.json();
+                }
+            }
+            
+            const build = smartBuildPC(budget, useCase, priority, allParts, conditionPref);
+            if (build) {
+                displayBuild(build);
+            } else {
+                alert('Could not find compatible parts within budget.');
+            }
+        } catch (fallbackError) {
+            alert('Both AI and fallback failed. Please try again.');
+        }
+    } finally {
+        generateBtn.disabled = false;
+        generateBtn.textContent = '✨ Generate My Build';
+    }
+}
+
+function smartBuildPC(budget, useCase, priority, allParts, conditionPref) {
+    const budgetAllocation = {
+        gaming: { gpu: 0.35, cpu: 0.20, motherboard: 0.15, psu: 0.10, case: 0.08, ssd: 0.12 },
+        productivity: { gpu: 0.15, cpu: 0.30, motherboard: 0.18, psu: 0.12, case: 0.10, ssd: 0.15 },
+        'content-creation': { gpu: 0.30, cpu: 0.25, motherboard: 0.15, psu: 0.12, case: 0.08, ssd: 0.10 },
+        budget: { gpu: 0.25, cpu: 0.20, motherboard: 0.15, psu: 0.12, case: 0.10, ssd: 0.18 },
+        enthusiast: { gpu: 0.40, cpu: 0.25, motherboard: 0.12, psu: 0.10, case: 0.06, ssd: 0.07 }
+    };
+    
+    let allocation = { ...budgetAllocation[useCase] };
+    
+    if (priority === 'gpu') {
+        allocation.gpu += 0.10;
+        allocation.cpu -= 0.05;
+        allocation.motherboard -= 0.05;
+    } else if (priority === 'cpu') {
+        allocation.cpu += 0.10;
+        allocation.gpu -= 0.05;
+        allocation.ssd -= 0.05;
+    }
+    
+    const targetPrices = Object.fromEntries(
+        Object.keys(allocation).map(part => [part, budget * allocation[part]])
+    );
+    
+    const findBestPart = (parts, targetPrice, flexibility) => {
+        if (!parts?.length) return null;
+        
+        let validParts = parts.filter(p => p.price > 0);
+        
+        if (conditionPref === 'new') {
+            validParts = validParts.filter(p => p.condition === 'New');
+        } else if (conditionPref === 'new-openbox') {
+            validParts = validParts.filter(p => p.condition === 'New' || p.condition === 'Open Box');
+        }
+        
+        const sorted = validParts.sort((a, b) => a.price - b.price);
+        const inRange = sorted.filter(p => 
+            p.price >= targetPrice * (1 - flexibility) && 
+            p.price <= targetPrice * (1 + flexibility)
+        );
+        
+        if (inRange.length > 0) {
+            return inRange[Math.floor(inRange.length / 2)];
+        }
+        
+        return sorted[0];
+    };
+    
+    const gpu = findBestPart(allParts.gpu, targetPrices.gpu, 0.3);
+    const cpu = findBestPart(allParts.cpu, targetPrices.cpu, 0.3);
+    
+    if (!gpu || !cpu) return null;
+    
+    const cpuName = cpu.title.toLowerCase();
+    const compatibleMotherboards = (allParts.motherboard?.filter(mb => {
+        const title = mb.title.toLowerCase();
+        if (cpuName.includes('ryzen') || cpuName.includes('amd')) {
+            return title.includes('am4') || title.includes('am5') || title.includes('amd');
+        } else {
+            return title.includes('lga') || title.includes('intel');
+        }
+    }) || []);
+    
+    const motherboard = findBestPart(compatibleMotherboards, targetPrices.motherboard, 0.4);
+    const psu = findBestPart(allParts.psu, targetPrices.psu, 0.3);
+    const pcCase = findBestPart(allParts.case, targetPrices.case, 0.4);
+    const ssd = findBestPart(allParts.ssd, targetPrices.ssd, 0.3);
+    
+    if (!motherboard || !psu || !pcCase || !ssd) return null;
+    
+    return { gpu, cpu, motherboard, psu, case: pcCase, ssd };
+}
+
+function displayBuild(build) {
+    const partsContainer = document.getElementById('buildParts');
+    const resultContainer = document.getElementById('buildResult');
+    
+    partsContainer.innerHTML = '';
+    let totalCost = 0;
+    
+    const partNames = {
+        gpu: 'Graphics Card',
+        cpu: 'Processor',
+        motherboard: 'Motherboard',
+        psu: 'Power Supply',
+        case: 'Case',
+        ssd: 'Storage'
+    };
+    
+    for (const [partType, part] of Object.entries(build)) {
+        if (!part) continue;
+        
+        totalCost += part.price;
+        
+        const partDiv = document.createElement('div');
+        partDiv.className = 'build-part';
+        partDiv.innerHTML = `
+            <div class="build-part-info">
+                <h4>${partNames[partType]}</h4>
+                <p>${part.title}</p>
+                <p style="margin-top:.25rem"><strong>${part.condition}</strong> • ${part.site}</p>
+            </div>
+            <div>
+                <div class="build-part-price">$${part.price.toFixed(2)}</div>
+                <a href="${part.url}" target="_blank" rel="noopener" style="font-size:.75rem;color:var(--accent);text-decoration:none">View Deal →</a>
+            </div>
+        `;
+        
+        partsContainer.appendChild(partDiv);
+    }
+    
+    document.getElementById('totalPrice').textContent = `$${totalCost.toFixed(2)}`;
+    resultContainer.classList.add('active');
+    resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// Load deals on page load
+loadFeaturedDeals();
 </script>
 </body>
 </html>
